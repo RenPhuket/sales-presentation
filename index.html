@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renaissance Phuket Resort & Spa — Sales Playbook 2026</title>
+<style>
+:root{
+  --midnight:#2A2E3D;
+  --pavement:#F5F3F0;
+  --cargo:#4F4A06;
+  --spark:#F2B826;
+  --wave:#3397B6;
+  --mid70:rgba(42,46,61,.7);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Miller Text RH",serif;background:var(--pavement);color:var(--midnight);line-height:1.6}
+
+/* ── NAV ─────────────────────────────────────────────────── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 36px;height:64px;background:transparent;transition:background .3s,box-shadow .3s}
+.nav.scrolled{background:var(--midnight);box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.brandmark{font-family:Arial,sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pavement)}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-family:Arial,sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,240,.8);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--spark)}
+.lang-switch{display:flex;gap:6px;align-items:center}
+.lang-switch button{font-family:Arial,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;background:none;border:1px solid rgba(245,243,240,.3);color:rgba(245,243,240,.6);padding:5px 10px;border-radius:20px;cursor:pointer;transition:all .2s}
+.lang-switch button.active{background:var(--spark);border-color:var(--spark);color:var(--midnight)}
+.lang-switch button:hover:not(.active){border-color:var(--pavement);color:var(--pavement)}
+
+/* ── SHARED ──────────────────────────────────────────────── */
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.eyebrow{font-family:Arial,sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--spark);margin-bottom:10px}
+.display{font-family:Arial,Helvetica,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.05em;line-height:1.15}
+.section-head{text-align:center;margin-bottom:56px}
+.section-head .display{font-size:2.4rem;margin-top:8px}
+.section-head .sub{max-width:620px;margin:16px auto 0;font-size:1.05rem;color:rgba(42,46,61,.75)}
+.section-head.light .display{color:var(--pavement)}
+.section-head.light .sub{color:rgba(245,243,240,.7)}
+.section-head.light .eyebrow{color:var(--spark)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ── HERO ────────────────────────────────────────────────── */
+.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url('images/slide01_000.jpg') center/cover no-repeat}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,46,61,.55) 0%,rgba(42,46,61,.35) 60%,rgba(42,46,61,.7) 100%)}
+.hero-inner{position:relative;z-index:1;padding:0 24px}
+.hero .eyebrow{font-size:.78rem;color:var(--spark)}
+.hero .display{font-size:clamp(2.8rem,6vw,5rem);color:var(--pavement);margin:12px 0}
+.hero .display span{color:var(--spark)}
+.hero-sub{font-size:1.15rem;color:rgba(245,243,240,.85);max-width:560px;margin:0 auto 32px}
+.scroll-cue{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);font-family:Arial,sans-serif;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,243,240,.55)}
+.stat-row{display:flex;gap:0;border-top:1px solid rgba(245,243,240,.2);border-bottom:1px solid rgba(245,243,240,.2);margin-top:40px}
+.stat{flex:1;text-align:center;padding:18px 12px;border-right:1px solid rgba(245,243,240,.2)}
+.stat:last-child{border-right:none}
+.stat .n{font-family:Arial,sans-serif;font-size:2rem;font-weight:700;color:var(--spark);line-height:1}
+.stat .l{font-family:Arial,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,243,240,.6);margin-top:4px}
+
+/* ── DESTINATION ─────────────────────────────────────────── */
+.destination{padding:100px 24px 80px;background:var(--midnight)}
+.dest-tab-nav{display:flex;gap:12px;margin-bottom:32px;justify-content:center}
+.dest-tab-btn{font-family:Arial,sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:none;border:1px solid rgba(245,243,240,.25);color:rgba(245,243,240,.55);padding:10px 28px;border-radius:30px;cursor:pointer;transition:all .2s}
+.dest-tab-btn.active{background:var(--spark);border-color:var(--spark);color:var(--midnight)}
+.dest-tab{display:none}.dest-tab.active{display:block}
+
+/* Destination board */
+#phuket-map{min-height:420px;border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,.35)}
+.location-board{display:grid;grid-template-columns:1.2fr repeat(2,1fr);grid-auto-rows:minmax(124px,auto);gap:12px;background:linear-gradient(135deg,rgba(245,243,240,.08),rgba(51,151,182,.16));border:1px solid rgba(245,243,240,.12);padding:18px}
+.loc-card{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:16px;min-height:124px;padding:18px;border-radius:12px;background:rgba(245,243,240,.08);border:1px solid rgba(245,243,240,.12);transition:transform .2s,border-color .2s,background .2s}
+.loc-card:hover{transform:translateY(-2px);border-color:rgba(242,184,38,.55);background:rgba(245,243,240,.12)}
+.loc-card.feature{grid-row:span 2;background:linear-gradient(180deg,rgba(242,184,38,.22),rgba(245,243,240,.08))}
+.loc-card.hide{display:none}
+.loc-kicker{font-family:Arial,sans-serif;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--spark);font-weight:700}
+.loc-name{font-family:Arial,sans-serif;font-size:1rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--pavement);line-height:1.25}
+.loc-meta{font-family:Arial,sans-serif;font-size:.72rem;color:rgba(245,243,240,.68)}
+.loc-desc{font-size:.86rem;color:rgba(245,243,240,.72);line-height:1.55}
+.loc-dot{position:absolute;right:14px;top:14px;width:12px;height:12px;border-radius:50%;box-shadow:0 0 0 4px rgba(255,255,255,.08)}
+.map-legend{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:20px;justify-content:center}
+.legend-item{display:flex;align-items:center;gap:8px;font-family:Arial,sans-serif;font-size:.72rem;letter-spacing:.06em;color:rgba(245,243,240,.65)}
+.legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.map-shuttle{margin-top:24px;padding:20px 28px;border:1px solid rgba(245,243,240,.15);border-radius:12px;background:rgba(245,243,240,.04);display:flex;gap:40px;flex-wrap:wrap}
+.shuttle-item{flex:1;min-width:180px}
+.shuttle-label{font-family:Arial,sans-serif;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--wave);margin-bottom:6px}
+.shuttle-item p{font-size:.88rem;color:rgba(245,243,240,.75);line-height:1.7}
+
+/* Resort Zone Map */
+.resort-wrap{position:relative}
+.resort-intro{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px}
+.r-stat{text-align:center;padding:14px;background:rgba(245,243,240,.06);border-radius:10px;border:1px solid rgba(245,243,240,.1)}
+.r-stat .n{font-family:Arial,sans-serif;font-size:1.6rem;font-weight:700;color:var(--spark)}
+.r-stat .l{font-family:Arial,sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,240,.55);margin-top:2px}
+.resort-map-container{position:relative;background:rgba(245,243,240,.04);border:1px solid rgba(245,243,240,.1);border-radius:18px;overflow:hidden;padding:20px}
+.beach-bar{background:linear-gradient(90deg,#3397B6,#2a85a8);text-align:center;padding:12px;border-radius:10px 10px 0 0;font-family:Arial,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin-bottom:12px;position:relative}
+.beach-bar::after{content:"🌊";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:1.2rem}
+.resort-grid{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto auto auto;gap:10px}
+.rzone{border-radius:10px;padding:16px 14px;cursor:pointer;border:2px solid transparent;transition:all .22s;position:relative;min-height:70px}
+.rzone:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.rzone.z-beach{background:rgba(51,151,182,.18);border-color:rgba(51,151,182,.35)}
+.rzone.z-beach:hover,.rzone.z-beach.open{border-color:var(--wave);background:rgba(51,151,182,.28)}
+.rzone.z-food{background:rgba(242,184,38,.12);border-color:rgba(242,184,38,.25)}
+.rzone.z-food:hover,.rzone.z-food.open{border-color:var(--spark);background:rgba(242,184,38,.22)}
+.rzone.z-leisure{background:rgba(79,74,6,.2);border-color:rgba(79,74,6,.35)}
+.rzone.z-leisure:hover,.rzone.z-leisure.open{border-color:var(--cargo);background:rgba(79,74,6,.32)}
+.rzone.z-wellness{background:rgba(160,100,160,.15);border-color:rgba(160,100,160,.25)}
+.rzone.z-wellness:hover,.rzone.z-wellness.open{border-color:#a064a0;background:rgba(160,100,160,.25)}
+.rzone.z-nature{background:rgba(60,140,80,.15);border-color:rgba(60,140,80,.25)}
+.rzone.z-nature:hover,.rzone.z-nature.open{border-color:#3c8c50;background:rgba(60,140,80,.25)}
+.rzone.z-rooms{background:rgba(245,243,240,.06);border-color:rgba(245,243,240,.15)}
+.rzone.z-rooms:hover,.rzone.z-rooms.open{border-color:rgba(245,243,240,.4);background:rgba(245,243,240,.12)}
+.zone-icon{font-size:1.3rem;margin-bottom:6px}
+.zone-name{font-family:Arial,sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--pavement)}
+.zone-hint{font-size:.68rem;color:rgba(245,243,240,.45);margin-top:3px;font-family:Arial,sans-serif}
+.zone-count{position:absolute;top:10px;right:10px;background:var(--spark);color:var(--midnight);font-family:Arial,sans-serif;font-size:.6rem;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.zone-panel{display:none;grid-column:1/-1;background:rgba(42,46,61,.7);border:1px solid rgba(245,243,240,.15);border-radius:12px;padding:24px;backdrop-filter:blur(8px)}
+.zone-panel.open{display:block}
+.zone-panel-title{font-family:Arial,sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--spark);margin-bottom:16px}
+.activity-items{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.activity-item{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:rgba(245,243,240,.06);border-radius:8px}
+.act-num{font-family:Arial,sans-serif;font-size:.7rem;font-weight:700;color:var(--spark);flex-shrink:0;width:22px}
+.act-text{font-size:.82rem;color:rgba(245,243,240,.8);line-height:1.45}
+/* ── MAP FILTER PILLS ─────────────────────────────────────── */
+.map-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.mf-btn{font-family:Arial,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:rgba(245,243,240,.08);border:1px solid rgba(245,243,240,.2);color:rgba(245,243,240,.7);padding:8px 18px;border-radius:20px;cursor:pointer;transition:all .2s;touch-action:manipulation}
+.mf-btn.active,.mf-btn:hover{background:var(--spark);border-color:var(--spark);color:var(--midnight)}
+
+/* ── MAP PIN LABELS ───────────────────────────────────────── */
+.map-pin{display:flex;flex-direction:column;align-items:center;pointer-events:none;filter:drop-shadow(0 2px 4px rgba(0,0,0,.25))}
+.pin-dot{width:30px;height:30px;border-radius:50%;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.pin-label{background:rgba(255,255,255,.96);border-radius:7px;padding:3px 8px;text-align:center;margin-top:3px;min-width:80px;max-width:120px;white-space:nowrap;box-shadow:0 1px 6px rgba(0,0,0,.15)}
+.pin-label strong{display:block;font-family:Arial,sans-serif;font-size:.65rem;font-weight:700;color:#2A2E3D;line-height:1.3;overflow:hidden;text-overflow:ellipsis}
+.pin-label span{font-family:Arial,sans-serif;font-size:.6rem;color:#3397B6;font-weight:600}
+.pin-label.resort-lbl{background:var(--spark);border:2px solid #c49000}
+.pin-label.resort-lbl strong{color:var(--midnight)}
+.pin-label.resort-lbl span{color:rgba(42,46,61,.7)}
+
+/* Styled Leaflet popup */
+.lf-popup{font-family:Georgia,serif;min-width:190px}
+.lf-emoji{font-size:1.3rem;margin-bottom:5px}
+.lf-name{font-family:Arial,sans-serif;font-weight:700;font-size:.88rem;text-transform:uppercase;letter-spacing:.06em;color:#2A2E3D;margin-bottom:4px;line-height:1.25}
+.lf-meta{font-size:.75rem;color:#3397B6;font-weight:700;margin-bottom:6px}
+.lf-desc{font-family:Georgia,serif;font-size:.78rem;color:rgba(42,46,61,.65);line-height:1.45}
+
+.resort-compass{text-align:center;margin-top:14px;font-family:Arial,sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,243,240,.3)}
+.resort-legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:16px;justify-content:center}
+.rl-item{display:flex;align-items:center;gap:6px;font-family:Arial,sans-serif;font-size:.68rem;color:rgba(245,243,240,.5)}
+.rl-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+
+/* Aerial resort map */
+.legacy-discovery{display:none}
+.aerial-map-container{background:rgba(245,243,240,.05);border:1px solid rgba(245,243,240,.12);border-radius:18px;overflow:hidden}
+.aerial-map-stage{position:relative;background:#111;overflow:hidden}
+.aerial-map-stage img{display:block;width:100%;height:auto}
+.map-num-pin{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--cargo);border:2px solid rgba(245,243,240,.95);color:var(--pavement);font-family:Arial,sans-serif;font-size:.78rem;font-weight:700;box-shadow:0 3px 12px rgba(0,0,0,.45);transition:transform .18s,background .18s;cursor:pointer}
+.map-num-pin:hover,.map-num-pin.active{transform:translate(-50%,-50%) scale(1.18);background:var(--spark);color:var(--midnight);z-index:5}
+.beach-label{position:absolute;left:3%;top:46%;font-family:Arial,sans-serif;font-size:1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--pavement);text-shadow:0 2px 10px rgba(0,0,0,.55)}
+.resort-number-menu{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:24px;background:var(--pavement)}
+.num-menu-col h4{font-family:Arial,sans-serif;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cargo);border-bottom:2px solid var(--wave);display:inline-block;margin-bottom:12px}
+.num-menu-list{display:grid;gap:7px}
+.num-menu-item{display:grid;grid-template-columns:30px 1fr;align-items:start;gap:8px;background:none;border:0;text-align:left;padding:0;cursor:pointer;color:var(--midnight)}
+.num-badge{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--cargo);color:var(--pavement);font-family:Arial,sans-serif;font-size:.74rem;font-weight:700;line-height:1}
+.num-label{font-size:.88rem;line-height:1.35;color:rgba(42,46,61,.85)}
+
+.phuket-map-layout{display:grid;grid-template-columns:minmax(300px,.95fr) 1.05fr;gap:28px;align-items:start}
+.phuket-map-visual{position:relative;min-height:500px;border-radius:18px;background:#070806;border:1px solid rgba(245,243,240,.14);box-shadow:0 4px 32px rgba(0,0,0,.35);overflow:hidden}
+.phuket-map-visual img{display:block;width:100%;height:100%;object-fit:contain;padding:22px}
+.phuket-pin{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;cursor:pointer}
+.phuket-pin.hero .pin-number{width:40px;height:40px;background:var(--spark);color:var(--midnight);font-size:.9rem}
+.phuket-pin.active{z-index:4}
+.phuket-pin.active .pin-number,.phuket-pin:hover .pin-number{background:var(--spark);color:var(--midnight);transform:scale(1.12)}
+.pin-number{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--cargo);color:var(--pavement);border:2px solid var(--pavement);font-family:Arial,sans-serif;font-weight:700;font-size:.78rem;box-shadow:0 3px 12px rgba(0,0,0,.4);transition:transform .18s,background .18s,color .18s}
+.pin-name{font-family:Arial,sans-serif;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--pavement);background:rgba(42,46,61,.86);border:1px solid rgba(245,243,240,.18);border-radius:999px;padding:5px 9px;white-space:nowrap}
+.phuket-map-card{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(245,243,240,.95);color:var(--midnight);border-radius:12px;padding:16px 18px}
+.phuket-map-card .map-card-kicker{font-family:Arial,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cargo);margin-bottom:5px}
+.phuket-map-card h4{font-family:Arial,sans-serif;font-size:1rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+.map-card-meta{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.map-card-meta span{font-family:Arial,sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--midnight);color:var(--pavement);border-radius:999px;padding:5px 9px}
+.phuket-map-card p{font-size:.84rem;color:rgba(42,46,61,.68);line-height:1.55}
+.phuket-rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rec-card{background:rgba(245,243,240,.07);border:1px solid rgba(245,243,240,.12);border-radius:12px;padding:16px;text-align:left;cursor:pointer;font:inherit;transition:border-color .18s,background .18s,transform .18s}
+.rec-card.active,.rec-card:hover{border-color:rgba(242,184,38,.55);background:rgba(245,243,240,.12);transform:translateY(-2px)}
+.rec-card strong{display:block;font-family:Arial,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--spark);margin-bottom:5px}
+.rec-card h3{font-family:Arial,sans-serif;font-size:.92rem;letter-spacing:.03em;text-transform:uppercase;color:var(--pavement);margin-bottom:6px}
+.rec-card p{font-size:.82rem;color:rgba(245,243,240,.7);line-height:1.5}
+.rec-meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.rec-meta span{font-family:Arial,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--midnight);background:var(--spark);border-radius:999px;padding:5px 9px}
+
+/* ── ROOMS ───────────────────────────────────────────────── */
+.rooms{padding:100px 24px;background:var(--pavement)}
+.rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.room-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(42,46,61,.08);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.room-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(42,46,61,.14)}
+.room-card .ph{aspect-ratio:4/3;overflow:hidden;flex-shrink:0}
+.room-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.room-card:hover .ph img{transform:scale(1.04)}
+.room-card .body{padding:22px;display:flex;flex-direction:column;flex:1}
+.room-card .size-badge{display:inline-flex;align-items:center;background:var(--midnight);color:var(--spark);font-family:Arial,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:10px;width:fit-content}
+.room-card .name{font-family:Arial,sans-serif;font-size:.95rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--midnight);margin-bottom:6px;line-height:1.25}
+.room-card .view-tag{font-family:Arial,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--wave);margin-bottom:10px}
+.room-card .desc{font-family:Georgia,serif;font-size:.83rem;color:rgba(42,46,61,.65);line-height:1.6;margin-bottom:12px}
+.room-card .room-meta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:12px;padding:10px 0;border-top:1px solid rgba(42,46,61,.07);border-bottom:1px solid rgba(42,46,61,.07)}
+.room-card .meta-item{font-family:Arial,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(42,46,61,.45)}
+.room-card .room-feats{padding-top:12px;margin-top:auto;display:flex;flex-direction:column;gap:5px}
+.room-card .feat{font-family:Arial,sans-serif;font-size:.63rem;color:rgba(42,46,61,.55);padding-left:14px;position:relative;line-height:1.45}
+.room-card .feat::before{content:'—';position:absolute;left:0;color:var(--spark);font-weight:700}
+.section-resource-row{display:flex;justify-content:center;margin:-30px 0 48px}
+.section-resource-card{width:min(100%,520px);background:#fff;border-radius:14px;padding:22px 24px;box-shadow:0 2px 14px rgba(42,46,61,.08);border-left:3px solid var(--spark);text-decoration:none;transition:transform .24s,box-shadow .24s,border-color .24s}
+.section-resource-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(42,46,61,.14)}
+.section-resource-card.dark{background:rgba(245,243,240,.06);border:1px solid rgba(245,243,240,.12);border-left:3px solid var(--spark);box-shadow:none}
+.section-resource-card.dark:hover{border-color:rgba(242,184,38,.45)}
+.section-resource-card.cta-only{width:auto;display:inline-flex;align-items:center;justify-content:center;background:var(--midnight);border:1px solid var(--midnight);border-radius:999px;padding:12px 22px;box-shadow:none}
+.section-resource-card.cta-only.dark{background:var(--spark);border-color:var(--spark)}
+.section-resource-card.cta-only:hover{box-shadow:none;opacity:.88}
+.section-resource-card .resource-kicker{display:block;font-family:Arial,sans-serif;font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cargo);margin-bottom:6px}
+.section-resource-card.dark .resource-kicker{color:var(--spark)}
+.section-resource-card .resource-copy{display:block;font-family:Georgia,serif;font-size:.86rem;color:rgba(42,46,61,.62);line-height:1.5;margin-bottom:12px}
+.section-resource-card.dark .resource-copy{color:rgba(245,243,240,.68)}
+.section-resource-card .resource-link{font-family:Arial,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--spark)}
+.section-resource-card:hover .resource-link{color:var(--midnight)}
+.section-resource-card.dark:hover .resource-link{color:var(--pavement)}
+.section-resource-card.cta-only .resource-link{color:var(--spark)}
+.section-resource-card.cta-only.dark .resource-link,.section-resource-card.cta-only.dark:hover .resource-link{color:var(--midnight)}
+.section-resource-card.cta-only:hover .resource-link{color:var(--spark)}
+
+/* ── DINING ──────────────────────────────────────────────── */
+.dining{padding:100px 24px;background:var(--midnight)}
+.dining-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rest-card{border-radius:14px;overflow:hidden;background:rgba(245,243,240,.06);border:1px solid rgba(245,243,240,.1);transition:border-color .25s}
+.rest-card:hover{border-color:rgba(242,184,38,.4)}
+.rest-card .ph{aspect-ratio:16/9;overflow:hidden}
+.rest-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.rest-card:hover .ph img{transform:scale(1.05)}
+.rest-card .body{padding:20px}
+.rest-card .tag{font-family:Arial,sans-serif;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wave);margin-bottom:6px}
+.rest-card .name{font-family:Arial,sans-serif;font-size:1.05rem;font-weight:700;color:var(--pavement);margin-bottom:8px}
+.rest-card p{font-family:Georgia,serif;font-size:.9rem;color:rgba(245,243,240,.65);line-height:1.55}
+.rest-card .hours{font-family:Arial,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--wave);margin-top:10px;display:flex;align-items:center;gap:6px}
+.rest-card .sig{font-family:Georgia,serif;font-size:.82rem;color:var(--spark);margin-top:8px;font-style:italic}
+.rest-card .soc-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.rest-card .soc-links a{font-family:Arial,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,243,240,.6);border:1px solid rgba(245,243,240,.2);border-radius:20px;padding:4px 10px;text-decoration:none;transition:all .2s}
+.rest-card .soc-links a:hover{background:var(--spark);border-color:var(--spark);color:var(--midnight)}
+
+/* ── FACILITIES ──────────────────────────────────────────── */
+.facilities{padding:100px 24px;background:var(--pavement)}
+.fac-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.fac-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(42,46,61,.08);transition:transform .25s,box-shadow .25s}
+.fac-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(42,46,61,.14)}
+.fac-card .ph{aspect-ratio:4/3;overflow:hidden}
+.fac-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.fac-card:hover .ph img{transform:scale(1.04)}
+.fac-card .body{padding:24px}
+.fac-card .tag{font-family:Arial,sans-serif;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--wave);font-weight:700;margin-bottom:6px}
+.fac-card .name{font-family:Arial,sans-serif;font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--midnight);margin-bottom:10px}
+.fac-card p{font-family:Georgia,serif;font-size:.88rem;color:rgba(42,46,61,.65);line-height:1.6}
+.fac-card .acts{margin-top:14px;display:flex;flex-direction:column;gap:5px}
+.fac-card .act-item{font-family:Arial,sans-serif;font-size:.65rem;color:rgba(42,46,61,.55);letter-spacing:.04em;padding-left:14px;position:relative}
+.fac-card .act-item::before{content:'—';position:absolute;left:0;color:var(--spark)}
+
+/* ── STAY CONNECTED ──────────────────────────────────────── */
+.stay-connected{padding:100px 24px;background:var(--midnight)}
+.soc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.soc-card{background:rgba(245,243,240,.05);border:1px solid rgba(245,243,240,.1);border-radius:14px;padding:28px 24px;transition:border-color .25s}
+.soc-card:hover{border-color:rgba(242,184,38,.3)}
+.soc-card .sc-tag{font-family:Arial,sans-serif;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--wave);font-weight:700;margin-bottom:8px}
+.soc-card .sc-name{font-family:Arial,sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--pavement);margin-bottom:12px}
+.soc-card .sc-links{display:flex;flex-wrap:wrap;gap:8px}
+.soc-card .sc-links a{font-family:Arial,sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,243,240,.65);border:1px solid rgba(245,243,240,.2);border-radius:20px;padding:6px 14px;text-decoration:none;transition:all .2s;display:flex;align-items:center;gap:5px}
+.soc-card .sc-links a:hover{background:var(--spark);border-color:var(--spark);color:var(--midnight)}
+.soc-resort-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+
+/* ── MEETINGS ────────────────────────────────────────────── */
+.meetings{padding:100px 24px;background:var(--pavement)}
+.meetings-hero{position:relative;border-radius:18px;overflow:hidden;margin-bottom:72px;aspect-ratio:21/8}
+.meetings-hero img{width:100%;height:100%;object-fit:cover}
+.meetings-hero .caption{position:absolute;inset:0;background:linear-gradient(90deg,rgba(42,46,61,.8) 0%,transparent 60%);display:flex;align-items:center;padding:48px}
+.meetings-hero .caption .display{font-size:2.2rem;color:var(--pavement);max-width:420px}
+.meetings-hero .caption p{color:rgba(245,243,240,.75);margin-top:12px;max-width:380px;font-size:1rem}
+.venues-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:72px}
+.venue-card{background:var(--midnight);border:0;border-radius:12px;overflow:hidden;text-align:center;cursor:pointer;font:inherit;padding:0}
+.venue-card .ph{aspect-ratio:4/3;overflow:hidden}
+.venue-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.venue-card:hover .ph img{transform:scale(1.06)}
+.venue-card .body{padding:16px 12px}
+.venue-card .vname{font-family:Arial,sans-serif;font-size:.82rem;font-weight:700;color:var(--pavement);letter-spacing:.04em}
+
+/* Capacity table */
+.capacity-section{margin-bottom:72px}
+.cap-title{font-family:Arial,sans-serif;font-size:1.1rem;font-weight:700;color:var(--midnight);margin-bottom:20px;text-transform:uppercase;letter-spacing:.08em}
+.cap-table{width:100%;border-collapse:collapse;font-family:Arial,sans-serif;font-size:.82rem;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(42,46,61,.08)}
+.cap-table thead tr{background:var(--midnight);color:var(--pavement)}
+.cap-table th{padding:12px 14px;text-align:center;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.cap-table th:first-child{text-align:left}
+.cap-table th button{font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.cap-table th button::after{content:' ↕';color:rgba(242,184,38,.72)}
+.cap-table td{padding:12px 14px;text-align:center;border-bottom:1px solid rgba(42,46,61,.08);color:var(--midnight)}
+.cap-table td:first-child{text-align:left;font-weight:600}
+.cap-table tr:last-child td{border-bottom:none}
+.cap-table tr:nth-child(even) td{background:rgba(42,46,61,.03)}
+.cap-table .highlight td{background:rgba(242,184,38,.1)!important}
+.cap-remark{font-size:.78rem;color:rgba(42,46,61,.6);margin-top:12px;font-style:italic}
+.venue-drawer{display:none;margin:-42px 0 72px;background:var(--midnight);border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(42,46,61,.2)}
+.venue-drawer.open{display:grid;grid-template-columns:1fr 1.15fr}
+.venue-drawer img{width:100%;height:100%;min-height:320px;object-fit:cover}
+.venue-drawer .drawer-body{padding:34px 38px;color:var(--pavement)}
+.drawer-close{float:right;background:none;border:1px solid rgba(245,243,240,.25);color:var(--pavement);border-radius:999px;width:32px;height:32px;cursor:pointer}
+.drawer-title{font-family:Arial,sans-serif;font-size:1.3rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin:8px 0 12px}
+.drawer-copy{color:rgba(245,243,240,.72);font-size:.94rem;line-height:1.65;margin-bottom:20px}
+.drawer-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0}
+.drawer-meta div{padding:12px;border:1px solid rgba(245,243,240,.12);border-radius:10px}
+.drawer-meta strong{display:block;font-family:Arial,sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--spark);margin-bottom:4px}
+.drawer-meta span{font-family:Arial,sans-serif;font-size:.86rem;color:rgba(245,243,240,.82)}
+
+/* Coffee break gallery */
+.coffee-section{margin-bottom:72px}
+.coffee-theme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.coffee-theme-card{background:#fff;border:0;border-radius:12px;overflow:hidden;text-align:left;cursor:pointer;font:inherit;box-shadow:0 2px 12px rgba(42,46,61,.08);transition:transform .22s,box-shadow .22s}
+.coffee-theme-card:hover,.coffee-theme-card.active{transform:translateY(-3px);box-shadow:0 8px 26px rgba(42,46,61,.14)}
+.coffee-theme-image{aspect-ratio:16/9;background:var(--midnight);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.coffee-theme-image::before{content:'';position:absolute;inset:12px;border:1px solid rgba(245,243,240,.22);z-index:1;pointer-events:none}
+.coffee-theme-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.coffee-theme-card:hover .coffee-theme-image img{transform:scale(1.05)}
+.coffee-theme-image.art,.coffee-drawer-image.art{background:#2A2E3D}
+.coffee-theme-image.lab,.coffee-drawer-image.lab{background:#3397B6}
+.coffee-theme-image.aloha,.coffee-drawer-image.aloha{background:#4F4A06}
+.coffee-theme-image.heritage,.coffee-drawer-image.heritage{background:#33413A}
+.coffee-theme-image.carnival,.coffee-drawer-image.carnival{background:#6B4B7A}
+.coffee-theme-image.energize,.coffee-drawer-image.energize{background:#6E5B1F}
+.coffee-theme-card .body{padding:20px}
+.coffee-theme-card .kicker{font-family:Arial,sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--spark);margin-bottom:7px}
+.coffee-theme-card .name{font-family:Arial,sans-serif;font-size:1rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--midnight);margin-bottom:8px}
+.coffee-theme-card p{font-size:.84rem;color:rgba(42,46,61,.65);line-height:1.55}
+.coffee-drawer{margin:22px 0 0}
+.coffee-drawer-image{min-height:320px;background:var(--midnight);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.coffee-drawer-image::before{content:'';position:absolute;inset:18px;border:1px solid rgba(245,243,240,.22);z-index:1;pointer-events:none}
+.coffee-drawer-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* Beach Lawn */
+.beach-section{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.beach-gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.beach-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.beach-gallery img:first-child{grid-column:1/-1;aspect-ratio:16/7}
+.beach-info .cap-note{display:flex;gap:32px;margin-top:24px}
+.beach-info .cap-item{text-align:center}
+.beach-info .cap-item .n{font-family:Arial,sans-serif;font-size:2rem;font-weight:700;color:var(--spark)}
+.beach-info .cap-item .l{font-family:Arial,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(42,46,61,.6);margin-top:4px}
+
+/* ── EXPERIENCES ─────────────────────────────────────────── */
+.experiences{padding:100px 24px;background:var(--midnight)}
+.exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px;margin-top:34px}
+.exp-card{border-radius:14px;overflow:hidden;position:relative;aspect-ratio:3/4}
+.exp-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.exp-card:hover img{transform:scale(1.05)}
+.exp-card .overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(42,46,61,.85) 0%,transparent 50%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px 16px}
+.exp-card .act-name{font-family:Arial,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pavement)}
+.exp-highlights{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.exp-hi{padding:20px 24px;background:rgba(245,243,240,.06);border-radius:12px;border-left:3px solid var(--spark)}
+.exp-hi p{font-size:.92rem;color:rgba(245,243,240,.75)}
+.exp-cta-row{display:flex;justify-content:center;margin-top:-28px;margin-bottom:34px}
+.exp-cta-row .btn{background:var(--spark);color:var(--midnight)}
+
+/* ── EXPERIENCE ENHANCERS ───────────────────────────────── */
+.enhancers{padding:100px 24px;background:var(--pavement)}
+.enhancer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.enhancer-card{background:var(--midnight);border-radius:16px;padding:36px 28px;position:relative;overflow:hidden;transition:transform .25s}
+.enhancer-card:hover{transform:translateY(-4px)}
+.enhancer-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--spark)}
+.enhancer-icon{font-size:2rem;margin-bottom:16px}
+.enhancer-name{font-family:Arial,sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--spark);margin-bottom:8px;font-weight:700}
+.enhancer-desc{font-size:.9rem;color:rgba(245,243,240,.7);line-height:1.6}
+
+/* ── GALLERY ────────────────────────────────────────────── */
+.gallery-section{padding:100px 24px;background:var(--midnight)}
+.gallery-filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:48px}
+.gf-btn{font-family:Arial,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid rgba(245,243,240,.25);color:rgba(245,243,240,.6);padding:8px 18px;border-radius:30px;cursor:pointer;transition:all .2s}
+.gf-btn.active,.gf-btn:hover{background:var(--spark);border-color:var(--spark);color:var(--midnight)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.gitem{border-radius:10px;overflow:hidden;aspect-ratio:1;cursor:pointer;position:relative}
+.gitem.wide{grid-column:span 2}
+.gitem.tall{grid-row:span 2}
+.gitem img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gitem:hover img{transform:scale(1.06)}
+.gitem .goverlay{position:absolute;inset:0;background:rgba(42,46,61,0);transition:background .25s;display:flex;align-items:flex-end;padding:16px}
+.gitem:hover .goverlay{background:rgba(42,46,61,.55)}
+.gitem .glabel{font-family:Arial,sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pavement);font-weight:700;opacity:0;transform:translateY(6px);transition:all .25s}
+.gitem:hover .glabel{opacity:1;transform:none}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:1000;align-items:center;justify-content:center;padding:32px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:6px}
+.lb-close{position:absolute;top:20px;right:28px;background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1}
+
+/* ── DOWNLOAD CENTER ─────────────────────────────────────── */
+.downloads{padding:100px 24px;background:var(--pavement)}
+.dl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dl-card{background:#fff;border-radius:14px;padding:28px 24px;display:flex;align-items:flex-start;gap:16px;box-shadow:0 2px 12px rgba(42,46,61,.07);transition:box-shadow .25s;text-decoration:none}
+.dl-card:hover{box-shadow:0 6px 24px rgba(42,46,61,.14)}
+.dl-icon{width:44px;height:44px;border-radius:10px;background:var(--midnight);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dl-icon svg{width:20px;height:20px;fill:var(--spark)}
+.dl-body .dl-name{font-family:Arial,sans-serif;font-size:.88rem;font-weight:700;color:var(--midnight);margin-bottom:4px}
+.dl-body .dl-desc{font-size:.8rem;color:rgba(42,46,61,.55);line-height:1.4;margin-bottom:12px}
+.dl-btn{font-family:Arial,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--spark);text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:none;background:none;cursor:pointer}
+.dl-btn:hover{color:var(--midnight)}
+.resource-downloads{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.resource-group{background:#fff;border-radius:14px;padding:26px;box-shadow:0 2px 14px rgba(42,46,61,.08)}
+.resource-group-head{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid rgba(42,46,61,.08);padding-bottom:14px;margin-bottom:14px}
+.resource-group-title{font-family:Arial,sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cargo)}
+.resource-count{font-family:Arial,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(42,46,61,.45)}
+.resource-links{display:grid;gap:10px}
+.resource-download-link{display:flex;align-items:center;gap:18px;border:1px solid rgba(42,46,61,.08);border-radius:10px;padding:14px 16px;text-decoration:none;background:rgba(245,243,240,.45);transition:background .2s,border-color .2s,transform .2s}
+.resource-download-link:hover{background:#fff;border-color:rgba(242,184,38,.75);transform:translateY(-2px)}
+.resource-download-name{font-family:Arial,sans-serif;font-size:.86rem;font-weight:700;color:var(--midnight);position:relative}
+.resource-download-name::after{content:'';position:absolute;left:0;right:0;bottom:-3px;height:2px;background:var(--spark);transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.resource-download-link:hover .resource-download-name::after{transform:scaleX(1)}
+
+/* ── RFP / CONTACT ──────────────────────────────────────── */
+.rfp{padding:100px 24px;background:var(--midnight)}
+.rfp-wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.rfp-form{background:rgba(245,243,240,.05);border:1px solid rgba(245,243,240,.12);border-radius:18px;padding:40px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-family:Arial,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,240,.6);margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(245,243,240,.08);border:1px solid rgba(245,243,240,.2);border-radius:8px;padding:12px 14px;font-family:Georgia,serif;font-size:.92rem;color:var(--pavement);outline:none;transition:border-color .2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--spark)}
+.form-group textarea{min-height:100px;resize:vertical}
+.form-group select{appearance:none;cursor:pointer}
+.form-group select option{background:var(--midnight)}
+.form-success{display:none;text-align:center;padding:40px 0}
+.form-success svg{width:48px;height:48px;fill:var(--spark);margin-bottom:16px}
+.form-success p{color:rgba(245,243,240,.75);font-size:1rem}
+.rfp-info .eyebrow{color:var(--spark)}
+.rfp-info .display{color:var(--pavement);font-size:2rem;margin:8px 0 20px}
+.rfp-info p{color:rgba(245,243,240,.65);line-height:1.7;margin-bottom:32px}
+.contact-cards{display:flex;flex-direction:column;gap:16px}
+.contact-card{background:rgba(245,243,240,.05);border:1px solid rgba(245,243,240,.1);border-radius:12px;padding:20px 24px}
+.contact-card .cc-role{font-family:Arial,sans-serif;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--spark);margin-bottom:4px;font-weight:700}
+.contact-card .cc-name{font-family:Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--pavement);margin-bottom:8px}
+.contact-card .cc-links{display:flex;flex-direction:column;gap:4px}
+.contact-card .cc-links a{font-size:.82rem;color:rgba(245,243,240,.55);text-decoration:none;transition:color .2s}
+.contact-card .cc-links a:hover{color:var(--spark)}
+
+/* ── CLOSING ─────────────────────────────────────────────── */
+.closing{position:relative;padding:140px 24px;text-align:center;overflow:hidden;background:var(--midnight)}
+.closing .bg{position:absolute;inset:0;background:url('images/slide14_055.jpg') center/cover no-repeat;opacity:.3}
+.closing .veil{position:absolute;inset:0;background:rgba(42,46,61,.6)}
+.closing-inner{position:relative;z-index:1}
+.closing .display{font-size:2.8rem;color:var(--pavement);margin-bottom:16px}
+.closing .display span{color:var(--spark)}
+.closing p{font-size:1.1rem;color:rgba(245,243,240,.75);max-width:500px;margin:0 auto 36px}
+.btn{display:inline-block;font-family:Arial,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--spark);color:var(--midnight);text-decoration:none;padding:16px 40px;border-radius:40px;transition:opacity .2s;border:none;cursor:pointer}
+.btn:hover{opacity:.85}
+
+footer{background:var(--midnight);text-align:center;padding:24px;font-family:Arial,sans-serif;font-size:.72rem;letter-spacing:.08em;color:rgba(245,243,240,.35);border-top:1px solid rgba(245,243,240,.08)}
+.logo-zone{position:fixed;right:22px;bottom:18px;z-index:90;background:rgba(245,243,240,.9);color:var(--midnight);border:1px solid rgba(42,46,61,.18);padding:10px 14px;border-radius:2px;font-family:Arial,sans-serif;font-size:.56rem;line-height:1.35;letter-spacing:.12em;text-transform:uppercase;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,.14)}
+.logo-zone span{display:block;color:rgba(42,46,61,.58);font-size:.48rem;margin-top:2px}
+
+@media (max-width:1100px){
+  .nav{height:auto;min-height:64px;padding:14px 24px;align-items:flex-start;gap:12px}
+  .nav-links{flex-wrap:wrap;gap:12px 18px}
+  .location-board{grid-template-columns:1fr 1fr}
+  .loc-card.feature{grid-row:auto;grid-column:1/-1}
+  .phuket-map-layout{grid-template-columns:1fr}
+  .resort-number-menu{grid-template-columns:repeat(2,1fr)}
+  .rooms-grid,.dining-grid,.fac-grid,.enhancer-grid,.dl-grid,.soc-grid,.coffee-theme-grid,.resource-downloads{grid-template-columns:repeat(2,1fr)}
+  .venues-grid{grid-template-columns:repeat(3,1fr)}
+  .section-resource-row{margin:-24px 0 42px}
+}
+
+@media (max-width:760px){
+  .nav{position:absolute}
+  .nav-links{display:none}
+  .hero{min-height:720px}
+  .stat-row,.rfp-wrap,.beach-section,.soc-resort-row,.venue-drawer.open{display:block}
+  .stat{border-right:0;border-bottom:1px solid rgba(245,243,240,.2)}
+  .location-board,.resort-intro,.rooms-grid,.dining-grid,.fac-grid,.exp-grid,.exp-highlights,.enhancer-grid,.dl-grid,.soc-grid,.form-row,.phuket-rec-grid,.resort-number-menu,.coffee-theme-grid,.resource-downloads{grid-template-columns:1fr}
+  .phuket-map-visual{min-height:500px}
+  .pin-name{display:none}
+  .map-num-pin{width:26px;height:26px;font-size:.68rem}
+  .beach-label{font-size:.72rem}
+  .venues-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .gitem.wide{grid-column:auto}
+  .cap-table{display:block;overflow-x:auto;white-space:nowrap}
+  .meeting-hero,.meetings-hero{aspect-ratio:4/3}
+  .section-resource-row{margin:-24px 0 34px}
+  .rfp-form{padding:26px}
+  .venue-drawer img{height:260px}
+  .coffee-drawer-image{min-height:260px}
+  .logo-zone{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="logo-zone" aria-label="Approved centered Renaissance property logo pending">Logo Asset<span>to be inserted</span></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="brandmark">Renaissance Phuket</div>
+  <nav class="nav-links">
+    <a href="#destination" data-t="nav_dest">Destination</a>
+    <a href="#rooms" data-t="nav_rooms">Accommodations</a>
+    <a href="#dining" data-t="nav_dining">Dining</a>
+    <a href="#meetings" data-t="nav_meetings">Meetings & Events</a>
+    <a href="#facilities" data-t="nav_fac">Facilities</a>
+    <a href="#experiences" data-t="nav_exp">Experiences</a>
+    <a href="#stay-connected" data-t="nav_soc">Stay Connected</a>
+    <a href="#gallery" data-t="nav_gallery">Gallery</a>
+    <a href="#downloads" data-t="nav_downloads">Downloads</a>
+    <a href="#rfp" data-t="nav_rfp">Request Proposal</a>
+  </nav>
+  <div class="lang-switch">
+    <button onclick="setLang('en')" class="active" data-lang="en">EN</button>
+    <button onclick="setLang('ru')" data-lang="ru">RU</button>
+    <button onclick="setLang('zh')" data-lang="zh">ZH</button>
+    <button onclick="setLang('ja')" data-lang="ja">JA</button>
+    <button onclick="setLang('ko')" data-lang="ko">KO</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="bg"></div><div class="veil"></div>
+  <div class="hero-inner reveal">
+    <div class="eyebrow" data-t="hero_eyebrow">Renaissance Phuket Resort & Spa</div>
+    <h1 class="display" data-t="hero_title">Sales Playbook <span>2026</span></h1>
+    <p class="hero-sub" data-t="hero_sub">Beachfront resort at Mai Khao Beach, Phuket</p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">180</div><div class="l" data-t="stat_rooms">Rooms & Villas</div></div>
+      <div class="stat"><div class="n">6</div><div class="l" data-t="stat_venues">Dining Venues</div></div>
+      <div class="stat"><div class="n">5</div><div class="l" data-t="stat_events">Event Spaces</div></div>
+      <div class="stat"><div class="n">55</div><div class="l" data-t="stat_activities">Activities</div></div>
+    </div>
+  </div>
+  <div class="scroll-cue">↓ Scroll to explore</div>
+</section>
+
+<!-- DESTINATION -->
+<section class="destination" id="destination">
+  <div class="wrap">
+    <div class="section-head light reveal">
+      <div class="eyebrow" data-t="dest_eyebrow">Where We Are</div>
+      <h2 class="display" data-t="dest_title">Mai Khao Beach, Phuket</h2>
+      <p class="sub" data-t="dest_body">Beachfront resort on Mai Khao Beach, adjacent to Sirinath National Park — 20 minutes from Phuket International Airport.</p>
+    </div>
+
+    <!-- Tab switcher -->
+    <div class="dest-tab-nav reveal">
+      <button class="dest-tab-btn active" onclick="showDestTab('phuket')" data-t="tab_phuket">Phuket & Surroundings</button>
+      <button class="dest-tab-btn" onclick="showDestTab('resort')" data-t="tab_resort">Resort Map & Activities</button>
+    </div>
+
+    <!-- ── TAB 1: Phuket Map ── -->
+    <div id="tab-phuket" class="dest-tab active reveal">
+      <div class="phuket-map-layout">
+        <div class="phuket-map-visual" aria-label="Phuket map with highlighted guest recommendations">
+          <img src="images/slide02_003.png" alt="Map of Phuket with Renaissance Phuket and selected highlights">
+          <button class="phuket-pin hero active" style="--x:48%;--y:9%" data-destination="hotel" onclick="selectDestination('hotel')" onmouseenter="selectDestination('hotel')" type="button"><span class="pin-number">H</span><span class="pin-name">Renaissance Phuket</span></button>
+          <button class="phuket-pin" style="--x:49%;--y:8%" data-destination="turtle" onclick="selectDestination('turtle')" onmouseenter="selectDestination('turtle')" type="button"><span class="pin-number">1</span><span class="pin-name">Turtle Village</span></button>
+          <button class="phuket-pin" style="--x:48%;--y:4%" data-destination="sarasin" onclick="selectDestination('sarasin')" onmouseenter="selectDestination('sarasin')" type="button"><span class="pin-number">2</span><span class="pin-name">Sarasin Bridge</span></button>
+          <button class="phuket-pin" style="--x:46%;--y:10%" data-destination="pru" onclick="selectDestination('pru')" onmouseenter="selectDestination('pru')" type="button"><span class="pin-number">3</span><span class="pin-name">Pru Jae Son</span></button>
+          <button class="phuket-pin" style="--x:63%;--y:52%" data-destination="town" onclick="selectDestination('town')" onmouseenter="selectDestination('town')" type="button"><span class="pin-number">4</span><span class="pin-name">Phuket Town</span></button>
+          <button class="phuket-pin" style="--x:40%;--y:54%" data-destination="patong" onclick="selectDestination('patong')" onmouseenter="selectDestination('patong')" type="button"><span class="pin-number">5</span><span class="pin-name">Patong</span></button>
+          <button class="phuket-pin" style="--x:53%;--y:18%" data-destination="airport" onclick="selectDestination('airport')" onmouseenter="selectDestination('airport')" type="button"><span class="pin-number">6</span><span class="pin-name">Phuket Airport</span></button>
+          <div class="phuket-map-card" id="destinationMapCard">
+            <div class="map-card-kicker" id="destinationKicker">Hotel Anchor</div>
+            <h4 id="destinationTitle">Renaissance Phuket Resort & Spa</h4>
+            <div class="map-card-meta">
+              <span id="destinationCategory">Beachfront resort</span>
+              <span id="destinationDistance">Anchor point</span>
+              <span id="destinationTime">Mai Khao Beach</span>
+            </div>
+            <p id="destinationDescription">The main reference point for every journey, set on Mai Khao Beach beside Sirinath National Park.</p>
+          </div>
+        </div>
+        <div>
+          <div class="eyebrow">Recommended Spots</div>
+          <h3 class="display" style="font-size:1.8rem;color:var(--pavement);margin-bottom:18px">A Few Places to Point Guests Toward</h3>
+          <div class="phuket-rec-grid">
+            <button class="rec-card active" data-destination-card="hotel" onclick="selectDestination('hotel')" type="button"><strong>Hotel Anchor</strong><h3>Mai Khao Beach</h3><p>The resort sits beachfront on Mai Khao Beach, adjacent to Sirinath National Park.</p><div class="rec-meta"><span>At resort</span><span>0 min</span></div></button>
+            <button class="rec-card" data-destination-card="turtle" onclick="selectDestination('turtle')" type="button"><strong>1 · Shopping</strong><h3>Turtle Village</h3><p>Nearby shopping and dining with complimentary transfer every hour.</p><div class="rec-meta"><span>2 km</span><span>5 min by car</span></div></button>
+            <button class="rec-card" data-destination-card="sarasin" onclick="selectDestination('sarasin')" type="button"><strong>2 · Viewpoint</strong><h3>Sarasin Bridge</h3><p>A northbound gateway toward Phang Nga and coastal views.</p><div class="rec-meta"><span>Approx. 6 km</span><span>13 min by car</span></div></button>
+            <button class="rec-card" data-destination-card="pru" onclick="selectDestination('pru')" type="button"><strong>3 · Local Discovery</strong><h3>Pru Jae Son</h3><p>A scenic mangrove setting for cycling close to the resort.</p><div class="rec-meta"><span>0 km</span><span>0 min</span></div></button>
+            <button class="rec-card" data-destination-card="town" onclick="selectDestination('town')" type="button"><strong>4 · Culture</strong><h3>Phuket Town</h3><p>Connected by the hotel shuttle route with Central Floresta, three times daily.</p><div class="rec-meta"><span>Approx. 38 km</span><span>50 min by car</span></div></button>
+            <button class="rec-card" data-destination-card="patong" onclick="selectDestination('patong')" type="button"><strong>5 · Attractions</strong><h3>Patong</h3><p>A sandy, crescent beach lined with cafes, restaurants, bars and night life.</p><div class="rec-meta"><span>Approx. 35 km</span><span>50 min by car</span></div></button>
+            <button class="rec-card" data-destination-card="airport" onclick="selectDestination('airport')" type="button"><strong>6 · Arrival</strong><h3>Phuket International Airport</h3><p>The key arrival point — just 20 minutes from the resort.</p><div class="rec-meta"><span>Approx. 20 min</span><span>By car</span></div></button>
+          </div>
+        </div>
+      </div>
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#F2B826;border:2px solid #c49000"></div>Renaissance Phuket</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#F2B826"></div>Guest highlights</div>
+      </div>
+      <div class="map-shuttle">
+        <div class="shuttle-item">
+          <div class="shuttle-label" data-t="dest_shuttle">Shuttle Service</div>
+          <p data-t="dest_shuttle1">3× daily: Hotel ↔ Phuket Town & Central Floresta</p>
+          <p data-t="dest_shuttle2">3× daily: Hotel ↔ Patong</p>
+        </div>
+        <div class="shuttle-item">
+          <div class="shuttle-label">Key Distances</div>
+          <p>Phuket International Airport: approx. 20 min &nbsp;|&nbsp; Turtle Village: 2 km · 5 min</p>
+          <p>Pru Jae Son: 0 km · 0 min &nbsp;|&nbsp; Phuket Town: approx. 38 km · 50 min</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TAB 2: Resort Map ── -->
+    <div id="tab-resort" class="dest-tab reveal">
+      <div class="resort-wrap">
+        <div class="resort-intro">
+          <div class="r-stat"><div class="n">32</div><div class="l">In-Resort Activities</div></div>
+          <div class="r-stat"><div class="n">23</div><div class="l">Nearby Experiences</div></div>
+          <div class="r-stat"><div class="n">6</div><div class="l">Dining Venues</div></div>
+          <div class="r-stat"><div class="n">55</div><div class="l">Total Discoveries</div></div>
+        </div>
+        <div class="aerial-map-container">
+          <div class="aerial-map-stage" aria-label="Aerial resort map with numbered locations">
+            <img src="images/HKTBR_Aerial_Top_View_Map.jpg" alt="Aerial top view of Renaissance Phuket Resort & Spa">
+            <div class="beach-label">Mai Khao Beach</div>
+            <button class="map-num-pin" style="--x:78%;--y:46%" onclick="highlightResortPin('1')" data-pin="1" aria-label="1 Lobby">1</button>
+            <button class="map-num-pin" style="--x:89%;--y:29%" onclick="highlightResortPin('2')" data-pin="2" aria-label="2 Parking">2</button>
+            <button class="map-num-pin" style="--x:82%;--y:31%" onclick="highlightResortPin('3')" data-pin="3" aria-label="3 R Ballroom">3</button>
+            <button class="map-num-pin" style="--x:72.5%;--y:46%" onclick="highlightResortPin('4')" data-pin="4" aria-label="4 Loca Vore">4</button>
+            <button class="map-num-pin" style="--x:78.8%;--y:58%" onclick="highlightResortPin('5')" data-pin="5" aria-label="5 The Lounge">5</button>
+            <button class="map-num-pin" style="--x:73.5%;--y:58%" onclick="highlightResortPin('6')" data-pin="6" aria-label="6 Doppio">6</button>
+            <button class="map-num-pin" style="--x:36%;--y:70%" onclick="highlightResortPin('7')" data-pin="7" aria-label="7 Takieng">7</button>
+            <button class="map-num-pin" style="--x:31.7%;--y:70%" onclick="highlightResortPin('8')" data-pin="8" aria-label="8 Sand Box Beachfront Bar & Eatery">8</button>
+            <button class="map-num-pin" style="--x:45.5%;--y:37%" onclick="highlightResortPin('20')" data-pin="20" aria-label="20 Herb Garden">20</button>
+            <button class="map-num-pin" style="--x:74.7%;--y:64%" onclick="highlightResortPin('10')" data-pin="10" aria-label="10 Gym">10</button>
+            <button class="map-num-pin" style="--x:57%;--y:45%" onclick="highlightResortPin('11')" data-pin="11" aria-label="11 Quan Spa">11</button>
+            <button class="map-num-pin" style="--x:62%;--y:60%" onclick="highlightResortPin('12')" data-pin="12" aria-label="12 Kids World and Dino Pool">12</button>
+            <button class="map-num-pin" style="--x:32.4%;--y:59%" onclick="highlightResortPin('13')" data-pin="13" aria-label="13 Ren Pool">13</button>
+            <button class="map-num-pin" style="--x:52%;--y:75%" onclick="highlightResortPin('14')" data-pin="14" aria-label="14 Deluxe Rooms">14</button>
+            <button class="map-num-pin" style="--x:66%;--y:75%" onclick="highlightResortPin('14')" data-pin="14" aria-label="14 Deluxe Rooms">14</button>
+            <button class="map-num-pin" style="--x:55%;--y:28%" onclick="highlightResortPin('15')" data-pin="15" aria-label="15 Deluxe Lagoon Rooms">15</button>
+            <button class="map-num-pin" style="--x:64%;--y:28%" onclick="highlightResortPin('16')" data-pin="16" aria-label="16 One Bedroom Suites">16</button>
+            <button class="map-num-pin" style="--x:44.7%;--y:70%" onclick="highlightResortPin('16')" data-pin="16" aria-label="16 One Bedroom Suites">16</button>
+            <button class="map-num-pin" style="--x:39.7%;--y:41%" onclick="highlightResortPin('17')" data-pin="17" aria-label="17 Pool Villas">17</button>
+            <button class="map-num-pin" style="--x:29.2%;--y:43%" onclick="highlightResortPin('18')" data-pin="18" aria-label="18 Oceanfront Pool Villas">18</button>
+            <button class="map-num-pin" style="--x:27.8%;--y:28%" onclick="highlightResortPin('19')" data-pin="19" aria-label="19 Duplex Oceanfront Villa">19</button>
+            <button class="map-num-pin" style="--x:41%;--y:70%" onclick="highlightResortPin('9')" data-pin="9" aria-label="9 Yunami">9</button>
+          </div>
+          <div class="resort-number-menu">
+            <div class="num-menu-col">
+              <h4>Public Area</h4>
+              <div class="num-menu-list">
+                <button class="num-menu-item" onclick="highlightResortPin('1')"><span class="num-badge">1</span><span class="num-label">Lobby</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('13')"><span class="num-badge">13</span><span class="num-label">Ren Pool</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('2')"><span class="num-badge">2</span><span class="num-label">Parking</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('20')"><span class="num-badge">20</span><span class="num-label">Herb Garden</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('3')"><span class="num-badge">3</span><span class="num-label">R Ballroom</span></button>
+              </div>
+            </div>
+            <div class="num-menu-col">
+              <h4>Accommodations</h4>
+              <div class="num-menu-list">
+                <button class="num-menu-item" onclick="highlightResortPin('14')"><span class="num-badge">14</span><span class="num-label">Deluxe Rooms</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('15')"><span class="num-badge">15</span><span class="num-label">Deluxe Lagoon Rooms</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('16')"><span class="num-badge">16</span><span class="num-label">One Bedroom Suites</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('17')"><span class="num-badge">17</span><span class="num-label">Pool Villas</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('18')"><span class="num-badge">18</span><span class="num-label">Oceanfront Pool Villas</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('19')"><span class="num-badge">19</span><span class="num-label">Duplex Oceanfront Villa</span></button>
+              </div>
+            </div>
+            <div class="num-menu-col">
+              <h4>Activities</h4>
+              <div class="num-menu-list">
+                <button class="num-menu-item" onclick="highlightResortPin('10')"><span class="num-badge">10</span><span class="num-label">Gym</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('11')"><span class="num-badge">11</span><span class="num-label">Quan Spa</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('12')"><span class="num-badge">12</span><span class="num-label">Kids World & Dino Pool</span></button>
+              </div>
+            </div>
+            <div class="num-menu-col">
+              <h4>Restaurants & Bars</h4>
+              <div class="num-menu-list">
+                <button class="num-menu-item" onclick="highlightResortPin('4')"><span class="num-badge">4</span><span class="num-label">Loca Vore</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('7')"><span class="num-badge">7</span><span class="num-label">Takieng</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('5')"><span class="num-badge">5</span><span class="num-label">The Lounge</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('8')"><span class="num-badge">8</span><span class="num-label">Sand Box</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('6')"><span class="num-badge">6</span><span class="num-label">Doppio</span></button>
+                <button class="num-menu-item" onclick="highlightResortPin('9')"><span class="num-badge">9</span><span class="num-label">Yunami</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="resort-map-container legacy-discovery">
+          <div class="beach-bar">🏖 MAI KHAO BEACH — ANDAMAN SEA</div>
+          <div class="resort-grid" id="resort-grid">
+
+            <!-- Row 1: Beach zone (full width) -->
+            <div class="rzone z-beach" style="grid-column:1/-1" onclick="toggleZone(this,'beach')">
+              <div class="zone-icon">🌊</div>
+              <div class="zone-name">Beach & Waterfront</div>
+              <div class="zone-hint">Sand bathing · Sunset cocktails · Yoga · Campfire</div>
+              <div class="zone-count">7</div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="rzone z-food" onclick="toggleZone(this,'sandbox')">
+              <div class="zone-icon">🍹</div>
+              <div class="zone-name">Sand Box</div>
+              <div class="zone-hint">Beachfront Bar & Eatery</div>
+              <div class="zone-count">1</div>
+            </div>
+            <div class="rzone z-leisure" onclick="toggleZone(this,'pool')">
+              <div class="zone-icon">🏊</div>
+              <div class="zone-name">Main Pool</div>
+              <div class="zone-hint">Lagoon pool · Morning yoga</div>
+              <div class="zone-count">2</div>
+            </div>
+            <div class="rzone z-leisure" onclick="toggleZone(this,'kids')">
+              <div class="zone-icon">🦕</div>
+              <div class="zone-name">Kids World & Dino Pool</div>
+              <div class="zone-hint">Pool inflatables · Arts · Jungle trail</div>
+              <div class="zone-count">3</div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="rzone z-food" onclick="toggleZone(this,'lounge')">
+              <div class="zone-icon">🍸</div>
+              <div class="zone-name">The Lounge</div>
+              <div class="zone-hint">Punch Bowl Ritual · Fairy dance show</div>
+              <div class="zone-count">2</div>
+            </div>
+            <div class="rzone z-rooms" style="grid-row:span 2" onclick="toggleZone(this,'lobby')">
+              <div class="zone-icon">🏨</div>
+              <div class="zone-name">Lobby & Arrival</div>
+              <div class="zone-hint">Cha Ya Nut welcome · Instagrammable spots</div>
+              <div class="zone-count">2</div>
+            </div>
+            <div class="rzone z-wellness" onclick="toggleZone(this,'spa')">
+              <div class="zone-icon">✨</div>
+              <div class="zone-name">Quan Spa</div>
+              <div class="zone-hint">Sound healing · Massages · Wellness</div>
+              <div class="zone-count">2</div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="rzone z-food" onclick="toggleZone(this,'dining')">
+              <div class="zone-icon">🍽</div>
+              <div class="zone-name">Takieng · Loca Vore · Doppio</div>
+              <div class="zone-hint">Thai dining · Breakfast · Café</div>
+              <div class="zone-count">9</div>
+            </div>
+            <div class="rzone z-nature" onclick="toggleZone(this,'fitness')">
+              <div class="zone-icon">💪</div>
+              <div class="zone-name">Fitness & Recreation</div>
+              <div class="zone-hint">24h gym · Muay Thai · Yoga · Bike tour</div>
+              <div class="zone-count">4</div>
+            </div>
+
+            <!-- Panel slots (hidden, revealed on click) -->
+            <div id="panel-beach" class="zone-panel" style="grid-column:1/-1">
+              <div class="zone-panel-title">🌊 Beach & Waterfront Activities</div>
+              <div class="activity-items">
+                <div class="activity-item"><span class="act-num">#4</span><span class="act-text">Sand bathing at Mai Khao Beach — best in the morning</span></div>
+                <div class="activity-item"><span class="act-num">#6</span><span class="act-text">Learn the traditional art of catching mole crabs at the beachfront (May–Oct)</span></div>
+                <div class="activity-item"><span class="act-num">#22</span><span class="act-text">Beach picnic — a photogenic spot not to be missed</span></div>
+                <div class="activity-item"><span class="act-num">#29</span><span class="act-text">Watch sunset over Mai Khao Beach with a cocktail from Sand Box</span></div>
+                <div class="activity-item"><span class="act-num">#31</span><span class="act-text">Sunset yoga class overlooking Mai Khao Beach</span></div>
+                <div class="activity-item"><span class="act-num">#32</span><span class="act-text">Cozy beachside evening roasting marshmallows at sunset</span></div>
+                <div class="activity-item"><span class="act-num">#36</span><span class="act-text">Horseback riding through scenic trails on Mai Khao Beach</span></div>
+              </div>
+            </div>
+            <div id="panel-sandbox" class="zone-panel" style="grid-column:1/-1">
+              <div class="zone-panel-title">🍹 Sand Box Beachfront Bar & Eatery</div>
+              <div class="activity-items">
+                <div class="activity-item"><span class="act-num">#29</span><span class="act-text">Watch sunset over Mai Khao Beach with special cocktail from Sand Box Bar</span></div>
+              </div>
+            </div>
+            <div id="panel-pool" class="zone-panel" style="grid-column:1/-1">
+              <div class="zone-panel-title">🏊 Pool & Aqua Activities</div>
+              <div class="activity-items">
+                <div class="activity-item"><span class="act-num">#10</span><span class="act-text">Start your day with morning yoga by the pool</span></div>
+                <div class="activity-item"><span class="act-num">#31</span><span class="act-text">Sunset yoga with stunning pool and ocean backdrop</span></div>
+              </div>
+            </div>
+            <div id="panel-kids" class="zone-panel" style="grid-column:1/-1">
+              <div class="zone-panel-title">🦕 Kids World & Dino Pool</div>
+              <div class="activity-items">
+                <div class="activity-item"><span class="act-num">#8</span><span class="act-text">Dive into fun with dinosaur and unicorn inflatables at the Kids Pool</span></div>
+                <div class="activity-item"><span class="act-num">#9</span><span class="act-text">Engage in the art of Northern Thai umbrella painting at Kids World</span></div>
+                <div class="activity-item"><span class="act-num">#17</span><span class="act-text">Venture behind the kids pool to explore the hidden wonders of the jungle</span></div>
+              </div>
+            </div>
+            <div id="panel-lounge" class="zone-panel" style="grid-column:1/-1">
+              <div class="zone-panel-title">🍸 The Lounge</div>
+              <div class="activity-items">
+                <div class="activity-item"><span class="act-num">#24</span><span class="act-text">Join our distinctive Punch Bowl Ritual — a memorable evening experience</span></div>
+                <div class="activity-item"><span class="act-num">#30</span><span class="act-text">Be mesmerized by our fairy dance show at The Lounge</span></div>
+              </div>
+            </div>
+            <div id="panel-lobby" class="zone-panel" style="grid-column:1/-1">
+              <div class="zone-panel-title">🏨 Lobby & Arrival Experience</div>
+              <div class="activity-items">
+                <div class="activity-item"><span class="act-num">#1</span><span class="act-text">Discover the blend of local flavors with Cha Ya Nut — our signature welcome drink</span></div>
+                <div class="activity-item"><span class="act-num">#3</span><span class="act-text">Follow our Navigator's guide to discover Instagrammable spots around the resort</span></div>
+              </div>
+            </div>
+            <div id="panel-spa" class="zone-panel" style="grid-column:1/-1">
+              <div class="zone-panel-title">✨ Quan Spa & Wellness</div>
+              <div class="activity-items">
+                <div class="activity-item"><span class="act-num">#16</span><span class="act-text">Discover Look Tho — a tropical edible plant found at the entrance of Quan Spa</span></div>
+                <div class="activity-item"><span class="act-num">Spa</span><span class="act-text">Sound healing sessions with Spa Manager Khun Miki · Massages · Facials</span></div>
+              </div>
+            </div>
+            <div id="panel-dining" class="zone-panel" style="grid-column:1/-1">
+              <div class="zone-panel-title">🍽 Takieng · Loca Vore · Doppio</div>
+              <div class="activity-items">
+                <div class="activity-item"><span class="act-num">#2</span><span class="act-text">Start with signature Thai pancakes Bi Koh Moi at Loca Vore breakfast</span></div>
+                <div class="activity-item"><span class="act-num">#14</span><span class="act-text">Feed fish with nutritious corn powder at the tranquil Loca Vore pond</span></div>
+                <div class="activity-item"><span class="act-num">#19</span><span class="act-text">Afternoon tea at Doppio — finely crafted pastries and teas</span></div>
+                <div class="activity-item"><span class="act-num">#20</span><span class="act-text">Cool down with artisanal ice creams at Doppio</span></div>
+                <div class="activity-item"><span class="act-num">#21</span><span class="act-text">Affogato & Cocogato (espresso with coconut) at Doppio</span></div>
+                <div class="activity-item"><span class="act-num">#25</span><span class="act-text">Discover Mole Crab Delicacies — a local favorite only found at Takieng</span></div>
+                <div class="activity-item"><span class="act-num">#26</span><span class="act-text">Monthly specials featuring authentic flavors from each Thai region at Takieng</span></div>
+                <div class="activity-item"><span class="act-num">#27</span><span class="act-text">Savor Pla Kapong Mieng Kam — authentic southern Thai at Takieng</span></div>
+                <div class="activity-item"><span class="act-num">#28</span><span class="act-text">Thai-inspired handcrafted cocktails with a twist at Takieng</span></div>
+              </div>
+            </div>
+            <div id="panel-fitness" class="zone-panel" style="grid-column:1/-1">
+              <div class="zone-panel-title">💪 Fitness, Recreation & Nature</div>
+              <div class="activity-items">
+                <div class="activity-item"><span class="act-num">#5</span><span class="act-text">Morning stroll around the pond to admire the blooming lotus</span></div>
+                <div class="activity-item"><span class="act-num">#7</span><span class="act-text">Capture the beauty of the cannonball tree with unique fruits and blooms</span></div>
+                <div class="activity-item"><span class="act-num">#11</span><span class="act-text">Test your fitness with the Peg Board challenge at the gym</span></div>
+                <div class="activity-item"><span class="act-num">#12</span><span class="act-text">Introductory Thai boxing (Muay Thai) sessions</span></div>
+                <div class="activity-item"><span class="act-num">#13</span><span class="act-text">3.5 km bike tour through the natural beauty of Phru Je Son mangroves</span></div>
+                <div class="activity-item"><span class="act-num">#15</span><span class="act-text">Explore the herb garden and learn culinary and medicinal uses of local plants</span></div>
+                <div class="activity-item"><span class="act-num">#18</span><span class="act-text">24-hour gym — always open, always ready</span></div>
+                <div class="activity-item"><span class="act-num">#23</span><span class="act-text">Learn secrets of authentic Thai cuisine in our cooking class</span></div>
+              </div>
+            </div>
+
+          </div><!-- /resort-grid -->
+          <div class="resort-legend">
+            <div class="rl-item"><div class="rl-dot" style="background:rgba(51,151,182,.5)"></div>Beach & Water</div>
+            <div class="rl-item"><div class="rl-dot" style="background:rgba(242,184,38,.4)"></div>Food & Beverage</div>
+            <div class="rl-item"><div class="rl-dot" style="background:rgba(79,74,6,.5)"></div>Leisure & Pools</div>
+            <div class="rl-item"><div class="rl-dot" style="background:rgba(160,100,160,.4)"></div>Wellness & Spa</div>
+            <div class="rl-item"><div class="rl-dot" style="background:rgba(60,140,80,.4)"></div>Fitness & Nature</div>
+          </div>
+          <div class="resort-compass">↑ NORTH · MAI KHAO BEACH &nbsp;&nbsp;|&nbsp;&nbsp; ENTRANCE → SOUTH</div>
+        </div>
+      </div>
+    </div><!-- /tab-resort -->
+
+  </div>
+</section>
+
+<!-- ACCOMMODATIONS -->
+<section class="rooms" id="rooms">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-t="rooms_eyebrow">Accommodations</div>
+      <h2 class="display" data-t="rooms_title">180 Renovated Rooms & Villas</h2>
+      <p class="sub" data-t="rooms_sub">Six categories from garden-view deluxe rooms to the Duplex Oceanfront Villa.</p>
+    </div>
+    <div class="section-resource-row reveal">
+      <a class="section-resource-card cta-only" href="https://www.marriott.com/en-us/hotels/hktbr-renaissance-phuket-resort-and-spa/rooms/" target="_blank" rel="noopener">
+        <span class="resource-link" data-t="dl_view">SEE MORE DETAILS</span>
+      </a>
+    </div>
+    <div class="rooms-grid">
+
+      <!-- 1. Deluxe Room Garden View -->
+      <div class="room-card reveal">
+        <div class="ph"><img src="images/Site - room type - 1.jpg" alt="Deluxe Room Garden View" loading="lazy"></div>
+        <div class="body">
+          <div class="size-badge">46 sqm</div>
+          <div class="name" data-t="room1_name">Deluxe Room</div>
+          <div class="view-tag">Garden View · King or Twin</div>
+          <p class="desc">Newly renovated room featuring soundproofed walls, warm wooden accents, and a soft, soothing colour palette. Private terrace overlooks the tropical garden.</p>
+          <div class="room-meta">
+            <div class="meta-item">👤 Max 3 Adults + 2 Children</div>
+            <div class="meta-item">🛏 King or 2 Single Beds</div>
+          </div>
+          <div class="room-feats">
+            <div class="feat">Walk-in rain shower · Separate bathtub</div>
+            <div class="feat">Private terrace with garden views</div>
+            <div class="feat">Minibar · Flat-screen TV · Tea & coffee maker</div>
+            <div class="feat">In-room safe · Robes & slippers</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Deluxe Lagoon View -->
+      <div class="room-card reveal">
+        <div class="ph"><img src="images/Site - room type - 2.jpg" alt="Deluxe Lagoon View" loading="lazy"></div>
+        <div class="body">
+          <div class="size-badge">46 sqm</div>
+          <div class="name" data-t="room2_name">Deluxe Lagoon View</div>
+          <div class="view-tag">Lagoon Pool View · King or Twin</div>
+          <p class="desc">Floor-to-ceiling windows frame the shimmering lagoon pool beyond a private terrace. Warm earth tones and organic textures bring the outdoors in.</p>
+          <div class="room-meta">
+            <div class="meta-item">👤 Max 3 Adults + 2 Children</div>
+            <div class="meta-item">🛏 King or 2 Single Beds</div>
+          </div>
+          <div class="room-feats">
+            <div class="feat">Walk-in rain shower · Bathtub</div>
+            <div class="feat">Floor-to-ceiling windows · Private terrace</div>
+            <div class="feat">Minibar · Flat-screen TV · Tea & coffee maker</div>
+            <div class="feat">In-room safe · Robes & slippers</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. One Bedroom Suite -->
+      <div class="room-card reveal">
+        <div class="ph"><img src="images/Site - room type - 3.jpg" alt="One Bedroom Suite" loading="lazy"></div>
+        <div class="body">
+          <div class="size-badge">97 sqm</div>
+          <div class="name" data-t="room3_name">One Bedroom Suite</div>
+          <div class="view-tag">Garden / Resort View · King</div>
+          <p class="desc">Expansive two-room suite with a separate living area, private balcony, and well-equipped kitchenette. Two balconies and floor-to-ceiling windows create an airy, residential feel.</p>
+          <div class="room-meta">
+            <div class="meta-item">👤 Max 3 Adults + 2 Children</div>
+            <div class="meta-item">🛏 King + Sofa Bed</div>
+          </div>
+          <div class="room-feats">
+            <div class="feat">Separate bedroom & living room</div>
+            <div class="feat">Walk-in closet · Kitchenette with microwave</div>
+            <div class="feat">Bathtub & walk-in shower · Dining area</div>
+            <div class="feat">Two private balconies · Soundproofed</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. One Bedroom Pool Villa Garden View -->
+      <div class="room-card reveal">
+        <div class="ph"><img src="images/Site - room type - 4.jpg" alt="One Bedroom Pool Villa" loading="lazy"></div>
+        <div class="body">
+          <div class="size-badge">117 sqm</div>
+          <div class="name" data-t="room4_name">One Bedroom Pool Villa</div>
+          <div class="view-tag">Garden View · Private Plunge Pool</div>
+          <p class="desc">Ground-floor villa celebrating Southern Thai folk culture with a contemporary point of view. Natural materials, warm wood tones, and an open-plan layout flow to the private pool terrace.</p>
+          <div class="room-meta">
+            <div class="meta-item">👤 Max 3 Adults + 2 Children</div>
+            <div class="meta-item">🛏 King Bed</div>
+          </div>
+          <div class="room-feats">
+            <div class="feat">Private plunge pool · Sun terrace with loungers</div>
+            <div class="feat">Floor-to-ceiling windows · Double vanity</div>
+            <div class="feat">Freestanding bathtub · Spacious walk-in shower</div>
+            <div class="feat">Private entrance · Minibar · Coffee maker</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. One Bedroom Oceanfront Pool Villa -->
+      <div class="room-card reveal">
+        <div class="ph"><img src="images/Site - room type - 5.jpg" alt="One Bedroom Oceanfront Pool Villa" loading="lazy"></div>
+        <div class="body">
+          <div class="size-badge">117 sqm</div>
+          <div class="name" data-t="room5_name">One Bedroom Oceanfront Pool Villa</div>
+          <div class="view-tag">Direct Oceanfront · Private Plunge Pool</div>
+          <p class="desc">Steps from Mai Khao Beach, this villa offers sweeping Andaman Sea views from both the private pool terrace and the freestanding bathtub. Open-plan living fills every room with sea light.</p>
+          <div class="room-meta">
+            <div class="meta-item">👤 Max 3 Adults + 2 Children</div>
+            <div class="meta-item">🛏 Extra Large King Bed</div>
+          </div>
+          <div class="room-feats">
+            <div class="feat">Private pool steps from the beach</div>
+            <div class="feat">Panoramic Andaman Sea views</div>
+            <div class="feat">Freestanding bathtub · Rainfall shower</div>
+            <div class="feat">Open-plan living & sleeping area · Soundproofed</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Duplex Three Bedroom Oceanfront Pool Villa -->
+      <div class="room-card reveal">
+        <div class="ph"><img src="images/Site - room type - 6.jpg" alt="Three Bedroom Oceanfront Pool Villa" loading="lazy"></div>
+        <div class="body">
+          <div class="size-badge">337 sqm · 2 Levels</div>
+          <div class="name" data-t="room6_name">Three Bedroom Oceanfront Pool Villa</div>
+          <div class="view-tag">Oceanfront · 3 Bedrooms · Duplex</div>
+          <p class="desc">Our signature villa spans two levels on the Andaman beachfront. Three private bedrooms each with ensuite bathrooms, a refined living room, bright dining space, and a panoramic ocean-view pool terrace.</p>
+          <div class="room-meta">
+            <div class="meta-item">👤 Max 7 Adults + 6 Children</div>
+            <div class="meta-item">🛏 3 King Beds</div>
+          </div>
+          <div class="room-feats">
+            <div class="feat">3 bedrooms · 3 ensuite bathrooms · 2 levels</div>
+            <div class="feat">Private oceanfront pool · Spacious terrace with loungers</div>
+            <div class="feat">Separate living & dining areas · Full kitchen</div>
+            <div class="feat">Panoramic bathtub views · Floor-to-ceiling windows</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DINING -->
+<section class="dining" id="dining">
+  <div class="wrap">
+    <div class="section-head light reveal">
+      <div class="eyebrow" data-t="dining_eyebrow">Sip & Savor</div>
+      <h2 class="display" data-t="dining_title">Six Venues, One Neighborhood</h2>
+      <p class="sub" data-t="dining_sub">From southern Thai classics to coastal Japanese izakaya — our restaurants have carved a niche in the Phuket dining scene.</p>
+    </div>
+    <div class="section-resource-row reveal">
+      <a class="section-resource-card cta-only dark" href="https://www.marriott.com/en-us/hotels/hktbr-renaissance-phuket-resort-and-spa/dining/" target="_blank" rel="noopener">
+        <span class="resource-link" data-t="dl_view">SEE MORE DETAILS</span>
+      </a>
+    </div>
+    <div class="dining-grid">
+
+      <!-- 1. Yunami -->
+      <div class="rest-card reveal">
+        <div class="ph"><img src="images/1.jpg" alt="Yunami"></div>
+        <div class="body">
+          <div class="tag">Japanese Coastal Izakaya</div>
+          <div class="name">Yunami</div>
+          <p data-t="r6_desc">Coastal Japanese izakaya creating day-to-night moments through fresh Andaman ingredients, craftsmanship, and cozy golden-hour vibes.</p>
+          <div class="sig">Signature: Kagoshima A5 Wagyu Striploin</div>
+          <div class="hours">🕐 Lunch & Dinner (Opening July 2026)</div>
+          <div class="soc-links">
+            <a href="https://www.yunamiphuket.com" target="_blank" rel="noopener">Website</a>
+            <a href="https://www.instagram.com/yunamiphuket/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Takieng -->
+      <div class="rest-card reveal">
+        <div class="ph"><img src="images/2.jpg" alt="Takieng"></div>
+        <div class="body">
+          <div class="tag">Signature Thai Cuisine</div>
+          <div class="name">Takieng</div>
+          <p data-t="r1_desc">Award-winning southern Thai restaurant inspired by fishermen's lanterns, featuring rare local ingredients from Mai Khao — including the legendary Mole Crab.</p>
+          <div class="sig">Signature: Fried Tom Yum Mole Crab</div>
+          <div class="hours">🕐 Daily · 12:00 PM – 11:00 PM</div>
+          <div class="soc-links">
+            <a href="https://www.takiengphuket.com" target="_blank" rel="noopener">Website</a>
+            <a href="https://www.takiengphuket.com/our-menus" target="_blank" rel="noopener">Menu</a>
+            <a href="https://www.facebook.com/takiengphuket" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.instagram.com/takiengphuket/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Sand Box -->
+      <div class="rest-card reveal">
+        <div class="ph"><img src="images/3.jpg" alt="Sand Box"></div>
+        <div class="body">
+          <div class="tag">International · Beachfront</div>
+          <div class="name">Sand Box Beachfront Bar & Eatery</div>
+          <p data-t="r2_desc">Relaxed beachfront dining with international favorites. Casual by day — BBQ vibes, cocktails, and sunset views by night.</p>
+          <div class="sig">Signature: Import Wagyu Beef Burger</div>
+          <div class="hours">🕐 Daily · 11:00 AM – 11:00 PM</div>
+          <div class="soc-links">
+            <a href="https://www.facebook.com/SandBoxBeachfrontBar" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.instagram.com/sand_box_beachfrontbar_eatery/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Loca Vore -->
+      <div class="rest-card reveal">
+        <div class="ph"><img src="images/4.jpg" alt="Loca Vore"></div>
+        <div class="body">
+          <div class="tag">Buffet Breakfast</div>
+          <div class="name">Loca Vore</div>
+          <p data-t="r3_desc">Start your day with a full breakfast spread — international comfort foods, Thai classics, and global favorites served in a bright garden-facing setting.</p>
+          <div class="sig">Signature: Bigomoi Pancake · Bi Koh Moi Thai Pancakes</div>
+          <div class="hours">🕐 Daily · 7:00 AM – 11:00 AM</div>
+        </div>
+      </div>
+
+      <!-- 5. The Lounge -->
+      <div class="rest-card reveal">
+        <div class="ph"><img src="images/5.jpg" alt="The Lounge"></div>
+        <div class="body">
+          <div class="tag">Bar · Cocktails</div>
+          <div class="name">The Lounge</div>
+          <p data-t="r4_desc">Laid-back cocktail bar with globally inspired drinks reimagined for Phuket. Home of the signature Punch Bowl Ritual — a theatrical evening ceremony.</p>
+          <div class="sig">Signature: Punch Bowl Ritual</div>
+          <div class="hours">🕐 Daily · 12:00 PM – 11:00 PM<br>&nbsp;&nbsp;&nbsp;&nbsp;Punch Bowl Ritual: Daily (exc. Mon) · 18:00–19:00</div>
+        </div>
+      </div>
+
+      <!-- 6. Doppio -->
+      <div class="rest-card reveal">
+        <div class="ph"><img src="images/6.jpg" alt="Doppio"></div>
+        <div class="body">
+          <div class="tag">Café · Coffee House</div>
+          <div class="name">Doppio</div>
+          <p data-t="r5_desc">Cozy all-day café proudly serving Starbucks coffee alongside artisanal ice creams, light bites, afternoon tea, and our signature Affogato & Cocogato.</p>
+          <div class="sig">Signature: Affogato & Cocogato (espresso + coconut)</div>
+          <div class="hours">🕐 Daily · 8:00 AM – 6:00 PM</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section class="facilities" id="facilities">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Resort Facilities</div>
+      <h2 class="display">Beyond the Room</h2>
+      <p class="sub">World-class wellness, family fun, and fitness — all within the resort.</p>
+    </div>
+    <div class="section-resource-row reveal">
+      <a class="section-resource-card cta-only" href="https://www.marriott.com/en-us/hotels/hktbr-renaissance-phuket-resort-and-spa/experiences/" target="_blank" rel="noopener">
+        <span class="resource-link" data-t="dl_view">SEE MORE DETAILS</span>
+      </a>
+    </div>
+    <div class="fac-grid">
+
+      <div class="fac-card reveal">
+        <div class="ph"><img src="images/slide12_045.jpg" alt="Kids World & Dino Pool" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Family · Recreation</div>
+          <div class="name">Kids' World & Dino Pool</div>
+          <p>A lively family space with dinosaur and unicorn pool inflatables, water slides, splash zones, and hands-on activities at Kids World.</p>
+          <div class="acts">
+            <div class="act-item">Northern Thai umbrella painting</div>
+            <div class="act-item">Dino & unicorn pool inflatables</div>
+            <div class="act-item">Jungle trail exploration behind the pool</div>
+            <div class="act-item">Non-alcoholic Punch Bowl Ritual every Monday · 16:30</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fac-card reveal">
+        <div class="ph"><img src="images/slide12_046.jpg" alt="Quan Spa" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Wellness · Spa</div>
+          <div class="name">Quan Spa</div>
+          <p>A tranquil spa blending traditional Thai healing with modern wellness — massages, facials, and signature sound healing sessions led by Spa Manager Khun Miki.</p>
+          <div class="acts">
+            <div class="act-item">Sound healing with Khun Miki</div>
+            <div class="act-item">Traditional Thai massage & aromatherapy</div>
+            <div class="act-item">Herbal compress therapy</div>
+            <div class="act-item">Facial & body treatment menu</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fac-card reveal">
+        <div class="ph"><img src="images/slide12_047.jpg" alt="Fitness Center" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Wellness · Recreation</div>
+          <div class="name">Fitness Center</div>
+          <p>Fully equipped 24-hour fitness center with cardio machines, free weights, and certified instructors for Muay Thai, yoga, and circuit training.</p>
+          <div class="acts">
+            <div class="act-item">Muay Thai introductory class</div>
+            <div class="act-item">Beach & pool yoga sessions</div>
+            <div class="act-item">Circuit training & Peg Board challenge</div>
+            <div class="act-item">Open 24 hours daily</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MEETINGS & EVENTS -->
+<section class="meetings" id="meetings">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-t="meetings_eyebrow">Meetings & Events</div>
+      <h2 class="display" data-t="meetings_title">Space to Inspire</h2>
+      <p class="sub" data-t="meetings_sub">Flexible indoor and outdoor venue spaces with comprehensive planning and catering services.</p>
+    </div>
+
+    <!-- Meetings Hero -->
+    <div class="meetings-hero reveal">
+      <img src="images/slide06_016.jpg" alt="Meeting spaces">
+      <div class="caption">
+        <div>
+          <div class="display" data-t="meetings_title_card">Five Stylish Venues</div>
+          <p data-t="meetings_sub_card">Indoor & outdoor — from the R Ballroom to beachfront settings under the stars.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 Venues -->
+    <div class="venues-grid reveal">
+      <button class="venue-card" onclick="openVenue('rballroom')" type="button">
+        <div class="ph"><img src="images/M-1.jpg" alt="R Ballroom"></div>
+        <div class="body"><div class="vname" data-t="venue1_name">R Ballroom</div></div>
+      </button>
+      <button class="venue-card" onclick="openVenue('beachlawn')" type="button">
+        <div class="ph"><img src="images/M-2.png" alt="Beach Lawn"></div>
+        <div class="body"><div class="vname" data-t="venue2_name">Beach Lawn</div></div>
+      </button>
+      <button class="venue-card" onclick="openVenue('barefoot')" type="button">
+        <div class="ph"><img src="images/M-3.jpg" alt="Barefoot"></div>
+        <div class="body"><div class="vname" data-t="venue3_name">Barefoot</div></div>
+      </button>
+      <button class="venue-card" onclick="openVenue('garden')" type="button">
+        <div class="ph"><img src="images/M-4.jpg" alt="Garden"></div>
+        <div class="body"><div class="vname" data-t="venue4_name">Garden</div></div>
+      </button>
+      <button class="venue-card" onclick="openVenue('takieng')" type="button">
+        <div class="ph"><img src="images/M-5.jpg" alt="Takieng"></div>
+        <div class="body"><div class="vname" data-t="venue5_name">Takieng</div></div>
+      </button>
+    </div>
+
+    <aside class="venue-drawer" id="venueDrawer" aria-live="polite">
+      <img id="venueDrawerImg" src="images/M-1.jpg" alt="">
+      <div class="drawer-body">
+        <button class="drawer-close" onclick="closeVenue()" type="button" aria-label="Close venue details">×</button>
+        <div class="eyebrow" id="venueDrawerTag">Venue Detail</div>
+        <h3 class="drawer-title" id="venueDrawerTitle">R Ballroom</h3>
+        <p class="drawer-copy" id="venueDrawerCopy">Content to be supplied.</p>
+        <div class="drawer-meta">
+          <div><strong>Setting</strong><span id="venueDrawerSetting">Indoor</span></div>
+          <div><strong>Best Use</strong><span id="venueDrawerUse">Meeting</span></div>
+          <div><strong>Status</strong><span id="venueDrawerStatus">Verified</span></div>
+        </div>
+        <a class="btn" href="#rfp">Request Floorplan or Proposal</a>
+      </div>
+    </aside>
+
+    <!-- Capacity Table -->
+    <div class="capacity-section reveal">
+      <div class="cap-title" data-t="table_heading">Meeting Room Capacities</div>
+      <table class="cap-table" id="capacityTable">
+        <thead>
+          <tr>
+            <th><button onclick="sortCapacity(0,'text')" data-t="table_room">Meeting Room</button></th>
+            <th><button onclick="sortCapacity(1,'text')" data-t="table_dim">Dimensions (m)</button></th>
+            <th><button onclick="sortCapacity(2,'number')" data-t="table_area">Area (sqm)</button></th>
+            <th><button onclick="sortCapacity(3,'number')" data-t="table_theatre">Theatre</button></th>
+            <th><button onclick="sortCapacity(4,'number')" data-t="table_classroom">Classroom</button></th>
+            <th><button onclick="sortCapacity(5,'number')" data-t="table_ushape">U-Shape</button></th>
+            <th><button onclick="sortCapacity(6,'number')" data-t="table_cluster">Cluster</button></th>
+            <th><button onclick="sortCapacity(7,'number')" data-t="table_banquet">Banquet</button></th>
+            <th><button onclick="sortCapacity(8,'number')" data-t="table_cocktail">Cocktail</button></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight">
+            <td data-t="cap_r_ballroom">R Ballroom</td>
+            <td>21.5 × 12.6 × 4.5</td><td>271</td>
+            <td>232</td><td>195</td><td>60</td><td>168</td><td>224</td><td>260</td>
+          </tr>
+          <tr>
+            <td data-t="cap_ren1">Renaissance I</td>
+            <td>12.6 × 7.2 × 4.5</td><td>90.7</td>
+            <td>80</td><td>42</td><td>30</td><td>48</td><td>64</td><td>70</td>
+          </tr>
+          <tr>
+            <td data-t="cap_ren2">Renaissance II</td>
+            <td>12.6 × 7.2 × 4.5</td><td>90.7</td>
+            <td>80</td><td>42</td><td>30</td><td>48</td><td>64</td><td>70</td>
+          </tr>
+          <tr>
+            <td data-t="cap_ren3">Renaissance III</td>
+            <td>12.6 × 7.2 × 4.5</td><td>90.7</td>
+            <td>80</td><td>42</td><td>30</td><td>48</td><td>64</td><td>70</td>
+          </tr>
+          <tr>
+            <td data-t="cap_pre">Pre-Function</td>
+            <td>21.5 × 6.7 × 3.5</td><td>144</td>
+            <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>70</td>
+          </tr>
+          <tr>
+            <td data-t="cap_beach">Beach Lawn</td>
+            <td>41 × 20</td><td>820</td>
+            <td>—</td><td>—</td><td>—</td><td>—</td><td>200</td><td>250</td>
+          </tr>
+          <tr>
+            <td data-t="cap_takieng">Takieng</td>
+            <td>10 × 8.6 × 2.4</td><td>86</td>
+            <td>40</td><td>30</td><td>24</td><td>35</td><td>50</td><td>60</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="cap-remark" data-t="table_remark">Takieng Restaurant is available as a premium daytime venue with ocean views. Availability is subject to confirmation and additional charges may apply.</p>
+    </div>
+
+    <!-- Coffee Break Gallery -->
+    <div class="coffee-section reveal">
+      <div class="section-head" style="text-align:left;margin-bottom:24px">
+        <div class="eyebrow" data-t="coffee_eyebrow">Details Matter</div>
+        <h3 class="display" style="font-size:1.6rem" data-t="coffee_title">Inspiring Coffee Break Themes</h3>
+        <p style="margin-top:8px;color:rgba(42,46,61,.65);max-width:560px" data-t="coffee_sub">Fuel your imagination with inventive coffee break setups — the little details that kick-start a well-planned event.</p>
+      </div>
+      <div class="coffee-theme-grid">
+        <button class="coffee-theme-card" data-coffee-card="art" onclick="openCoffeeTheme('art')" type="button">
+          <div class="coffee-theme-image art"><img src="images/Meeting/B-1.jpg" alt="Art Room coffee break" loading="lazy"></div>
+          <div class="body">
+            <div class="kicker">Theme 01</div>
+            <div class="name" data-t="coffee_art_name">Art Room</div>
+            <p data-t="coffee_art_short">An art-room break shaped by colour, brushstrokes, and freshly brewed coffee.</p>
+          </div>
+        </button>
+        <button class="coffee-theme-card" data-coffee-card="lab" onclick="openCoffeeTheme('lab')" type="button">
+          <div class="coffee-theme-image lab"><img src="images/Meeting/B-2.jpg" alt="Laboratory coffee break" loading="lazy"></div>
+          <div class="body">
+            <div class="kicker">Theme 02</div>
+            <div class="name" data-t="coffee_lab_name">Laboratory</div>
+            <p data-t="coffee_lab_short">A science-inspired pause with vivid drinks, interactive beverages, and molecular-style treats.</p>
+          </div>
+        </button>
+        <button class="coffee-theme-card" data-coffee-card="aloha" onclick="openCoffeeTheme('aloha')" type="button">
+          <div class="coffee-theme-image aloha"><img src="images/Meeting/B-3.jpg" alt="Phuket Aloha coffee break" loading="lazy"></div>
+          <div class="body">
+            <div class="kicker">Theme 03</div>
+            <div class="name" data-t="coffee_aloha_name">Phuket Aloha</div>
+            <p data-t="coffee_aloha_short">A beach-inspired break with tropical drinks, sunny bites, and island colour.</p>
+          </div>
+        </button>
+        <button class="coffee-theme-card" data-coffee-card="heritage" onclick="openCoffeeTheme('heritage')" type="button">
+          <div class="coffee-theme-image heritage"><img src="images/Meeting/B-4.jpg" alt="Phuket Heritage coffee break" loading="lazy"></div>
+          <div class="body">
+            <div class="kicker">Theme 04</div>
+            <div class="name" data-t="coffee_heritage_name">Phuket Heritage</div>
+            <p data-t="coffee_heritage_short">Local delicacies, tropical fruit, and street-food touches inspired by Phuket Old Town.</p>
+          </div>
+        </button>
+        <button class="coffee-theme-card" data-coffee-card="carnival" onclick="openCoffeeTheme('carnival')" type="button">
+          <div class="coffee-theme-image carnival"><img src="images/Meeting/B-5.jpg" alt="R.E.N. Carnival coffee break" loading="lazy"></div>
+          <div class="body">
+            <div class="kicker">Theme 05</div>
+            <div class="name" data-t="coffee_carnival_name">R.E.N. Carnival</div>
+            <p data-t="coffee_carnival_short">A fairground-style break with popcorn, colourful drinks, and festive street-style snacks.</p>
+          </div>
+        </button>
+        <button class="coffee-theme-card" data-coffee-card="energize" onclick="openCoffeeTheme('energize')" type="button">
+          <div class="coffee-theme-image energize"><img src="images/Meeting/B-6.jpg" alt="R.E.N. Energize coffee break" loading="lazy"></div>
+          <div class="body">
+            <div class="kicker">Theme 06</div>
+            <div class="name" data-t="coffee_energize_name">R.E.N. Energize</div>
+            <p data-t="coffee_energize_short">A high-energy break with interactive games, light movement, and uplifting snacks.</p>
+          </div>
+        </button>
+      </div>
+
+      <aside class="venue-drawer coffee-drawer" id="coffeeDrawer" aria-live="polite">
+        <div class="coffee-drawer-image" id="coffeeDrawerImage"><img id="coffeeDrawerImg" src="images/Meeting/B-1.jpg" alt="Art Room coffee break"></div>
+        <div class="drawer-body">
+          <button class="drawer-close" onclick="closeCoffeeTheme()" type="button" aria-label="Close coffee break details">×</button>
+          <div class="eyebrow" id="coffeeDrawerTag">Art-inspired break</div>
+          <h3 class="drawer-title" id="coffeeDrawerTitle">Art Room</h3>
+          <p class="drawer-copy" id="coffeeDrawerCopy">Step away from the boardroom and into an art-room coffee break at our Phuket meeting resort. Freshly brewed coffee, colourful treats, and brushstroke-inspired details bring ideas to life with a lighter rhythm.</p>
+          <div class="drawer-meta">
+            <div><strong data-t="coffee_mood_label">Mood</strong><span id="coffeeDrawerMood">Expressive, colourful</span></div>
+            <div><strong data-t="coffee_best_label">Best Use</strong><span id="coffeeDrawerUse">Brainstorming, workshops</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Beach Lawn Feature -->
+    <div class="beach-section reveal">
+      <div class="beach-gallery">
+        <img src="images/slide11_038.jpg" alt="Beach Lawn panorama">
+        <img src="images/slide11_039.jpg" alt="Beach Lawn setup">
+        <img src="images/slide11_040.jpg" alt="Beach Lawn evening">
+        <img src="images/slide11_042.jpg" alt="Beach Lawn details">
+      </div>
+      <div class="beach-info">
+        <div class="eyebrow" data-t="beach_eyebrow">Outdoor Venue</div>
+        <h3 class="display" style="font-size:2rem;margin:8px 0 16px" data-t="beach_title">Beach Lawn</h3>
+        <p style="color:rgba(42,46,61,.7)" data-t="beach_sub">820 sqm of outdoor space under pine trees, fronting Andaman waters. Designed for gala dinners, team-building activities, and sunset cocktail receptions.</p>
+        <div class="cap-note">
+          <div class="cap-item"><div class="n">200</div><div class="l" data-t="beach_cap1">Banquet</div></div>
+          <div class="cap-item"><div class="n">250</div><div class="l" data-t="beach_cap2">Cocktail</div></div>
+          <div class="cap-item"><div class="n">820</div><div class="l">sqm</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section class="experiences" id="experiences">
+  <div class="wrap">
+    <div class="section-head light reveal">
+      <div class="eyebrow" data-t="exp_eyebrow">Experiences</div>
+      <h2 class="display" data-t="exp_title">55 Things to Discover</h2>
+      <p class="sub" data-t="exp_sub">From beach yoga to Muay Thai — activities for every group and every interest.</p>
+    </div>
+    <div class="exp-cta-row reveal">
+      <a class="btn" href="https://marrstar.ent.box.com/file/1945265404574" target="_blank" rel="noopener" data-t="exp_cta">View All Lists</a>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card reveal">
+        <img src="images/slide13_051.jpg" alt="Water Sports">
+        <div class="overlay"><div class="act-name" data-t="exp1">Water Sports</div></div>
+      </div>
+      <div class="exp-card reveal">
+        <img src="images/slide13_052.jpg" alt="Activities">
+        <div class="overlay"><div class="act-name" data-t="exp4">Beach Yoga & Muay Thai</div></div>
+      </div>
+      <div class="exp-card reveal">
+        <img src="images/slide12_046.jpg" alt="Recreation">
+        <div class="overlay"><div class="act-name" data-t="exp7">Quan Spa</div></div>
+      </div>
+      <div class="exp-card reveal">
+        <img src="images/slide12_047.jpg" alt="Experiences">
+        <div class="overlay"><div class="act-name" data-t="exp_local">Local Experiences</div></div>
+      </div>
+    </div>
+    <div class="exp-highlights">
+      <div class="exp-hi reveal"><p data-t="exp_detail1">Kayaking and water-skiing on the Andaman Sea</p></div>
+      <div class="exp-hi reveal"><p data-t="exp_detail2">Hidden beaches, local markets, and nature trails within 30 minutes</p></div>
+      <div class="exp-hi reveal"><p data-t="exp_detail3">Thai cooking classes and cultural experiences</p></div>
+      <div class="exp-hi reveal"><p data-t="exp_detail4">Sound healing and spa treatments at Quan Spa</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE ENHANCERS -->
+<section class="enhancers" id="enhancers">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-t="enh_eyebrow">Event Add-Ons</div>
+      <h2 class="display" data-t="enh_title">Experience Enhancers</h2>
+      <p class="sub" data-t="enh_sub">Personalise your group programme with considered moments that turn meetings into memories.</p>
+    </div>
+    <div class="enhancer-grid">
+      <div class="enhancer-card reveal">
+        <div class="enhancer-icon">🧭</div>
+        <div class="enhancer-name" data-t="enh1_name">Meet Navigator</div>
+        <p class="enhancer-desc" data-t="enh1_desc">A dedicated meeting concierge guides your group through every detail — from arrival to last call — so your team stays focused on what matters.</p>
+      </div>
+      <div class="enhancer-card reveal">
+        <div class="enhancer-icon">🏄</div>
+        <div class="enhancer-name" data-t="enh2_name">Recreation Activities</div>
+        <p class="enhancer-desc" data-t="enh2_desc">Thai boxing, beach yoga, mangrove cycling, kayaking, Thai cooking — group activities that energise and connect your delegates.</p>
+      </div>
+      <div class="enhancer-card reveal">
+        <div class="enhancer-icon">📸</div>
+        <div class="enhancer-name" data-t="enh3_name">Photo Spots</div>
+        <p class="enhancer-desc" data-t="enh3_desc">Guided photography moments at the resort's most striking locations — the beachfront, sunrise pool, and heritage mangrove trail.</p>
+      </div>
+      <div class="enhancer-card reveal">
+        <div class="enhancer-icon">🥣</div>
+        <div class="enhancer-name" data-t="enh4_name">Punch Bowl Ritual</div>
+        <p class="enhancer-desc" data-t="enh4_desc">A theatrical welcome ritual for group arrivals — house-made punch bowl presented with ceremony to set the tone for a remarkable event.</p>
+      </div>
+      <div class="enhancer-card reveal">
+        <div class="enhancer-icon">🎵</div>
+        <div class="enhancer-name" data-t="enh5_name">Entertainment</div>
+        <p class="enhancer-desc" data-t="enh5_desc">From traditional Thai performers to ambient live music, our entertainment options elevate gala dinners and cocktail receptions.</p>
+      </div>
+      <div class="enhancer-card reveal">
+        <div class="enhancer-icon">🔔</div>
+        <div class="enhancer-name" data-t="enh6_name">Singing Bowl Experiences</div>
+        <p class="enhancer-desc" data-t="enh6_desc">A mindful sound healing session led by our wellness team — a calm opening or closing ritual for retreats and leadership summits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+  <div class="wrap">
+    <div class="section-head light reveal">
+      <div class="eyebrow" data-t="gal_eyebrow">Gallery</div>
+      <h2 class="display" data-t="gal_title">See the Resort</h2>
+      <p class="sub" data-t="gal_sub">Filter by category to explore what Renaissance Phuket looks and feels like.</p>
+    </div>
+    <div class="gallery-filters">
+      <button class="gf-btn active" onclick="filterGallery('all',this)" data-t="gf_all">All</button>
+      <button class="gf-btn" onclick="filterGallery('resort',this)" data-t="gf_resort">Resort</button>
+      <button class="gf-btn" onclick="filterGallery('rooms',this)" data-t="gf_rooms">Accommodations</button>
+      <button class="gf-btn" onclick="filterGallery('dining',this)" data-t="gf_dining">Dining</button>
+      <button class="gf-btn" onclick="filterGallery('mice',this)" data-t="gf_mice">MICE</button>
+      <button class="gf-btn" onclick="filterGallery('outdoor',this)" data-t="gf_outdoor">Outdoor Venues</button>
+      <button class="gf-btn" onclick="filterGallery('activities',this)">Activities</button>
+      <button class="gf-btn" onclick="filterGallery('wellness',this)" data-t="gf_wellness">Wellness</button>
+      <button class="gf-btn" onclick="filterGallery('beach',this)" data-t="gf_beach">Beachfront</button>
+      <button class="gf-btn" onclick="filterGallery('coffee',this)">Coffee Break Themes</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gitem wide" data-cat="resort" onclick="openLightbox(this)"><img src="images/slide03_004.png" alt="Mai Khao Beach"><div class="goverlay"><span class="glabel">Mai Khao Beach</span></div></div>
+      <div class="gitem" data-cat="rooms" onclick="openLightbox(this)"><img src="images/Site - room type - 1.jpg" alt="Deluxe Room"><div class="goverlay"><span class="glabel">Deluxe Room</span></div></div>
+      <div class="gitem" data-cat="rooms" onclick="openLightbox(this)"><img src="images/Site - room type - 4.jpg" alt="Pool Villa"><div class="goverlay"><span class="glabel">Pool Villa</span></div></div>
+      <div class="gitem" data-cat="dining" onclick="openLightbox(this)"><img src="images/2.jpg" alt="Takieng"><div class="goverlay"><span class="glabel">Takieng Restaurant</span></div></div>
+      <div class="gitem" data-cat="dining" onclick="openLightbox(this)"><img src="images/3.jpg" alt="Sand Box"><div class="goverlay"><span class="glabel">Sand Box Bar</span></div></div>
+      <div class="gitem" data-cat="mice" onclick="openLightbox(this)"><img src="images/slide09_026.jpg" alt="R Ballroom"><div class="goverlay"><span class="glabel">R Ballroom</span></div></div>
+      <div class="gitem wide" data-cat="outdoor" onclick="openLightbox(this)"><img src="images/slide11_041.jpg" alt="Beach Lawn"><div class="goverlay"><span class="glabel">Beach Lawn</span></div></div>
+      <div class="gitem" data-cat="beach" onclick="openLightbox(this)"><img src="images/slide11_043.png" alt="Barefoot Beach"><div class="goverlay"><span class="glabel">Barefoot Beachfront</span></div></div>
+      <div class="gitem" data-cat="wellness" onclick="openLightbox(this)"><img src="images/slide13_052.jpg" alt="Quan Spa"><div class="goverlay"><span class="glabel">Quan Spa</span></div></div>
+      <div class="gitem" data-cat="coffee" onclick="openLightbox(this)"><img src="images/slide10_036.jpg" alt="Coffee Break"><div class="goverlay"><span class="glabel">Coffee Break Theme</span></div></div>
+      <div class="gitem" data-cat="resort" onclick="openLightbox(this)"><img src="images/slide13_050.png" alt="Resort Pool"><div class="goverlay"><span class="glabel">Resort Pool</span></div></div>
+      <div class="gitem" data-cat="rooms" onclick="openLightbox(this)"><img src="images/Site - room type - 5.jpg" alt="Oceanfront Villa"><div class="goverlay"><span class="glabel">Oceanfront Villa</span></div></div>
+      <div class="gitem" data-cat="activities" onclick="openLightbox(this)"><img src="images/slide12_045.jpg" alt="Bike Tour"><div class="goverlay"><span class="glabel">Bike Tour</span></div></div>
+      <div class="gitem" data-cat="activities" onclick="openLightbox(this)"><img src="images/slide12_048.jpg" alt="Punch Bowl Ritual"><div class="goverlay"><span class="glabel">Punch Bowl Ritual</span></div></div>
+    </div>
+    <p style="text-align:center;margin-top:20px;font-family:Arial,sans-serif;font-size:.75rem;color:rgba(245,243,240,.35);font-style:italic">Photography to be inserted — placeholders shown</p>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <img id="lbImg" src="" alt="">
+</div>
+
+<!-- DOWNLOAD CENTER -->
+<section class="downloads" id="downloads">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-t="dl_eyebrow">Downloads</div>
+      <h2 class="display" data-t="dl_title">Resource Centre</h2>
+      <p class="sub" data-t="dl_sub">Quick links to key resort information for client conversations.</p>
+    </div>
+    <div class="resource-downloads reveal">
+      <div class="resource-group">
+        <div class="resource-group-head">
+          <div class="resource-group-title" data-t="dl_group_factsheet">Factsheet</div>
+          <div class="resource-count" data-t="dl_count_1">1 item</div>
+        </div>
+        <div class="resource-links">
+          <a class="resource-download-link" href="https://marrstar.box.com/s/c6rcmo4ewru8yyikj3yknow1rww3vfj0" target="_blank" rel="noopener">
+            <span class="resource-download-name" data-t="dl_factsheet">Factsheet</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="resource-group">
+        <div class="resource-group-head">
+          <div class="resource-group-title" data-t="dl_group_playbook">Playbook</div>
+          <div class="resource-count" data-t="dl_count_2">2 items</div>
+        </div>
+        <div class="resource-links">
+          <a class="resource-download-link" href="https://marrstar.box.com/s/vpct55hx1io7w1or0iitoukmllleq5mg" target="_blank" rel="noopener">
+            <span class="resource-download-name" data-t="dl_playbook_mice">MICE</span>
+          </a>
+          <a class="resource-download-link" href="https://marrstar.box.com/s/0oebqmx38kme975b6ieib74le3pnldwv" target="_blank" rel="noopener">
+            <span class="resource-download-name" data-t="dl_playbook_leisure">Leisure</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="resource-group">
+        <div class="resource-group-head">
+          <div class="resource-group-title" data-t="dl_group_wedding">Wedding</div>
+          <div class="resource-count" data-t="dl_count_2">2 items</div>
+        </div>
+        <div class="resource-links">
+          <a class="resource-download-link" href="https://marrstar.box.com/s/42w66fp397rs5m9yp083464xstm74z59" target="_blank" rel="noopener">
+            <span class="resource-download-name" data-t="dl_wedding_western">Western</span>
+          </a>
+          <a class="resource-download-link" href="https://marrstar.box.com/s/hglb3zf6m21qgxdf3f2eu7nubby7h1nn" target="_blank" rel="noopener">
+            <span class="resource-download-name" data-t="dl_wedding_indian">Indian</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="resource-group">
+        <div class="resource-group-head">
+          <div class="resource-group-title" data-t="dl_group_media">Photos & Videos</div>
+          <div class="resource-count" data-t="dl_count_3">3 items</div>
+        </div>
+        <div class="resource-links">
+          <a class="resource-download-link" href="https://marrstar.box.com/s/y1js8pmragw8n03c7413il5mzxhle4eh" target="_blank" rel="noopener">
+            <span class="resource-download-name" data-t="dl_photo">Photo</span>
+          </a>
+          <a class="resource-download-link" href="https://www.youtube.com/watch?v=U1xebwPT46s" target="_blank" rel="noopener">
+            <span class="resource-download-name" data-t="dl_video_resort">Resort Lifestyle</span>
+          </a>
+          <a class="resource-download-link" href="https://youtu.be/VNHELqfS9wQ?si=tNtpMwXEFC6efe16" target="_blank" rel="noopener">
+            <span class="resource-download-name" data-t="dl_video_mice">MICE</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAY CONNECTED -->
+<section class="stay-connected" id="stay-connected">
+  <div class="wrap">
+    <div class="section-head light reveal">
+      <div class="eyebrow">Stay Connected</div>
+      <h2 class="display">Follow the Story</h2>
+      <p class="sub">Stay updated on what's happening at Renaissance Phuket — explore our outlets, follow our channels, and discover the neighborhood through our lens.</p>
+    </div>
+
+    <!-- Resort -->
+    <div class="soc-resort-row">
+      <div class="soc-card reveal">
+        <div class="sc-tag">The Resort</div>
+        <div class="sc-name">Renaissance Phuket Resort & Spa</div>
+        <div class="sc-links">
+          <a href="https://www.marriott.com/en-us/hotels/hktbr-renaissance-phuket-resort-and-spa/overview/" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            Website
+          </a>
+          <a href="https://www.facebook.com/renphuket/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/renaissancephuket/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="soc-card reveal">
+        <div class="sc-tag">Quan Spa</div>
+        <div class="sc-name">Quan Spa Phuket</div>
+        <div class="sc-links">
+          <a href="https://www.marriott.com/en-us/hotels/hktbr-renaissance-phuket-resort-and-spa/spa/" target="_blank" rel="noopener">Website</a>
+          <a href="https://www.facebook.com/QuanSpaPhuket" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/quanspaphuket/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outlets -->
+    <div class="soc-grid">
+      <div class="soc-card reveal">
+        <div class="sc-tag">Japanese Coastal Izakaya</div>
+        <div class="sc-name">Yunami</div>
+        <div class="sc-links">
+          <a href="https://www.yunamiphuket.com" target="_blank" rel="noopener">Website</a>
+          <a href="https://www.instagram.com/yunamiphuket/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="soc-card reveal">
+        <div class="sc-tag">Signature Thai Cuisine</div>
+        <div class="sc-name">Takieng</div>
+        <div class="sc-links">
+          <a href="https://www.takiengphuket.com" target="_blank" rel="noopener">Website</a>
+          <a href="https://www.takiengphuket.com/our-menus" target="_blank" rel="noopener">Menu</a>
+          <a href="https://www.facebook.com/takiengphuket" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/takiengphuket/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="soc-card reveal">
+        <div class="sc-tag">Beachfront Bar & Eatery</div>
+        <div class="sc-name">Sand Box</div>
+        <div class="sc-links">
+          <a href="https://www.facebook.com/SandBoxBeachfrontBar" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/sand_box_beachfrontbar_eatery/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RFP / CONTACT -->
+<section class="rfp" id="rfp">
+  <div class="wrap">
+    <div class="rfp-wrap">
+      <div class="rfp-info reveal">
+        <div class="eyebrow" data-t="rfp_eyebrow">Get in Touch</div>
+        <h2 class="display" data-t="rfp_title">Request a Proposal</h2>
+        <p data-t="rfp_body">Tell us about your event and our Sales team will respond within 24 hours with a tailored proposal — including venue recommendations, capacity, and indicative rates.</p>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="cc-role" data-t="cc1_role">Sales & Events</div>
+            <div class="cc-name">Renaissance Phuket Sales Team</div>
+            <div class="cc-links">
+              <a href="mailto:sales.renphuket@marriott.com">sales.renphuket@marriott.com</a>
+              <a href="tel:+66763...">+66 76 3… (Content to be supplied)</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-role" data-t="cc2_role">Site Inspection</div>
+            <div class="cc-name" data-t="cc2_name">Book a Site Visit</div>
+            <div class="cc-links">
+              <a href="mailto:sales.renphuket@marriott.com" data-t="cc2_link">Request a complimentary site inspection →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <form class="rfp-form" id="rfpForm" onsubmit="submitRFP(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rf-fname" data-t="rf_fname">First Name *</label>
+              <input type="text" id="rf-fname" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="rf-lname" data-t="rf_lname">Last Name *</label>
+              <input type="text" id="rf-lname" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="rf-email" data-t="rf_email">Email Address *</label>
+            <input type="email" id="rf-email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="rf-company" data-t="rf_company">Company / Organisation</label>
+            <input type="text" id="rf-company" autocomplete="organization">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rf-type" data-t="rf_type">Event Type *</label>
+              <select id="rf-type" required>
+                <option value="" data-t="rf_select">Select…</option>
+                <option value="conference" data-t="rf_opt_conf">Conference / Meeting</option>
+                <option value="gala" data-t="rf_opt_gala">Gala Dinner / Reception</option>
+                <option value="incentive" data-t="rf_opt_inc">Incentive Trip</option>
+                <option value="wedding" data-t="rf_opt_wed">Wedding</option>
+                <option value="leisure" data-t="rf_opt_lei">Group Leisure</option>
+                <option value="other" data-t="rf_opt_other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rf-pax" data-t="rf_pax">Number of Guests *</label>
+              <select id="rf-pax" required>
+                <option value="" data-t="rf_select">Select…</option>
+                <option value="1-20">1–20</option>
+                <option value="21-50">21–50</option>
+                <option value="51-100">51–100</option>
+                <option value="101-200">101–200</option>
+                <option value="200+">200+</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rf-checkin" data-t="rf_checkin">Preferred Date</label>
+              <input type="date" id="rf-checkin">
+            </div>
+            <div class="form-group">
+              <label for="rf-nights" data-t="rf_nights">Number of Nights</label>
+              <select id="rf-nights">
+                <option value="" data-t="rf_select">Select…</option>
+                <option value="1">1 night</option>
+                <option value="2">2 nights</option>
+                <option value="3">3 nights</option>
+                <option value="4-6">4–6 nights</option>
+                <option value="7+">7+ nights</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="rf-notes" data-t="rf_notes">Additional Notes</label>
+            <textarea id="rf-notes" placeholder="Tell us about your event vision, preferred venues, or any special requirements…"></textarea>
+          </div>
+          <button type="submit" class="btn" style="width:100%;text-align:center" data-t="rf_submit">Submit Request for Proposal</button>
+        </form>
+        <div class="form-success" id="rfpSuccess">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <p data-t="rfp_success">Thank you — your request has been received. Our Sales team will be in touch within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="bg"></div><div class="veil"></div>
+  <div class="closing-inner wrap reveal">
+    <h2 class="display"><span data-t="closing_title">Ready to plan your event?</span></h2>
+    <p data-t="closing_sub">Contact our Sales team to start shaping your Renaissance experience.</p>
+    <a class="btn" href="mailto:sales.renphuket@marriott.com" data-t="closing_btn">Get in Touch</a>
+  </div>
+</section>
+
+<footer data-t="footer">© 2026 Renaissance Phuket Resort & Spa · Marriott International · Mai Khao Beach, Phuket</footer>
+
+<script>
+const T = {
+  en:{
+    tab_phuket:"Phuket & Surroundings",tab_resort:"Resort Map & Activities",
+    nav_dest:"Destination",nav_rooms:"Accommodations",nav_dining:"Dining",nav_meetings:"Meetings & Events",nav_fac:"Facilities",nav_exp:"Experiences",nav_soc:"Social Links",nav_gallery:"Gallery",nav_downloads:"Downloads",nav_rfp:"Request Proposal",
+    enh_eyebrow:"Event Add-Ons",enh_title:"Experience Enhancers",enh_sub:"Personalise your group programme with considered moments that turn meetings into memories.",
+    enh1_name:"Meet Navigator",enh1_desc:"A dedicated meeting concierge guides your group through every detail — from arrival to last call — so your team stays focused on what matters.",
+    enh2_name:"Recreation Activities",enh2_desc:"Thai boxing, beach yoga, mangrove cycling, kayaking, Thai cooking — group activities that energise and connect your delegates.",
+    enh3_name:"Photo Spots",enh3_desc:"Guided photography moments at the resort's most striking locations — the beachfront, sunrise pool, and heritage mangrove trail.",
+    enh4_name:"Punch Bowl Ritual",enh4_desc:"A theatrical welcome ritual for group arrivals — house-made punch bowl presented with ceremony to set the tone for a remarkable event.",
+    enh5_name:"Entertainment",enh5_desc:"From traditional Thai performers to ambient live music, our entertainment options elevate gala dinners and cocktail receptions.",
+    enh6_name:"Singing Bowl Experiences",enh6_desc:"A mindful sound healing session led by our wellness team — a calm opening or closing ritual for retreats and leadership summits.",
+    gal_eyebrow:"Gallery",gal_title:"See the Resort",gal_sub:"Filter by category to explore what Renaissance Phuket looks and feels like.",
+    gf_all:"All",gf_resort:"Resort",gf_rooms:"Accommodations",gf_dining:"Dining",gf_mice:"MICE",gf_outdoor:"Outdoor Venues",gf_wellness:"Wellness",gf_beach:"Beachfront",
+    dl_eyebrow:"Downloads",dl_title:"Resource Centre",dl_sub:"Quick links to key resort information for client conversations.",
+    dl1_name:"Accommodation Overview",dl1_desc:"Room categories, sizes, and group room block information.",
+    dl2_name:"Dining Overview",dl2_desc:"All six outlets — concepts, atmosphere, and group dining options.",
+    dl_view:"See more details",
+    dl_group_factsheet:"Factsheet",dl_group_playbook:"Playbook",dl_group_wedding:"Wedding",dl_group_media:"Photos & Videos",
+    dl_factsheet:"Factsheet",dl_playbook_mice:"MICE",dl_playbook_leisure:"Leisure",dl_wedding_western:"Western",dl_wedding_indian:"Indian",
+    dl_photo:"Photo",dl_video_resort:"Resort Lifestyle",dl_video_mice:"MICE",dl_count_1:"1 item",dl_count_2:"2 items",dl_count_3:"3 items",
+    rfp_eyebrow:"Get in Touch",rfp_title:"Request a Proposal",rfp_body:"Tell us about your event and our Sales team will respond within 24 hours with a tailored proposal — including venue recommendations, capacity, and indicative rates.",
+    cc1_role:"Sales & Events",cc2_role:"Site Inspection",cc2_name:"Book a Site Visit",cc2_link:"Request a complimentary site inspection →",
+    rf_fname:"First Name *",rf_lname:"Last Name *",rf_email:"Email Address *",rf_company:"Company / Organisation",rf_type:"Event Type *",rf_pax:"Number of Guests *",rf_checkin:"Preferred Date",rf_nights:"Number of Nights",rf_notes:"Additional Notes",rf_select:"Select…",
+    rf_opt_conf:"Conference / Meeting",rf_opt_gala:"Gala Dinner / Reception",rf_opt_inc:"Incentive Trip",rf_opt_wed:"Wedding",rf_opt_lei:"Group Leisure",rf_opt_other:"Other",
+    rf_submit:"Submit Request for Proposal",rfp_success:"Thank you — your request has been received. Our Sales team will be in touch within 24 hours.",
+    hero_eyebrow:"Renaissance Phuket Resort & Spa",hero_title:"Sales Playbook 2026",hero_sub:"Beachfront resort at Mai Khao Beach, Phuket",
+    stat_rooms:"Rooms & Villas",stat_venues:"Dining Venues",stat_events:"Event Spaces",stat_activities:"Activities",
+    dest_eyebrow:"Where We Are",dest_title:"Mai Khao Beach, Phuket",dest_body:"Beachfront resort on Mai Khao Beach, adjacent to Sirinath National Park — 20 minutes from Phuket International Airport.",
+    dest_bullet1:"Approximately 20 min from Phuket International Airport",dest_bullet2:"13 min to Sarasin Bridge & Phang Nga",dest_bullet3:"2 km to Turtle Village (complimentary transfer every hour)",dest_bullet4:"Mangrove cycling at Pru Jae Son",
+    dest_shuttle:"Shuttle Service (small fee applies)",dest_shuttle1:"3× daily: Hotel ↔ Phuket Town & Central Floresta",dest_shuttle2:"3× daily: Hotel ↔ Patong",
+    rooms_eyebrow:"Accommodations",rooms_title:"180 Renovated Rooms & Villas",rooms_sub:"Six categories from garden-view deluxe rooms to the Duplex Oceanfront Villa.",
+    room1_name:"Deluxe Room",room1_size:"46 sqm",room2_name:"Deluxe Lagoon View",room2_size:"46 sqm",room3_name:"One Bedroom Suite",room3_size:"97 sqm",room4_name:"One Bedroom Pool Villa",room4_size:"117 sqm",room5_name:"One Bedroom Oceanfront Pool Villa",room5_size:"117 sqm",room6_name:"Duplex Oceanfront Villa",room6_size:"337 sqm",
+    dining_eyebrow:"Sip & Savor",dining_title:"Six Venues, One Neighborhood",dining_sub:"From southern Thai classics to coastal Japanese izakaya — our restaurants have carved a niche in the Phuket dining scene.",
+    r1_desc:"Our relaxed Thai restaurant features fresh flavor combinations.",r2_desc:"Features light lunch options during the day; at night, a contemporary bar atmosphere.",r3_desc:"Open for breakfast, lunch and dinner — comfort food from Thai classics to global favorites.",r4_desc:"Welcomes you with all-day dining and well-crafted cocktails in the afternoon.",r5_desc:"Enjoy light meals at our on-site coffee house.",r6_desc:"Coastal Japanese izakaya — opening July 2026.",
+    meetings_eyebrow:"Meetings & Events",meetings_title:"Space to Inspire",meetings_sub:"Flexible indoor and outdoor venue spaces with comprehensive planning and catering services.",
+    meetings_title_card:"Five Stylish Venues",meetings_sub_card:"Indoor & outdoor — from the R Ballroom to beachfront settings under the stars.",
+    venue1_name:"R Ballroom",venue2_name:"Beach Lawn",venue3_name:"Barefoot",venue4_name:"Garden",venue5_name:"Takieng",
+    table_heading:"Meeting Room Capacities",table_room:"Meeting Room",table_dim:"Dimensions (m)",table_area:"Area (sqm)",table_theatre:"Theatre",table_classroom:"Classroom",table_ushape:"U-Shape",table_cluster:"Cluster",table_banquet:"Banquet",table_cocktail:"Cocktail",
+    cap_r_ballroom:"R Ballroom",cap_ren1:"Renaissance I",cap_ren2:"Renaissance II",cap_ren3:"Renaissance III",cap_pre:"Pre-Function",cap_beach:"Beach Lawn",cap_takieng:"Takieng",
+    table_remark:"Takieng Restaurant is available as a premium daytime venue with ocean views. Availability is subject to confirmation and additional charges may apply.",
+    coffee_eyebrow:"Details Matter",coffee_title:"Inspiring Coffee Break Themes",coffee_sub:"Fuel your imagination with inventive coffee break setups — the little details that kick-start a well-planned event.",
+    photo_pending:"Photography to be inserted",coffee_mood_label:"Mood",coffee_best_label:"Best Use",coffee_status_label:"Image Status",
+    coffee_art_name:"Art Room",coffee_art_tag:"Art-inspired break",coffee_art_short:"An art-room break shaped by colour, brushstrokes, and freshly brewed coffee.",coffee_art_full:"Step away from the boardroom and into an art-room coffee break at our Phuket meeting resort. Freshly brewed coffee, colourful treats, and brushstroke-inspired details bring ideas to life with a lighter rhythm.",coffee_art_mood:"Expressive, colourful",coffee_art_use:"Brainstorming, workshops",
+    coffee_lab_name:"Laboratory",coffee_lab_tag:"Science-inspired break",coffee_lab_short:"A science-inspired pause with vivid drinks, interactive beverages, and molecular-style treats.",coffee_lab_full:"Step into The Laboratory, where coffee meets science-inspired play. Vivid drinks, interactive beverages, and molecular-style treats sit against a backdrop of formulas, discovery, and a little theatre.",coffee_lab_mood:"Experimental, theatrical",coffee_lab_use:"Product launches, ideation",
+    coffee_aloha_name:"Phuket Aloha",coffee_aloha_tag:"Beach-inspired break",coffee_aloha_short:"A beach-inspired break with tropical drinks, sunny bites, and island colour.",coffee_aloha_full:"Bring a beach-state pause into the meeting day with tropical drinks, light bites, and sunlit island character. Bright decor, beach chairs, and relaxed colour help the room shift gears.",coffee_aloha_mood:"Tropical, relaxed",coffee_aloha_use:"Team building, incentive groups",
+    coffee_heritage_name:"Phuket Heritage",coffee_heritage_tag:"Local flavour break",coffee_heritage_short:"Local delicacies, tropical fruit, and street-food touches inspired by Phuket Old Town.",coffee_heritage_full:"Celebrate Phuket's rich history and flavour through local delicacies, tropical fruit, and street-food favourites. The setup takes cues from Phuket Old Town and its lively market culture.",coffee_heritage_mood:"Local, sensory",coffee_heritage_use:"Cultural programmes, destination meetings",
+    coffee_carnival_name:"R.E.N. Carnival",coffee_carnival_tag:"Fairground-style break",coffee_carnival_short:"A fairground-style break with popcorn, colourful drinks, and festive street-style snacks.",coffee_carnival_full:"Add a playful fairground note to the meeting day with fresh popcorn, vivid drinks, and street-style snacks. A festive setup keeps the break lighthearted and easy to enjoy.",coffee_carnival_mood:"Festive, lighthearted",coffee_carnival_use:"Networking, post-session breaks",
+    coffee_energize_name:"R.E.N. Energize",coffee_energize_tag:"High-energy break",coffee_energize_short:"A high-energy break with interactive games, light movement, and uplifting snacks.",coffee_energize_full:"Keep energy moving with a dynamic break built around interactive games, light physical activities, and uplifting snacks. Ideal when the agenda needs a quick reset between sessions.",coffee_energize_mood:"Dynamic, upbeat",coffee_energize_use:"Long agendas, team sessions",
+    beach_eyebrow:"Outdoor Venue",beach_title:"Beach Lawn",beach_sub:"820 sqm of outdoor space under pine trees, fronting Andaman waters. Designed for gala dinners, team-building activities, and sunset cocktail receptions.",
+    beach_cap1:"Banquet",beach_cap2:"Cocktail",
+    exp_eyebrow:"Experiences",exp_title:"55 Things to Discover",exp_sub:"From beach yoga to Muay Thai — activities for every group and every interest.",
+    exp1:"Water Sports",exp4:"Beach Yoga & Muay Thai",exp7:"Quan Spa",exp_local:"Local Experiences",
+    exp_detail1:"Kayaking and water-skiing on the Andaman Sea",exp_detail2:"Hidden beaches, local markets, and nature trails within 30 minutes",exp_detail3:"Thai cooking classes and cultural experiences",exp_detail4:"Sound healing and spa treatments at Quan Spa",
+    exp_cta:"View All Lists",
+    closing_title:"Ready to plan your event?",closing_sub:"Contact our Sales team to start shaping your Renaissance experience.",closing_btn:"Get in Touch",
+    footer:"© 2026 Renaissance Phuket Resort & Spa · Marriott International · Mai Khao Beach, Phuket"
+  },
+  ru:{
+    tab_phuket:"🗺 Карта Пхукета",tab_resort:"🏨 Карта курорта",
+    nav_dest:"Расположение",nav_rooms:"Размещение",nav_dining:"Рестораны",nav_meetings:"Мероприятия",nav_exp:"Впечатления",
+    hero_eyebrow:"Renaissance Phuket Resort & Spa",hero_title:"Презентация 2026",hero_sub:"Курорт на берегу пляжа Май Кхао, Пхукет",
+    stat_rooms:"Номера и виллы",stat_venues:"Рестораны",stat_events:"Площадки",stat_activities:"Активности",
+    dest_eyebrow:"Наше расположение",dest_title:"Пляж Май Кхао, Пхукет",dest_body:"Курорт на берегу пляжа Май Кхао, рядом с национальным парком Сиринат — в 20 минутах от международного аэропорта Пхукета.",
+    dest_bullet1:"20 минут от международного аэропорта Пхукета",dest_bullet2:"13 минут до моста Сарасин и Пхангнга",dest_bullet3:"2 км до Turtle Village (бесплатный трансфер каждый час)",dest_bullet4:"Велосипедные прогулки по мангровым зарослям Пру Чай Сон",
+    dest_shuttle:"Трансфер (небольшая доплата)",dest_shuttle1:"3 раза в день: Отель ↔ Пхукет-таун и Central Floresta",dest_shuttle2:"3 раза в день: Отель ↔ Патонг",
+    rooms_eyebrow:"Размещение",rooms_title:"180 обновлённых номеров и вилл",rooms_sub:"Шесть категорий от делюкс-номеров с видом на сад до двухэтажной виллы с видом на океан.",
+    room1_name:"Делюкс",room1_size:"46 кв.м",room2_name:"Делюкс с видом на лагуну",room2_size:"46 кв.м",room3_name:"Односпальный люкс",room3_size:"97 кв.м",room4_name:"Односпальная вилла с бассейном",room4_size:"117 кв.м",room5_name:"Вилла с бассейном и видом на океан",room5_size:"117 кв.м",room6_name:"Двухуровневая вилла с видом на океан",room6_size:"337 кв.м",
+    dining_eyebrow:"Вкус и атмосфера",dining_title:"Шесть ресторанов, один район",dining_sub:"От классической тайской кухни южных провинций до прибрежного японского идзакая — наши рестораны занимают особое место в гастрономической сцене Пхукета.",
+    r1_desc:"Расслабленный тайский ресторан с захватывающим меню из свежих вкусовых сочетаний.",r2_desc:"Лёгкие обеды днём и атмосфера современного бара ночью.",r3_desc:"Завтрак, обед и ужин — душевная еда от тайской классики до мировой кухни.",r4_desc:"Блюда весь день и изысканные коктейли во второй половине дня.",r5_desc:"Лёгкие закуски в нашей кофейне.",r6_desc:"Прибрежный японский идзакая — открытие в июле 2026 г.",
+    meetings_eyebrow:"Мероприятия",meetings_title:"Пространство для вдохновения",meetings_sub:"Гибкие крытые и открытые площадки с полным комплексом услуг по организации мероприятий и кейтерингу.",
+    meetings_title_card:"Пять стильных площадок",meetings_sub_card:"В помещении и на открытом воздухе — от бального зала R до мероприятий у берега моря под звёздами.",
+    venue1_name:"Бальный зал R",venue2_name:"Пляжная лужайка",venue3_name:"Barefoot",venue4_name:"Сад",venue5_name:"Такьенг",
+    table_heading:"Вместимость залов",table_room:"Зал",table_dim:"Размеры (м)",table_area:"Площадь (кв.м)",table_theatre:"Театр",table_classroom:"Класс",table_ushape:"П-образная",table_cluster:"Кластер",table_banquet:"Банкет",table_cocktail:"Коктейль",
+    cap_r_ballroom:"Бальный зал R",cap_ren1:"Renaissance I",cap_ren2:"Renaissance II",cap_ren3:"Renaissance III",cap_pre:"Пре-функция",cap_beach:"Пляжная лужайка",cap_takieng:"Такьенг",
+    table_remark:"Ресторан Такьенг доступен как премиальная дневная площадка с видом на океан. Доступность подтверждается отдельно, возможны дополнительные расходы.",
+    coffee_eyebrow:"Детали важны",coffee_title:"Вдохновляющие кофе-паузы",coffee_sub:"Зарядитесь энергией во время творческих кофе-пауз — небольшие детали, которые дают идеальный старт вашему мероприятию.",
+    beach_eyebrow:"Открытая площадка",beach_title:"Пляжная лужайка",beach_sub:"820 кв.м идиллического пространства под соснами на берегу Андаманского моря. Идеально для торжественных ужинов, тимбилдингов и коктейльных вечеров на закате.",
+    beach_cap1:"Банкет",beach_cap2:"Коктейль",
+    exp_eyebrow:"Впечатления",exp_title:"55 открытий",exp_sub:"От пляжной йоги до тайского бокса — активности для любой группы и любых интересов.",
+    exp1:"Водный спорт",exp4:"Йога и тайский бокс",exp7:"Спа Quan",exp_local:"Местные впечатления",
+    exp_detail1:"Каякинг и водные лыжи в Андаманском море",exp_detail2:"Скрытые пляжи, местные рынки и природные тропы в 30 минутах",exp_detail3:"Тайские кулинарные мастер-классы и культурные впечатления",exp_detail4:"Звуковое исцеление и спа-процедуры в Quan Spa",
+    closing_title:"Готовы спланировать мероприятие?",closing_sub:"Свяжитесь с нашим отделом продаж, чтобы создать идеальный опыт Renaissance.",closing_btn:"Связаться",
+    footer:"© 2026 Renaissance Phuket Resort & Spa · Marriott International · Пляж Май Кхао, Пхукет"
+  },
+  zh:{
+    tab_phuket:"🗺 普吉岛地图",tab_resort:"🏨 度假村地图",
+    nav_dest:"地理位置",nav_rooms:"客房与别墅",nav_dining:"餐饮",nav_meetings:"会议与活动",nav_exp:"体验",
+    hero_eyebrow:"普吉岛万丽度假酒店",hero_title:"销售手册 2026",hero_sub:"位于普吉岛迈考海滩的海滨度假村",
+    stat_rooms:"客房与别墅",stat_venues:"餐饮场所",stat_events:"活动场地",stat_activities:"活动项目",
+    dest_eyebrow:"地理位置",dest_title:"迈考海滩，普吉岛",dest_body:"度假村坐落于迈考海滩，毗邻西里纳特国家公园，距普吉国际机场仅20分钟车程。",
+    dest_bullet1:"距普吉国际机场20分钟",dest_bullet2:"距萨拉辛大桥及攀牙13分钟",dest_bullet3:"距海龟村2公里（每小时免费接送）",dest_bullet4:"在Pru Jae Son红树林骑行体验",
+    dest_shuttle:"班车服务（收取少量费用）",dest_shuttle1:"每日3班：酒店 ↔ 普吉镇 & Central Floresta",dest_shuttle2:"每日3班：酒店 ↔ 芭东",
+    rooms_eyebrow:"客房与别墅",rooms_title:"180间翻新客房与别墅",rooms_sub:"六种房型可选，从花园景豪华房到壮观的海景双层别墅。",
+    room1_name:"豪华客房",room1_size:"46 m²",room2_name:"泻湖景豪华房",room2_size:"46 m²",room3_name:"一卧室套房",room3_size:"97 m²",room4_name:"一卧室泳池别墅",room4_size:"117 m²",room5_name:"一卧室海景泳池别墅",room5_size:"117 m²",room6_name:"双层海景别墅",room6_size:"337 m²",
+    dining_eyebrow:"品味与享受",dining_title:"六大餐厅，一个街区",dining_sub:"从泰南经典菜肴到日式海滨居酒屋——我们的餐厅在普吉餐饮界独树一帜。",
+    r1_desc:"休闲泰式餐厅，提供新鲜风味组合的精彩菜单。",r2_desc:"白天供应轻食，夜晚营造时尚酒吧氛围。",r3_desc:"提供早餐、午餐和晚餐——从泰式经典到全球美食的舒心料理。",r4_desc:"全天供餐，下午提供精心调制的鸡尾酒。",r5_desc:"在我们的咖啡馆享用轻食。",r6_desc:"日式海滨居酒屋——2026年7月开业。",
+    meetings_eyebrow:"会议与活动",meetings_title:"激发灵感的空间",meetings_sub:"灵活的室内外活动场地，提供全面的活动策划和餐饮服务。",
+    meetings_title_card:"五大特色场地",meetings_sub_card:"室内外兼备——从R宴会厅到星空下的海滨场地。",
+    venue1_name:"R宴会厅",venue2_name:"海滩草坪",venue3_name:"赤足海滩",venue4_name:"花园",venue5_name:"Takieng",
+    table_heading:"会议室容量",table_room:"会议室",table_dim:"尺寸（米）",table_area:"面积（m²）",table_theatre:"剧院式",table_classroom:"课堂式",table_ushape:"U形",table_cluster:"圆桌式",table_banquet:"宴会式",table_cocktail:"鸡尾酒式",
+    cap_r_ballroom:"R宴会厅",cap_ren1:"Renaissance I",cap_ren2:"Renaissance II",cap_ren3:"Renaissance III",cap_pre:"前厅",cap_beach:"海滩草坪",cap_takieng:"Takieng",
+    table_remark:"Takieng餐厅可作为拥有海景的高级白天场地。作为特色餐厅，供应情况须另行确认，可能收取额外费用。",
+    coffee_eyebrow:"细节成就完美",coffee_title:"创意茶歇主题",coffee_sub:"以创意茶歇激发无限想象——正是这些小细节，让您的活动精彩开场。",
+    beach_eyebrow:"户外场地",beach_title:"海滩草坪",beach_sub:"820平方米的松树林下户外空间，面朝安达曼海。完美适合晚宴、团建活动和日落鸡尾酒会。",
+    beach_cap1:"宴会",beach_cap2:"鸡尾酒",
+    exp_eyebrow:"体验",exp_title:"55种探索",exp_sub:"从海滩瑜伽到泰拳——适合各种团体和兴趣的活动。",
+    exp1:"水上运动",exp4:"海滩瑜伽与泰拳",exp7:"Quan水疗中心",exp_local:"本地体验",
+    exp_detail1:"在安达曼海体验皮划艇和水上滑雪",exp_detail2:"30分钟内探索隐秘海滩、当地市场和自然小径",exp_detail3:"泰式烹饪课程和文化体验",exp_detail4:"在Quan水疗中心享受颂钵疗愈和水疗护理",
+    closing_title:"准备好规划您的活动了吗？",closing_sub:"联系我们的销售团队，共同打造完美的万丽体验。",closing_btn:"立即联系",
+    footer:"© 2026 普吉岛万丽度假酒店 · 万豪国际集团 · 普吉岛迈考海滩"
+  },
+  ja:{
+    tab_phuket:"🗺 プーケットマップ",tab_resort:"🏨 リゾートマップ",
+    nav_dest:"アクセス",nav_rooms:"客室・ヴィラ",nav_dining:"ダイニング",nav_meetings:"会議・イベント",nav_exp:"体験",
+    hero_eyebrow:"ルネッサンス プーケット リゾート＆スパ",hero_title:"セールスプレイブック 2026",hero_sub:"プーケット、マイカオビーチのビーチフロントリゾート",
+    stat_rooms:"客室・ヴィラ",stat_venues:"レストラン",stat_events:"イベント会場",stat_activities:"アクティビティ",
+    dest_eyebrow:"アクセス",dest_title:"マイカオビーチ、プーケット",dest_body:"シリナート国立公園に隣接するマイカオビーチのリゾート。プーケット国際空港から車で20分。",
+    dest_bullet1:"プーケット国際空港から20分",dest_bullet2:"サラシン橋・パンガーまで13分",dest_bullet3:"タートルビレッジまで2km（毎時間無料送迎）",dest_bullet4:"プルジャイソンでのマングローブサイクリング体験",
+    dest_shuttle:"シャトルサービス（小額料金あり）",dest_shuttle1:"1日3便：ホテル ↔ プーケットタウン & セントラルフロレスタ",dest_shuttle2:"1日3便：ホテル ↔ パトン",
+    rooms_eyebrow:"客室・ヴィラ",rooms_title:"改装済み客室・ヴィラ 180室",rooms_sub:"ガーデンビューのデラックスルームから壮大なデュプレックスオーシャンフロントヴィラまで、6タイプの客室をご用意。",
+    room1_name:"デラックスルーム",room1_size:"46㎡",room2_name:"デラックス ラグーンビュー",room2_size:"46㎡",room3_name:"ワンベッドルームスイート",room3_size:"97㎡",room4_name:"ワンベッドルームプールヴィラ",room4_size:"117㎡",room5_name:"オーシャンフロントプールヴィラ",room5_size:"117㎡",room6_name:"デュプレックスオーシャンフロントヴィラ",room6_size:"337㎡",
+    dining_eyebrow:"味わいと雰囲気",dining_title:"6つのレストラン、ひとつの街",dining_sub:"タイ南部の伝統料理から海辺の日本式居酒屋まで——プーケットのダイニングシーンに独自のニッチを築いています。",
+    r1_desc:"新鮮な食材の組み合わせが魅力的なタイ料理レストラン。",r2_desc:"昼はランチ、夜はコンテンポラリーバーの雰囲気に。",r3_desc:"朝食・昼食・夕食を提供。タイ料理からグローバルフードまでのコンフォートフード。",r4_desc:"終日ダイニングと午後のクラフトカクテルをお楽しみください。",r5_desc:"オンサイトのコーヒーハウスで軽食をどうぞ。",r6_desc:"海辺の日本式居酒屋——2026年7月オープン予定。",
+    meetings_eyebrow:"会議・イベント",meetings_title:"インスパイアする空間",meetings_sub:"室内外のフレキシブルな会場と、充実した企画・ケータリングサービスをご提供します。",
+    meetings_title_card:"5つのスタイリッシュな会場",meetings_sub_card:"屋内・屋外——Rボールルームから星空のビーチフロントまで。",
+    venue1_name:"Rボールルーム",venue2_name:"ビーチローン",venue3_name:"ベアフット",venue4_name:"ガーデン",venue5_name:"タキアン",
+    table_heading:"会場収容人数",table_room:"会場",table_dim:"寸法（m）",table_area:"面積（㎡）",table_theatre:"シアター",table_classroom:"教室",table_ushape:"U字型",table_cluster:"クラスター",table_banquet:"バンケット",table_cocktail:"カクテル",
+    cap_r_ballroom:"Rボールルーム",cap_ren1:"ルネッサンス I",cap_ren2:"ルネッサンス II",cap_ren3:"ルネッサンス III",cap_pre:"プレファンクション",cap_beach:"ビーチローン",cap_takieng:"タキアン",
+    table_remark:"タキアンレストランは海の見える昼間のプレミアム会場として利用可能です。要確認、追加料金が発生する場合があります。",
+    coffee_eyebrow:"細部へのこだわり",coffee_title:"インスパイアするコーヒーブレイク",coffee_sub:"クリエイティブなコーヒーブレイクで想像力に火を灯しましょう——完璧なイベントの最高のスタートとなる細部の工夫です。",
+    beach_eyebrow:"屋外会場",beach_title:"ビーチローン",beach_sub:"アンダマン海を望む松並木の下、820㎡の開放的な屋外スペース。ガラディナー、チームビルディング、サンセットカクテルレセプションに最適。",
+    beach_cap1:"バンケット",beach_cap2:"カクテル",
+    exp_eyebrow:"体験",exp_title:"55の発見",exp_sub:"ビーチヨガからムエタイまで——あらゆるグループと興味に対応したアクティビティ。",
+    exp1:"ウォータースポーツ",exp4:"ビーチヨガ＆ムエタイ",exp7:"クアンスパ",exp_local:"ローカル体験",
+    exp_detail1:"アンダマン海でのカヤックとウォータースキー",exp_detail2:"30分圏内の秘密のビーチ・地元市場・自然トレイル",exp_detail3:"タイ料理教室と文化体験",exp_detail4:"クアンスパでのサウンドヒーリングとスパトリートメント",
+    closing_title:"イベントの計画を始めませんか？",closing_sub:"セールスチームにお問い合わせいただき、理想的なルネッサンス体験をご一緒に設計しましょう。",closing_btn:"お問い合わせ",
+    footer:"© 2026 ルネッサンス プーケット リゾート＆スパ · マリオット・インターナショナル · プーケット マイカオビーチ"
+  },
+  ko:{
+    tab_phuket:"푸켓 및 주변 지역",tab_resort:"리조트 지도 & 액티비티",
+    nav_dest:"위치 안내",nav_rooms:"객실 및 빌라",nav_dining:"다이닝",nav_meetings:"미팅 & 이벤트",nav_fac:"시설",nav_exp:"특별한 경험",nav_soc:"소셜 링크",nav_gallery:"갤러리",nav_downloads:"다운로드",nav_rfp:"제안 요청",
+    enh_eyebrow:"이벤트 애드온",enh_title:"경험을 더하는 프로그램",enh_sub:"그룹 프로그램에 특별한 순간을 더해 미팅을 오래 기억될 경험으로 만들어 보세요.",
+    enh1_name:"네비게이터와의 만남",enh1_desc:"전담 미팅 네비게이터가 도착부터 행사 종료까지 세부 사항을 안내합니다.",
+    enh2_name:"레크리에이션 액티비티",enh2_desc:"무에타이, 비치 요가, 맹그로브 사이클링, 카약, 태국 요리 클래스 등 그룹을 위한 액티비티를 제공합니다.",
+    enh3_name:"포토 스팟",enh3_desc:"비치프런트, 수영장, 맹그로브 트레일 등 리조트 곳곳의 포토 스팟을 안내합니다.",
+    enh4_name:"펀치 볼 리추얼",enh4_desc:"그룹 도착을 환영하는 르네상스의 시그니처 이브닝 리추얼입니다.",
+    enh5_name:"엔터테인먼트",enh5_desc:"태국 전통 공연부터 라이브 음악까지 갈라 디너와 칵테일 리셉션을 위한 엔터테인먼트를 제안합니다.",
+    enh6_name:"싱잉볼 체험",enh6_desc:"웰니스 팀이 진행하는 차분한 사운드 힐링 세션으로 리트리트와 리더십 프로그램에 어울립니다.",
+    gal_eyebrow:"갤러리",gal_title:"리조트 둘러보기",gal_sub:"카테고리별로 르네상스 푸켓의 공간과 분위기를 살펴보세요.",
+    gf_all:"전체",gf_resort:"리조트",gf_rooms:"객실 및 빌라",gf_dining:"다이닝",gf_mice:"MICE",gf_outdoor:"야외 공간",gf_wellness:"웰니스",gf_beach:"비치프런트",
+    dl_eyebrow:"다운로드",dl_title:"리소스 센터",dl_sub:"고객 상담에 필요한 주요 리조트 정보를 빠르게 확인할 수 있습니다.",
+    dl1_name:"객실 개요",dl1_desc:"객실 카테고리, 크기, 그룹 객실 블록 정보를 확인하세요.",
+    dl2_name:"다이닝 개요",dl2_desc:"6개 다이닝 공간의 콘셉트, 분위기, 그룹 다이닝 옵션을 확인하세요.",
+    dl_view:"자세히 보기",
+    dl_group_factsheet:"팩트시트",dl_group_playbook:"플레이북",dl_group_wedding:"웨딩",dl_group_media:"사진 & 영상",
+    dl_factsheet:"팩트시트",dl_playbook_mice:"MICE",dl_playbook_leisure:"레저",dl_wedding_western:"웨스턴",dl_wedding_indian:"인디언",
+    dl_photo:"사진",dl_video_resort:"리조트 라이프스타일",dl_video_mice:"MICE",dl_count_1:"1개 항목",dl_count_2:"2개 항목",dl_count_3:"3개 항목",
+    rfp_eyebrow:"문의하기",rfp_title:"제안 요청",rfp_body:"행사 정보를 남겨주시면 세일즈 팀이 장소 추천, 수용 인원, 예상 요금을 포함한 맞춤 제안을 안내드립니다.",
+    cc1_role:"세일즈 & 이벤트",cc2_role:"사이트 인스펙션",cc2_name:"사이트 방문 예약",cc2_link:"사이트 인스펙션 요청 →",
+    rf_fname:"이름 *",rf_lname:"성 *",rf_email:"이메일 주소 *",rf_company:"회사 / 기관",rf_type:"행사 유형 *",rf_pax:"참석 인원 *",rf_checkin:"희망 날짜",rf_nights:"숙박 일수",rf_notes:"추가 요청 사항",rf_select:"선택…",
+    rf_opt_conf:"컨퍼런스 / 미팅",rf_opt_gala:"갈라 디너 / 리셉션",rf_opt_inc:"인센티브 여행",rf_opt_wed:"웨딩",rf_opt_lei:"그룹 레저",rf_opt_other:"기타",
+    rf_submit:"제안 요청 제출",rfp_success:"감사합니다. 요청이 접수되었습니다. 세일즈 팀이 곧 연락드리겠습니다.",
+    hero_eyebrow:"르네상스 푸켓 리조트 & 스파",hero_title:"세일즈 플레이북 2026",hero_sub:"마이카오 비치에 위치한 비치프런트 리조트",
+    stat_rooms:"객실 및 빌라",stat_venues:"다이닝 공간",stat_events:"이벤트 공간",stat_activities:"액티비티",
+    dest_eyebrow:"위치 안내",dest_title:"마이카오 비치, 푸켓",dest_body:"시리낫 국립공원 인근의 마이카오 해변에 위치한 비치프런트 리조트 — 푸켓 국제공항에서 차량으로 20분.",
+    dest_bullet1:"푸켓 국제공항에서 차량으로 20분",dest_bullet2:"유명한 사라신 브릿지까지 차량으로 13분, 팡아 지역으로 편리하게 이동 가능",dest_bullet3:"쇼핑과 다이닝을 즐길 수 있는 터틀 빌리지까지 약 2km 거리 (매시간 무료 셔틀 운행)",dest_bullet4:"프루 재 손(Pru Jae Son) 맹그로브 숲에서 자연을 만끽하며 사이클링 가능",
+    dest_shuttle:"셔틀 밴 서비스 (소정의 이용 요금이 부과됩니다)",dest_shuttle1:"호텔 ↔ 푸켓 타운 및 센트럴 플로레스타 왕복 하루 3회",dest_shuttle2:"호텔 ↔ 빠통 왕복 하루 3회",
+    rooms_eyebrow:"객실 및 빌라",rooms_title:"새롭게 리노베이션된 180개의 객실 및 빌라",rooms_sub:"디럭스 룸부터 듀플렉스 오션프론트 빌라까지 6가지 객실 카테고리를 제공합니다.",
+    room1_name:"디럭스 룸",room1_size:"46㎡",room2_name:"디럭스 라군 뷰",room2_size:"46㎡",room3_name:"원베드룸 스위트",room3_size:"97㎡",room4_name:"원베드룸 풀 빌라",room4_size:"117㎡",room5_name:"원베드룸 오션프론트 풀 빌라",room5_size:"117㎡",room6_name:"듀플렉스 오션프론트 빌라",room6_size:"337㎡",
+    dining_eyebrow:"다채로운 다이닝 경험",dining_title:"6개의 다이닝 공간",dining_sub:"호텔 내 6개의 다이닝 공간에서는 정통 태국 요리, 계절 특선 메뉴, 수제 칵테일을 선보이며 푸켓의 미식 문화를 경험하실 수 있습니다.",
+    r1_desc:"신선한 재료와 독창적인 풍미가 조화를 이루는 태국 레스토랑입니다.",r2_desc:"낮에는 가벼운 식사, 저녁에는 세련된 비치 바 분위기를 즐길 수 있습니다.",r3_desc:"조식, 중식, 석식을 제공하며 태국 요리부터 세계 각국의 인기 메뉴까지 다양하게 즐길 수 있습니다.",r4_desc:"올데이 다이닝과 함께 오후에는 정성스럽게 만든 칵테일을 즐기실 수 있습니다.",r5_desc:"리조트 내 커피하우스에서 가벼운 식사와 음료를 즐겨보세요.",r6_desc:"푸켓의 여유로운 낮과 아름다운 석양을 배경으로 즐기는 현대적인 일본식 코스탈 이자카야입니다.",
+    meetings_eyebrow:"미팅 & 이벤트",meetings_title:"미팅 & 이벤트",meetings_sub:"다양한 실내·야외 공간과 전문 기획 및 케이터링 서비스를 통해 성공적인 미팅과 이벤트를 지원합니다.",
+    meetings_title_card:"5개의 특별한 이벤트 공간",meetings_sub_card:"실내와 야외 공간을 모두 갖춘 유연한 이벤트 장소를 제공합니다.",
+    venue1_name:"R 볼룸",venue2_name:"비치 론",venue3_name:"베어풋",venue4_name:"가든",venue5_name:"타키엥",
+    table_heading:"미팅 공간",table_room:"미팅룸",table_dim:"크기 (길이 × 너비 × 높이, m)",table_area:"면적 (㎡)",table_theatre:"극장식",table_classroom:"강의식",table_ushape:"U자형",table_cluster:"클러스터형",table_banquet:"연회식",table_cocktail:"칵테일 리셉션",
+    cap_r_ballroom:"R 볼룸",cap_ren1:"르네상스 I",cap_ren2:"르네상스 II",cap_ren3:"르네상스 III",cap_pre:"프리펑션 공간",cap_beach:"비치 론",cap_takieng:"타키엥",
+    table_remark:"참고: 타키엥 레스토랑은 오션뷰를 갖춘 프리미엄 주간 행사 장소로 이용 가능하며, 시그니처 레스토랑 특성상 이용 가능 여부 확인 및 추가 요금이 적용될 수 있습니다.",
+    coffee_eyebrow:"커피 브레이크",coffee_title:"특별한 테마의 커피 브레이크",coffee_sub:"특별한 커피 브레이크와 함께 더욱 특별한 미팅을 경험해 보세요. 세심한 디테일이 성공적인 회의의 시작을 완성합니다.",
+    photo_pending:"이미지 삽입 예정",coffee_mood_label:"무드",coffee_best_label:"추천 용도",coffee_status_label:"이미지 상태",
+    coffee_art_name:"아트 룸",coffee_art_tag:"아트 테마 브레이크",coffee_art_short:"컬러, 브러시 터치, 갓 내린 커피로 구성한 아트 룸 커피 브레이크입니다.",coffee_art_full:"회의실을 벗어나 푸켓 미팅 리조트의 아트 룸 커피 브레이크를 경험해 보세요. 갓 내린 커피, 컬러풀한 디저트, 브러시 터치에서 영감을 받은 디테일이 미팅 분위기를 한층 가볍게 전환합니다.",coffee_art_mood:"표현적, 컬러풀",coffee_art_use:"브레인스토밍, 워크숍",
+    coffee_lab_name:"래버러토리",coffee_lab_tag:"사이언스 테마 브레이크",coffee_lab_short:"선명한 음료, 인터랙티브 베버리지, 몰레큘러 스타일 디저트로 구성한 사이언스 테마입니다.",coffee_lab_full:"커피와 사이언스 테마의 재미가 만나는 래버러토리입니다. 선명한 음료, 인터랙티브 베버리지, 몰레큘러 스타일 디저트가 공식과 발견, 작은 극장적 분위기 속에서 펼쳐집니다.",coffee_lab_mood:"실험적, 극적",coffee_lab_use:"제품 발표, 아이디어 세션",
+    coffee_aloha_name:"푸켓 알로하",coffee_aloha_tag:"비치 테마 브레이크",coffee_aloha_short:"트로피컬 음료, 밝은 스낵, 섬의 컬러를 담은 비치 테마 브레이크입니다.",coffee_aloha_full:"트로피컬 음료, 가벼운 스낵, 햇살 가득한 섬의 분위기로 미팅 중간에 비치 무드를 더합니다. 밝은 장식, 비치 체어, 여유로운 컬러가 공간의 리듬을 부드럽게 바꿔 줍니다.",coffee_aloha_mood:"트로피컬, 여유로움",coffee_aloha_use:"팀빌딩, 인센티브 그룹",
+    coffee_heritage_name:"푸켓 헤리티지",coffee_heritage_tag:"로컬 플레이버 브레이크",coffee_heritage_short:"푸켓 올드타운에서 영감을 받은 로컬 디저트, 열대 과일, 스트리트 푸드 감각을 담았습니다.",coffee_heritage_full:"푸켓의 역사와 풍미를 로컬 디저트, 열대 과일, 스트리트 푸드 감각으로 만나보는 커피 브레이크입니다. 구성은 푸켓 올드타운과 활기 있는 시장 문화에서 영감을 받았습니다.",coffee_heritage_mood:"로컬, 감각적",coffee_heritage_use:"문화 프로그램, 목적지 미팅",
+    coffee_carnival_name:"R.E.N. 카니발",coffee_carnival_tag:"페어그라운드 테마 브레이크",coffee_carnival_short:"팝콘, 컬러풀한 음료, 축제 분위기의 스트리트 스타일 스낵으로 구성됩니다.",coffee_carnival_full:"갓 만든 팝콘, 선명한 음료, 스트리트 스타일 스낵으로 미팅 중간에 경쾌한 페어그라운드 감각을 더합니다. 축제 분위기의 셋업이 브레이크 시간을 가볍고 즐겁게 만듭니다.",coffee_carnival_mood:"축제적, 경쾌함",coffee_carnival_use:"네트워킹, 세션 후 브레이크",
+    coffee_energize_name:"R.E.N. 에너자이즈",coffee_energize_tag:"에너지 브레이크",coffee_energize_short:"인터랙티브 게임, 가벼운 움직임, 에너지를 더하는 스낵으로 구성됩니다.",coffee_energize_full:"인터랙티브 게임, 가벼운 신체 활동, 에너지를 더하는 스낵으로 미팅의 흐름을 이어가는 다이내믹한 브레이크입니다. 긴 아젠다 사이에 빠른 전환이 필요할 때 잘 어울립니다.",coffee_energize_mood:"다이내믹, 업비트",coffee_energize_use:"긴 회의 일정, 팀 세션",
+    beach_eyebrow:"야외 이벤트 공간",beach_title:"비치 론",beach_sub:"소나무 아래 안다만 해를 마주한 820㎡ 규모의 야외 공간입니다. 갈라 디너, 팀빌딩, 선셋 칵테일 리셉션에 어울립니다.",
+    beach_cap1:"연회식",beach_cap2:"칵테일 리셉션",
+    exp_eyebrow:"특별한 경험",exp_title:"즐거움과 휴식",exp_sub:"리조트 및 주변 지역에서 55가지 이상의 액티비티를 경험해 보세요.",
+    exp1:"수상 스포츠",exp4:"베이직 요가 & 무에타이",exp7:"콴 스파",exp_local:"특별한 경험",
+    exp_detail1:"카약 및 수상 스포츠 체험",exp_detail2:"30분 이내 거리에 위치한 숨겨진 해변, 현지 시장, 자연 산책로 탐험",exp_detail3:"비치 요가, 태국 요리 클래스, 사이클링, 무에타이 체험",exp_detail4:"태국 전통 치유기법과 현대적인 웰니스 프로그램이 조화를 이루는 콴 스파",
+    exp_cta:"더 알아보기",
+    closing_title:"감사합니다",closing_sub:"세일즈 팀에 문의하여 르네상스 푸켓에서의 미팅과 이벤트를 계획해 보세요.",closing_btn:"문의하기",
+    footer:"© 2026 르네상스 푸켓 리조트 & 스파 · 메리어트 인터내셔널 · 마이카오 비치, 푸켓"
+  }
+};
+
+const KO_STATIC_TEXT = {
+  "Logo Asset":"로고 자료",
+  "to be inserted":"삽입 예정",
+  "↓ Scroll to explore":"아래로 스크롤하여 살펴보기",
+  "Renaissance Phuket":"르네상스 푸켓",
+  "Turtle Village":"터틀 빌리지",
+  "Sarasin Bridge":"사라신 브릿지",
+  "Pru Jae Son":"프루 재 손",
+  "Phuket Town":"푸켓 타운",
+  "Patong":"빠통",
+  "Phuket International Airport":"푸켓 국제공항",
+  "Phuket Airport":"푸켓 국제공항",
+  "Hotel Anchor":"호텔 기준 지점",
+  "Renaissance Phuket Resort & Spa":"르네상스 푸켓 리조트 & 스파",
+  "Beachfront resort":"비치프런트 리조트",
+  "Anchor point":"기준 지점",
+  "Mai Khao Beach":"마이카오 비치",
+  "The main reference point for every journey, set on Mai Khao Beach beside Sirinath National Park.":"시리낫 국립공원 인근 마이카오 비치에 위치한 모든 여정의 기준 지점입니다.",
+  "Recommended Spots":"추천 명소",
+  "A Few Places to Point Guests Toward":"고객에게 추천하기 좋은 장소",
+  "The resort sits beachfront on Mai Khao Beach, adjacent to Sirinath National Park.":"리조트는 시리낫 국립공원 인근 마이카오 비치에 위치해 있습니다.",
+  "At resort":"리조트 내",
+  "0 min":"0분",
+  "1 · Shopping":"1 · 쇼핑",
+  "Nearby shopping and dining with complimentary transfer every hour.":"매시간 무료 셔틀로 이동 가능한 가까운 쇼핑 및 다이닝 공간입니다.",
+  "5 min by car":"차량 5분",
+  "2 · Viewpoint":"2 · 전망 포인트",
+  "A northbound gateway toward Phang Nga and coastal views.":"팡아로 이어지는 북쪽 관문이자 해안 전망을 즐길 수 있는 장소입니다.",
+  "Approx. 6 km":"약 6km",
+  "13 min by car":"차량 13분",
+  "3 · Local Discovery":"3 · 로컬 디스커버리",
+  "A scenic mangrove setting for cycling close to the resort.":"리조트 가까이에 위치한 맹그로브 숲 사이클링 코스입니다.",
+  "4 · Culture":"4 · 문화",
+  "Connected by the hotel shuttle route with Central Floresta, three times daily.":"호텔 셔틀로 센트럴 플로레스타와 푸켓 타운까지 하루 3회 이동 가능합니다.",
+  "Approx. 38 km":"약 38km",
+  "50 min by car":"차량 50분",
+  "5 · Attractions":"5 · 관광지",
+  "A sandy, crescent beach lined with cafes, restaurants, bars and night life.":"카페, 레스토랑, 바와 야간 명소가 이어지는 초승달 모양의 해변 지역입니다.",
+  "Approx. 35 km":"약 35km",
+  "6 · Arrival":"6 · 도착 지점",
+  "The key arrival point — just 20 minutes from the resort.":"리조트에서 약 20분 거리에 있는 주요 도착 지점입니다.",
+  "Approx. 20 min":"약 20분",
+  "By car":"차량 이동",
+  "Guest highlights":"고객 추천 포인트",
+  "Key Distances":"주요 거리",
+  "Phuket International Airport: approx. 20 min | Turtle Village: 2 km · 5 min":"푸켓 국제공항: 약 20분 | 터틀 빌리지: 2km · 5분",
+  "Pru Jae Son: 0 km · 0 min | Phuket Town: approx. 38 km · 50 min":"프루 재 손: 0km · 0분 | 푸켓 타운: 약 38km · 50분",
+  "In-Resort Activities":"리조트 내 액티비티",
+  "Nearby Experiences":"주변 체험",
+  "Dining Venues":"다이닝 공간",
+  "Total Discoveries":"전체 디스커버리",
+  "Public Area":"공용 시설",
+  "Lobby":"로비",
+  "Ren Pool":"렌 풀",
+  "Parking":"주차장",
+  "Herb Garden":"허브 가든",
+  "R Ballroom":"R 볼룸",
+  "Accommodations":"객실 및 빌라",
+  "Deluxe Rooms":"디럭스 룸",
+  "Deluxe Lagoon Rooms":"디럭스 라군 룸",
+  "One Bedroom Suites":"원베드룸 스위트",
+  "Pool Villas":"풀 빌라",
+  "Oceanfront Pool Villas":"오션프론트 풀 빌라",
+  "Duplex Oceanfront Villa":"듀플렉스 오션프론트 빌라",
+  "Activities":"액티비티",
+  "Gym":"피트니스 센터",
+  "Quan Spa":"콴 스파",
+  "Kids World & Dino Pool":"키즈 월드 & 다이노 풀",
+  "Restaurants & Bars":"레스토랑 & 바",
+  "Loca Vore":"로카 보어",
+  "Takieng":"타키엥",
+  "The Lounge":"더 라운지",
+  "Sand Box":"샌드 박스",
+  "Doppio":"도피오",
+  "Yunami":"유나미",
+  "🏖 MAI KHAO BEACH — ANDAMAN SEA":"🏖 마이카오 비치 — 안다만 해",
+  "Beach & Waterfront":"비치 & 워터프런트",
+  "Sand bathing · Sunset cocktails · Yoga · Campfire":"샌드 배싱 · 선셋 칵테일 · 요가 · 캠프파이어",
+  "Beachfront Bar & Eatery":"비치프런트 바 & 이터리",
+  "Main Pool":"메인 풀",
+  "Lagoon pool · Morning yoga":"라군 풀 · 모닝 요가",
+  "Pool inflatables · Arts · Jungle trail":"풀 인플레이터블 · 아트 · 정글 트레일",
+  "Punch Bowl Ritual · Fairy dance show":"펀치 볼 리추얼 · 페어리 댄스 쇼",
+  "Lobby & Arrival":"로비 & 도착 경험",
+  "Cha Ya Nut welcome · Instagrammable spots":"차야넛 웰컴 드링크 · 포토 스팟",
+  "Sound healing · Massages · Wellness":"사운드 힐링 · 마사지 · 웰니스",
+  "Takieng · Loca Vore · Doppio":"타키엥 · 로카 보어 · 도피오",
+  "Thai dining · Breakfast · Café":"태국 다이닝 · 조식 · 카페",
+  "Fitness & Recreation":"피트니스 & 레크리에이션",
+  "24h gym · Muay Thai · Yoga · Bike tour":"24시간 피트니스 · 무에타이 · 요가 · 자전거 투어",
+  "🌊 Beach & Waterfront Activities":"🌊 비치 & 워터프런트 액티비티",
+  "Sand bathing at Mai Khao Beach — best in the morning":"마이카오 비치 샌드 배싱 — 오전 추천",
+  "Learn the traditional art of catching mole crabs at the beachfront (May–Oct)":"비치프런트에서 전통 몰 크랩 잡기 체험 (5월–10월)",
+  "Beach picnic — a photogenic spot not to be missed":"비치 피크닉 — 사진을 남기기 좋은 장소",
+  "Watch sunset over Mai Khao Beach with a cocktail from Sand Box":"샌드 박스 칵테일과 함께 마이카오 비치의 선셋 감상",
+  "Sunset yoga class overlooking Mai Khao Beach":"마이카오 비치를 바라보며 즐기는 선셋 요가 클래스",
+  "Cozy beachside evening roasting marshmallows at sunset":"선셋 시간 해변가에서 즐기는 마시멜로 로스팅",
+  "Horseback riding through scenic trails on Mai Khao Beach":"마이카오 비치의 경치 좋은 트레일을 따라 즐기는 승마",
+  "🍹 Sand Box Beachfront Bar & Eatery":"🍹 샌드 박스 비치프런트 바 & 이터리",
+  "Watch sunset over Mai Khao Beach with special cocktail from Sand Box Bar":"샌드 박스 바의 스페셜 칵테일과 함께 마이카오 비치 선셋 감상",
+  "🏊 Pool & Aqua Activities":"🏊 풀 & 아쿠아 액티비티",
+  "Start your day with morning yoga by the pool":"풀사이드 모닝 요가로 하루를 시작하세요",
+  "Sunset yoga with stunning pool and ocean backdrop":"풀과 바다를 배경으로 즐기는 선셋 요가",
+  "🦕 Kids World & Dino Pool":"🦕 키즈 월드 & 다이노 풀",
+  "Dive into fun with dinosaur and unicorn inflatables at the Kids Pool":"키즈 풀의 공룡 및 유니콘 인플레이터블과 함께 즐거운 시간을 보내세요",
+  "Engage in the art of Northern Thai umbrella painting at Kids World":"키즈 월드에서 북부 태국 우산 페인팅 체험",
+  "Venture behind the kids pool to explore the hidden wonders of the jungle":"키즈 풀 뒤편의 정글 트레일 탐험",
+  "🍸 The Lounge":"🍸 더 라운지",
+  "Join our distinctive Punch Bowl Ritual — a memorable evening experience":"르네상스의 펀치 볼 리추얼에 참여해 특별한 이브닝을 경험해 보세요",
+  "Be mesmerized by our fairy dance show at The Lounge":"더 라운지에서 페어리 댄스 쇼를 감상하세요",
+  "🏨 Lobby & Arrival Experience":"🏨 로비 & 도착 경험",
+  "Discover the blend of local flavors with Cha Ya Nut — our signature welcome drink":"시그니처 웰컴 드링크 차야넛으로 로컬 풍미를 만나보세요",
+  "Follow our Navigator's guide to discover Instagrammable spots around the resort":"네비게이터의 안내에 따라 리조트 곳곳의 포토 스팟을 찾아보세요",
+  "✨ Quan Spa & Wellness":"✨ 콴 스파 & 웰니스",
+  "Discover Look Tho — a tropical edible plant found at the entrance of Quan Spa":"콴 스파 입구에서 만날 수 있는 열대 식용 식물 룩토를 찾아보세요",
+  "Spa":"스파",
+  "Sound healing sessions with Spa Manager Khun Miki · Massages · Facials":"스파 매니저 쿤 미키와 함께하는 사운드 힐링 · 마사지 · 페이셜",
+  "🍽 Takieng · Loca Vore · Doppio":"🍽 타키엥 · 로카 보어 · 도피오",
+  "Start with signature Thai pancakes Bi Koh Moi at Loca Vore breakfast":"로카 보어 조식에서 시그니처 태국식 팬케이크 비코모이로 하루를 시작하세요",
+  "Feed fish with nutritious corn powder at the tranquil Loca Vore pond":"로카 보어 연못에서 영양 옥수수 파우더로 물고기 먹이 주기",
+  "Afternoon tea at Doppio — finely crafted pastries and teas":"도피오 애프터눈 티 — 정성스럽게 만든 페이스트리와 차",
+  "Cool down with artisanal ice creams at Doppio":"도피오의 아티산 아이스크림으로 시원한 휴식",
+  "Affogato & Cocogato (espresso with coconut) at Doppio":"도피오의 아포가토 & 코코가토 (에스프레소와 코코넛)",
+  "Discover Mole Crab Delicacies — a local favorite only found at Takieng":"타키엥에서만 만날 수 있는 로컬 별미 몰 크랩 요리",
+  "Monthly specials featuring authentic flavors from each Thai region at Takieng":"타키엥에서 선보이는 태국 지역별 월간 특선 메뉴",
+  "Savor Pla Kapong Mieng Kam — authentic southern Thai at Takieng":"타키엥의 정통 남부 태국 요리 플라 카퐁 미앙캄",
+  "Thai-inspired handcrafted cocktails with a twist at Takieng":"타키엥의 태국식 수제 칵테일",
+  "💪 Fitness, Recreation & Nature":"💪 피트니스, 레크리에이션 & 자연",
+  "Morning stroll around the pond to admire the blooming lotus":"연못 주변을 산책하며 피어난 연꽃 감상",
+  "Capture the beauty of the cannonball tree with unique fruits and blooms":"독특한 열매와 꽃을 가진 캐논볼 트리 감상",
+  "Test your fitness with the Peg Board challenge at the gym":"피트니스 센터에서 페그 보드 챌린지 체험",
+  "Introductory Thai boxing (Muay Thai) sessions":"입문자를 위한 무에타이 세션",
+  "3.5 km bike tour through the natural beauty of Phru Je Son mangroves":"프루 재 손 맹그로브의 자연을 따라 즐기는 3.5km 자전거 투어",
+  "Explore the herb garden and learn culinary and medicinal uses of local plants":"허브 가든에서 로컬 식물의 요리 및 약용 활용법 알아보기",
+  "24-hour gym — always open, always ready":"24시간 피트니스 센터 — 언제든 이용 가능",
+  "Learn secrets of authentic Thai cuisine in our cooking class":"쿠킹 클래스에서 정통 태국 요리의 비법을 배워보세요",
+  "Beach & Water":"비치 & 워터",
+  "Food & Beverage":"식음료",
+  "Leisure & Pools":"레저 & 풀",
+  "Wellness & Spa":"웰니스 & 스파",
+  "Fitness & Nature":"피트니스 & 자연",
+  "↑ NORTH · MAI KHAO BEACH | ENTRANCE → SOUTH":"↑ 북쪽 · 마이카오 비치 | 입구 → 남쪽",
+  "46 sqm":"46㎡",
+  "97 sqm":"97㎡",
+  "117 sqm":"117㎡",
+  "Garden View · King or Twin":"가든 뷰 · 킹 또는 트윈",
+  "Newly renovated room featuring soundproofed walls, warm wooden accents, and a soft, soothing colour palette. Private terrace overlooks the tropical garden.":"방음 벽, 따뜻한 우드 포인트, 부드러운 색감이 돋보이는 새롭게 리노베이션된 객실입니다. 프라이빗 테라스에서 열대 정원을 바라볼 수 있습니다.",
+  "👤 Max 3 Adults + 2 Children":"👤 성인 최대 3명 + 어린이 2명",
+  "🛏 King or 2 Single Beds":"🛏 킹 또는 싱글 침대 2개",
+  "Walk-in rain shower · Separate bathtub":"워크인 레인 샤워 · 별도 욕조",
+  "Private terrace with garden views":"가든 뷰 프라이빗 테라스",
+  "Minibar · Flat-screen TV · Tea & coffee maker":"미니바 · 평면 TV · 티 & 커피 메이커",
+  "In-room safe · Robes & slippers":"객실 금고 · 로브 & 슬리퍼",
+  "Lagoon Pool View · King or Twin":"라군 풀 뷰 · 킹 또는 트윈",
+  "Floor-to-ceiling windows frame the shimmering lagoon pool beyond a private terrace. Warm earth tones and organic textures bring the outdoors in.":"프라이빗 테라스 너머 반짝이는 라군 풀을 통창으로 감상할 수 있습니다. 따뜻한 어스 톤과 자연스러운 질감이 객실 안으로 자연을 들입니다.",
+  "Walk-in rain shower · Bathtub":"워크인 레인 샤워 · 욕조",
+  "Floor-to-ceiling windows · Private terrace":"통창 · 프라이빗 테라스",
+  "Garden / Resort View · King":"가든 / 리조트 뷰 · 킹",
+  "Expansive two-room suite with a separate living area, private balcony, and well-equipped kitchenette. Two balconies and floor-to-ceiling windows create an airy, residential feel.":"분리된 거실, 프라이빗 발코니, 간이 주방을 갖춘 넓은 투룸 스위트입니다. 두 개의 발코니와 통창이 여유로운 레지덴셜 분위기를 만듭니다.",
+  "🛏 King + Sofa Bed":"🛏 킹 침대 + 소파 베드",
+  "Separate bedroom & living room":"분리된 침실 & 거실",
+  "Walk-in closet · Kitchenette with microwave":"워크인 클로젯 · 전자레인지가 있는 간이 주방",
+  "Bathtub & walk-in shower · Dining area":"욕조 & 워크인 샤워 · 다이닝 공간",
+  "Two private balconies · Soundproofed":"프라이빗 발코니 2개 · 방음",
+  "Garden View · Private Plunge Pool":"가든 뷰 · 프라이빗 플런지 풀",
+  "Ground-floor villa celebrating Southern Thai folk culture with a contemporary point of view. Natural materials, warm wood tones, and an open-plan layout flow to the private pool terrace.":"남부 태국 문화를 현대적으로 풀어낸 1층 빌라입니다. 자연 소재와 따뜻한 우드 톤, 오픈형 구조가 프라이빗 풀 테라스로 이어집니다.",
+  "🛏 King Bed":"🛏 킹 침대",
+  "Private plunge pool · Sun terrace with loungers":"프라이빗 플런지 풀 · 선 라운저가 있는 테라스",
+  "Floor-to-ceiling windows · Double vanity":"통창 · 더블 세면대",
+  "Freestanding bathtub · Spacious walk-in shower":"프리스탠딩 욕조 · 넓은 워크인 샤워",
+  "Private entrance · Minibar · Coffee maker":"프라이빗 입구 · 미니바 · 커피 메이커",
+  "Direct Oceanfront · Private Plunge Pool":"오션프런트 · 프라이빗 플런지 풀",
+  "Steps from Mai Khao Beach, this villa offers sweeping Andaman Sea views from both the private pool terrace and the freestanding bathtub. Open-plan living fills every room with sea light.":"마이카오 비치에서 가까운 이 빌라는 프라이빗 풀 테라스와 프리스탠딩 욕조에서 안다만 해 전망을 감상할 수 있습니다. 오픈형 구조가 객실 곳곳에 바다의 빛을 들입니다.",
+  "🛏 Extra Large King Bed":"🛏 엑스트라 라지 킹 침대",
+  "Private pool steps from the beach":"해변 가까이에 위치한 프라이빗 풀",
+  "Panoramic Andaman Sea views":"파노라마 안다만 해 전망",
+  "Freestanding bathtub · Rainfall shower":"프리스탠딩 욕조 · 레인폴 샤워",
+  "Open-plan living & sleeping area · Soundproofed":"오픈형 리빙 & 침실 공간 · 방음",
+  "337 sqm · 2 Levels":"337㎡ · 2층",
+  "Oceanfront · 3 Bedrooms · Duplex":"오션프런트 · 침실 3개 · 듀플렉스",
+  "Our signature villa spans two levels on the Andaman beachfront. Three private bedrooms each with ensuite bathrooms, a refined living room, bright dining space, and a panoramic ocean-view pool terrace.":"안다만 비치프런트에 자리한 2층 구조의 시그니처 빌라입니다. 욕실이 딸린 침실 3개, 세련된 거실, 밝은 다이닝 공간, 파노라마 오션뷰 풀 테라스를 갖추고 있습니다.",
+  "Our signature villa spans two levels on the Andaman beachfront. Three private bedrooms each with ensuite bathrooms, a refined living room, bright dining space, and a panoramic oceanfront terrace create an impressive setting for VIP stays.":"안다만 비치프런트에 자리한 2층 구조의 시그니처 빌라입니다. 욕실이 딸린 침실 3개, 세련된 거실, 밝은 다이닝 공간, 파노라마 오션프런트 테라스가 VIP 숙박에 어울리는 공간을 완성합니다.",
+  "👤 Max 7 Adults + 6 Children":"👤 성인 최대 7명 + 어린이 6명",
+  "🛏 3 King Beds":"🛏 킹 침대 3개",
+  "3 bedrooms · 3 ensuite bathrooms · 2 levels":"침실 3개 · 욕실 3개 · 2층",
+  "Private oceanfront pool · Spacious terrace with loungers":"프라이빗 오션프런트 풀 · 선 라운저가 있는 넓은 테라스",
+  "Separate living & dining areas · Full kitchen":"분리된 거실 & 다이닝 공간 · 풀 키친",
+  "Panoramic bathtub views · Floor-to-ceiling windows":"파노라마 욕조 전망 · 통창",
+  "Japanese Coastal Izakaya":"일본식 코스탈 이자카야",
+  "Signature: Kagoshima A5 Wagyu Striploin":"시그니처: 가고시마 A5 와규 스트립로인",
+  "🕐 Lunch & Dinner (Opening July 2026)":"🕐 중식 & 석식 (2026년 7월 오픈 예정)",
+  "Website":"웹사이트",
+  "Instagram":"인스타그램",
+  "Signature Thai Cuisine":"시그니처 태국 요리",
+  "Signature: Fried Tom Yum Mole Crab":"시그니처: 프라이드 톰얌 몰 크랩",
+  "🕐 Daily · 12:00 PM – 11:00 PM":"🕐 매일 · 오후 12:00 – 오후 11:00",
+  "Menu":"메뉴",
+  "Facebook":"페이스북",
+  "International · Beachfront":"인터내셔널 · 비치프런트",
+  "Sand Box Beachfront Bar & Eatery":"샌드 박스 비치프런트 바 & 이터리",
+  "Signature: Import Wagyu Beef Burger":"시그니처: 수입 와규 비프 버거",
+  "🕐 Daily · 11:00 AM – 11:00 PM":"🕐 매일 · 오전 11:00 – 오후 11:00",
+  "Buffet Breakfast":"뷔페 조식",
+  "Signature: Bigomoi Pancake · Bi Koh Moi Thai Pancakes":"시그니처: 비고모이 팬케이크 · 비코모이 태국 팬케이크",
+  "🕐 Daily · 7:00 AM – 11:00 AM":"🕐 매일 · 오전 7:00 – 오전 11:00",
+  "Bar · Cocktails":"바 · 칵테일",
+  "Signature: Punch Bowl Ritual":"시그니처: 펀치 볼 리추얼",
+  "🕐 Daily · 12:00 PM – 11:00 PM Punch Bowl Ritual: Daily (exc. Mon) · 18:00–19:00":"🕐 매일 · 오후 12:00 – 오후 11:00 펀치 볼 리추얼: 매일 (월요일 제외) · 18:00–19:00",
+  "Punch Bowl Ritual: Daily (exc. Mon) · 18:00–19:00":"펀치 볼 리추얼: 매일 (월요일 제외) · 18:00–19:00",
+  "Café · Coffee House":"카페 · 커피하우스",
+  "Signature: Affogato & Cocogato (espresso + coconut)":"시그니처: 아포가토 & 코코가토 (에스프레소 + 코코넛)",
+  "🕐 Daily · 8:00 AM – 6:00 PM":"🕐 매일 · 오전 8:00 – 오후 6:00",
+  "Resort Facilities":"리조트 시설",
+  "Beyond the Room":"객실 그 이상의 경험",
+  "World-class wellness, family fun, and fitness — all within the resort.":"웰니스, 가족 레크리에이션, 피트니스를 리조트 안에서 모두 경험할 수 있습니다.",
+  "Family · Recreation":"패밀리 · 레크리에이션",
+  "Kids' World & Dino Pool":"키즈 월드 & 다이노 풀",
+  "A lively family space with dinosaur and unicorn pool inflatables, water slides, splash zones, and hands-on activities at Kids World.":"공룡과 유니콘 인플레이터블, 워터 슬라이드, 스플래시 존, 키즈 월드 액티비티가 있는 활기찬 가족 공간입니다.",
+  "Northern Thai umbrella painting":"북부 태국 우산 페인팅",
+  "Dino & unicorn pool inflatables":"공룡 & 유니콘 풀 인플레이터블",
+  "Jungle trail exploration behind the pool":"풀 뒤편 정글 트레일 탐험",
+  "Non-alcoholic Punch Bowl Ritual every Monday · 16:30":"매주 월요일 16:30 논알코올 펀치 볼 리추얼",
+  "Wellness · Spa":"웰니스 · 스파",
+  "A tranquil spa blending traditional Thai healing with modern wellness — massages, facials, and signature sound healing sessions led by Spa Manager Khun Miki.":"태국 전통 치유와 현대 웰니스가 조화를 이루는 차분한 스파입니다. 스파 매니저 쿤 미키가 이끄는 마사지, 페이셜, 시그니처 사운드 힐링 세션을 제공합니다.",
+  "Sound healing with Khun Miki":"쿤 미키와 함께하는 사운드 힐링",
+  "Traditional Thai massage & aromatherapy":"태국 전통 마사지 & 아로마테라피",
+  "Herbal compress therapy":"허벌 컴프레스 테라피",
+  "Facial & body treatment menu":"페이셜 & 바디 트리트먼트 메뉴",
+  "Wellness · Recreation":"웰니스 · 레크리에이션",
+  "Fitness Center":"피트니스 센터",
+  "Fully equipped 24-hour fitness center with cardio machines, free weights, and certified instructors for Muay Thai, yoga, and circuit training.":"카디오 머신, 프리 웨이트, 무에타이, 요가, 서킷 트레이닝 전문 강사가 있는 24시간 피트니스 센터입니다.",
+  "Muay Thai introductory class":"무에타이 입문 클래스",
+  "Beach & pool yoga sessions":"비치 & 풀 요가 세션",
+  "Circuit training & Peg Board challenge":"서킷 트레이닝 & 페그 보드 챌린지",
+  "Open 24 hours daily":"매일 24시간 운영",
+  "Venue Detail":"장소 상세",
+  "Content to be supplied.":"콘텐츠 제공 예정입니다.",
+  "Setting":"공간 유형",
+  "Indoor":"실내",
+  "Outdoor":"야외",
+  "Best Use":"추천 용도",
+  "Meeting":"미팅",
+  "Status":"상태",
+  "Verified":"확인 완료",
+  "Request Floorplan or Proposal":"플로어플랜 또는 제안 요청",
+  "Indoor venue":"실내 행사 공간",
+  "Conference, banquet, cocktail":"컨퍼런스, 연회, 칵테일",
+  "Verified capacity":"수용 인원 확인 완료",
+  "Outdoor venue":"야외 행사 공간",
+  "An 820 sqm outdoor setting under pine trees fronting Andaman waters, suited to gala dinners, sunset receptions, and team-building programs.":"안다만 해를 마주한 소나무 아래 820㎡ 규모의 야외 공간으로 갈라 디너, 선셋 리셉션, 팀빌딩 프로그램에 어울립니다.",
+  "Banquet, cocktail, team-building":"연회, 칵테일, 팀빌딩",
+  "A private beachfront and lawn setting where corporate events can move closer to the coast. Capacity and setup detail to be supplied by Sales.":"기업 행사를 해안 가까이에서 진행할 수 있는 프라이빗 비치프런트 및 론 공간입니다. 수용 인원과 세팅 세부 정보는 세일즈 팀에서 제공 예정입니다.",
+  "Beachfront events":"비치프런트 이벤트",
+  "Content to be supplied":"콘텐츠 제공 예정",
+  "A garden setting for daylight meetings and open-air moments. Capacity and wet-weather backup details to be supplied.":"주간 미팅과 야외 프로그램에 어울리는 가든 공간입니다. 수용 인원 및 우천 시 대안 정보는 제공 예정입니다.",
+  "Daylight meeting, reception":"주간 미팅, 리셉션",
+  "Premium daytime venue":"프리미엄 주간 행사 공간",
+  "A Thai restaurant with ocean views, available as a premium daytime venue. Availability is subject to confirmation and additional charges may apply.":"오션뷰를 갖춘 태국 레스토랑으로 프리미엄 주간 행사 장소로 이용 가능합니다. 이용 가능 여부 확인 및 추가 요금이 적용될 수 있습니다.",
+  "Private dining, daytime meeting":"프라이빗 다이닝, 주간 미팅",
+  "sqm":"㎡",
+  "Coffee Break Themes":"커피 브레이크 테마",
+  "Deluxe Room":"디럭스 룸",
+  "Pool Villa":"풀 빌라",
+  "Takieng Restaurant":"타키엥 레스토랑",
+  "Sand Box Bar":"샌드 박스 바",
+  "Beach Lawn":"비치 론",
+  "Barefoot Beachfront":"베어풋 비치프런트",
+  "Coffee Break Theme":"커피 브레이크 테마",
+  "Resort Pool":"리조트 풀",
+  "Oceanfront Villa":"오션프런트 빌라",
+  "Bike Tour":"자전거 투어",
+  "Punch Bowl Ritual":"펀치 볼 리추얼",
+  "Photography to be inserted — placeholders shown":"사진 삽입 예정 — 현재는 플레이스홀더 이미지입니다.",
+  "Stay Connected":"소식 받아보기",
+  "Follow the Story":"이야기 따라가기",
+  "Stay updated on what's happening at Renaissance Phuket — explore our outlets, follow our channels, and discover the neighborhood through our lens.":"르네상스 푸켓의 새로운 소식을 확인하세요. 다이닝 공간과 채널을 둘러보고, 우리의 시선으로 주변 지역을 만나보세요.",
+  "The Resort":"리조트",
+  "Quan Spa Phuket":"콴 스파 푸켓",
+  "Renaissance Phuket Sales Team":"르네상스 푸켓 세일즈 팀",
+  "+66 76 3… (Content to be supplied)":"+66 76 3… (정보 제공 예정)",
+  "1 night":"1박",
+  "2 nights":"2박",
+  "3 nights":"3박",
+  "4–6 nights":"4–6박",
+  "7+ nights":"7박 이상"
+};
+
+const KO_STATIC_REVERSE = Object.fromEntries(Object.entries(KO_STATIC_TEXT).map(([en,ko])=>[ko,en]));
+
+function normalizeTextValue(text){
+  return text.replace(/\s+/g,' ').trim();
+}
+
+function hasDataTranslationAncestor(node){
+  let el = node.parentElement;
+  while(el){
+    if(el.hasAttribute('data-t')) return true;
+    el = el.parentElement;
+  }
+  return false;
+}
+
+function applyStaticTranslations(lang){
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode(node){
+      if(!node.nodeValue || !normalizeTextValue(node.nodeValue)) return NodeFilter.FILTER_REJECT;
+      const parent = node.parentElement;
+      if(!parent) return NodeFilter.FILTER_REJECT;
+      if(['SCRIPT','STYLE','TEXTAREA','INPUT'].includes(parent.tagName)) return NodeFilter.FILTER_REJECT;
+      if(hasDataTranslationAncestor(node)) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  const nodes = [];
+  while(walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node=>{
+    const text = normalizeTextValue(node.nodeValue);
+    if(lang === 'ko' && KO_STATIC_TEXT[text]){
+      node.nodeValue = KO_STATIC_TEXT[text];
+    } else if(lang === 'en' && KO_STATIC_REVERSE[text]){
+      node.nodeValue = KO_STATIC_REVERSE[text];
+    }
+  });
+}
+
+/* ── DESTINATION TAB SWITCH ────────────────────────────── */
+function showDestTab(tab){
+  document.querySelectorAll('.dest-tab').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.dest-tab-btn').forEach(btn=>btn.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  event.currentTarget.classList.add('active');
+  if(tab==='phuket'&&!window._mapInit) initPhuketMap();
+}
+
+/* ── RESORT ZONE TOGGLE ────────────────────────────────── */
+function toggleZone(el,key){
+  var panel=document.getElementById('panel-'+key);
+  var isOpen=panel.classList.contains('open');
+  // close all
+  document.querySelectorAll('.zone-panel').forEach(p=>p.classList.remove('open'));
+  document.querySelectorAll('.rzone').forEach(z=>z.classList.remove('open'));
+  if(!isOpen){panel.classList.add('open');el.classList.add('open');}
+}
+
+/* ── SELF-CONTAINED DESTINATION BOARD ───────────────────── */
+function filterMap(cat,btn){
+  document.querySelectorAll('.mf-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('[data-map-cat]').forEach(card=>{
+    const keep = cat === 'all' || card.dataset.mapCat === cat || card.dataset.mapCat === 'resort' || card.dataset.mapCat === 'airport';
+    card.classList.toggle('hide', !keep);
+  });
+}
+
+function initPhuketMap(){ window._mapInit = true; }
+
+document.addEventListener('DOMContentLoaded',function(){initPhuketMap();});
+
+const venueDetails = {
+  rballroom:{
+    title:'R Ballroom',
+    tag:'Indoor venue',
+    img:'images/M-1.jpg',
+    copy:'The main indoor meeting setting, with flexible setup options for conferences, launches, receptions, and banquet moments. Verified capacities are shown in the meeting room table.',
+    setting:'Indoor',
+    use:'Conference, banquet, cocktail',
+    status:'Verified capacity'
+  },
+  beachlawn:{
+    title:'Beach Lawn',
+    tag:'Outdoor venue',
+    img:'images/M-2.png',
+    copy:'An 820 sqm outdoor setting under pine trees fronting Andaman waters, suited to gala dinners, sunset receptions, and team-building programs.',
+    setting:'Outdoor',
+    use:'Banquet, cocktail, team-building',
+    status:'Verified capacity'
+  },
+  barefoot:{
+    title:'Barefoot',
+    tag:'Outdoor venue',
+    img:'images/M-3.jpg',
+    copy:'A private beachfront and lawn setting where corporate events can move closer to the coast. Capacity and setup detail to be supplied by Sales.',
+    setting:'Outdoor',
+    use:'Beachfront events',
+    status:'Content to be supplied'
+  },
+  garden:{
+    title:'Garden',
+    tag:'Outdoor venue',
+    img:'images/M-4.jpg',
+    copy:'A garden setting for daylight meetings and open-air moments. Capacity and wet-weather backup details to be supplied.',
+    setting:'Outdoor',
+    use:'Daylight meeting, reception',
+    status:'Content to be supplied'
+  },
+  takieng:{
+    title:'Takieng',
+    tag:'Premium daytime venue',
+    img:'images/M-5.jpg',
+    copy:'A Thai restaurant with ocean views, available as a premium daytime venue. Availability is subject to confirmation and additional charges may apply.',
+    setting:'Indoor',
+    use:'Private dining, daytime meeting',
+    status:'Verified capacity'
+  }
+};
+
+function openVenue(key){
+  const data = venueDetails[key];
+  if(!data) return;
+  document.getElementById('venueDrawerImg').src = data.img;
+  document.getElementById('venueDrawerImg').alt = data.title;
+  document.getElementById('venueDrawerTag').textContent = data.tag;
+  document.getElementById('venueDrawerTitle').textContent = data.title;
+  document.getElementById('venueDrawerCopy').textContent = data.copy;
+  document.getElementById('venueDrawerSetting').textContent = data.setting;
+  document.getElementById('venueDrawerUse').textContent = data.use;
+  document.getElementById('venueDrawerStatus').textContent = data.status;
+  applyStaticTranslations(window.currentLang || document.documentElement.lang || 'en');
+  document.getElementById('venueDrawer').classList.add('open');
+  document.getElementById('venueDrawer').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function closeVenue(){
+  document.getElementById('venueDrawer').classList.remove('open');
+}
+
+function tValue(key){
+  const lang = window.currentLang || document.documentElement.lang || 'en';
+  return (T[lang] && T[lang][key] !== undefined) ? T[lang][key] : ((T.en && T.en[key] !== undefined) ? T.en[key] : key);
+}
+
+const coffeeThemeDetails = {
+  art:{title:'coffee_art_name',tag:'coffee_art_tag',copy:'coffee_art_full',mood:'coffee_art_mood',use:'coffee_art_use',tone:'art',img:'images/Meeting/B-1.jpg'},
+  lab:{title:'coffee_lab_name',tag:'coffee_lab_tag',copy:'coffee_lab_full',mood:'coffee_lab_mood',use:'coffee_lab_use',tone:'lab',img:'images/Meeting/B-2.jpg'},
+  aloha:{title:'coffee_aloha_name',tag:'coffee_aloha_tag',copy:'coffee_aloha_full',mood:'coffee_aloha_mood',use:'coffee_aloha_use',tone:'aloha',img:'images/Meeting/B-3.jpg'},
+  heritage:{title:'coffee_heritage_name',tag:'coffee_heritage_tag',copy:'coffee_heritage_full',mood:'coffee_heritage_mood',use:'coffee_heritage_use',tone:'heritage',img:'images/Meeting/B-4.jpg'},
+  carnival:{title:'coffee_carnival_name',tag:'coffee_carnival_tag',copy:'coffee_carnival_full',mood:'coffee_carnival_mood',use:'coffee_carnival_use',tone:'carnival',img:'images/Meeting/B-5.jpg'},
+  energize:{title:'coffee_energize_name',tag:'coffee_energize_tag',copy:'coffee_energize_full',mood:'coffee_energize_mood',use:'coffee_energize_use',tone:'energize',img:'images/Meeting/B-6.jpg'}
+};
+
+function openCoffeeTheme(key, shouldScroll = true){
+  const data = coffeeThemeDetails[key];
+  if(!data) return;
+  document.querySelectorAll('[data-coffee-card]').forEach(card=>{
+    card.classList.toggle('active', card.dataset.coffeeCard === key);
+  });
+  document.getElementById('coffeeDrawerImage').className = 'coffee-drawer-image ' + data.tone;
+  document.getElementById('coffeeDrawerImg').src = data.img;
+  document.getElementById('coffeeDrawerImg').alt = tValue(data.title) + ' coffee break';
+  document.getElementById('coffeeDrawerTag').textContent = tValue(data.tag);
+  document.getElementById('coffeeDrawerTitle').textContent = tValue(data.title);
+  document.getElementById('coffeeDrawerCopy').textContent = tValue(data.copy);
+  document.getElementById('coffeeDrawerMood').textContent = tValue(data.mood);
+  document.getElementById('coffeeDrawerUse').textContent = tValue(data.use);
+  document.getElementById('coffeeDrawer').classList.add('open');
+  if(shouldScroll) document.getElementById('coffeeDrawer').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function closeCoffeeTheme(){
+  document.getElementById('coffeeDrawer').classList.remove('open');
+  document.querySelectorAll('[data-coffee-card]').forEach(card=>card.classList.remove('active'));
+}
+
+function syncCoffeeTheme(shouldScroll = false){
+  const active = document.querySelector('[data-coffee-card].active');
+  if(active) openCoffeeTheme(active.dataset.coffeeCard, shouldScroll);
+}
+
+function highlightResortPin(num){
+  document.querySelectorAll('.map-num-pin').forEach(pin=>{
+    pin.classList.toggle('active', pin.dataset.pin === num);
+  });
+}
+
+const destinationMapData = {
+  hotel:{
+    kicker:'Hotel Anchor',
+    title:'Renaissance Phuket Resort & Spa',
+    category:'Beachfront resort',
+    distance:'Anchor point',
+    time:'Mai Khao Beach',
+    description:'The main reference point for every journey, set on Mai Khao Beach beside Sirinath National Park.'
+  },
+  turtle:{
+    kicker:'1 · Shopping',
+    title:'Turtle Village',
+    category:'Shopping & dining',
+    distance:'2 km from hotel',
+    time:'5 min by car',
+    description:'A nearby stop for easy shopping and dining, with complimentary transfer every hour.'
+  },
+  sarasin:{
+    kicker:'2 · Viewpoint',
+    title:'Sarasin Bridge',
+    category:'Viewpoint / gateway',
+    distance:'Approx. 6 km',
+    time:'13 min by car',
+    description:'A northbound gateway toward Phang Nga with sweeping coastal views.'
+  },
+  pru:{
+    kicker:'3 · Local Discovery',
+    title:'Pru Jae Son Mangroves',
+    category:'Mangrove cycling',
+    distance:'0 km',
+    time:'0 min',
+    description:'A scenic mangrove setting for cycling experiences close to the resort.'
+  },
+  town:{
+    kicker:'4 · Culture',
+    title:'Phuket Town',
+    category:'Culture / day trip',
+    distance:'Approx. 38 km',
+    time:'50 min by car',
+    description:'Connected by hotel shuttle to Central Floresta, three times daily.'
+  },
+  patong:{
+    kicker:'5 · Attractions',
+    title:'Patong',
+    category:'Beach town',
+    distance:'Approx. 35 km',
+    time:'50 min by car',
+    description:'A sandy, crescent beach is lined with cafes, restaurants, bars and night life.'
+  },
+  airport:{
+    kicker:'6 · Arrival',
+    title:'Phuket International Airport',
+    category:'Airport',
+    distance:'Approx. 20 min',
+    time:'By car',
+    description:'The key arrival point for guests — just 20 minutes from the resort.'
+  }
+};
+
+function selectDestination(key){
+  const data = destinationMapData[key];
+  if(!data) return;
+  document.querySelectorAll('.phuket-pin').forEach(pin=>{
+    pin.classList.toggle('active', pin.dataset.destination === key);
+  });
+  document.querySelectorAll('[data-destination-card]').forEach(card=>{
+    card.classList.toggle('active', card.dataset.destinationCard === key);
+  });
+  document.getElementById('destinationKicker').textContent = data.kicker;
+  document.getElementById('destinationTitle').textContent = data.title;
+  document.getElementById('destinationCategory').textContent = data.category;
+  document.getElementById('destinationDistance').textContent = data.distance;
+  document.getElementById('destinationTime').textContent = data.time;
+  document.getElementById('destinationDescription').textContent = data.description;
+  applyStaticTranslations(window.currentLang || document.documentElement.lang || 'en');
+}
+
+let capacitySort = {col:0,dir:1};
+function sortCapacity(col,type){
+  const table = document.getElementById('capacityTable');
+  const body = table.tBodies[0];
+  const rows = Array.from(body.rows);
+  capacitySort.dir = capacitySort.col === col ? capacitySort.dir * -1 : 1;
+  capacitySort.col = col;
+  rows.sort((a,b)=>{
+    const av = a.cells[col].textContent.trim();
+    const bv = b.cells[col].textContent.trim();
+    if(type === 'number'){
+      const an = av === '—' ? -1 : parseFloat(av.replace(/,/g,''));
+      const bn = bv === '—' ? -1 : parseFloat(bv.replace(/,/g,''));
+      return (an - bn) * capacitySort.dir;
+    }
+    return av.localeCompare(bv) * capacitySort.dir;
+  });
+  rows.forEach(row=>body.appendChild(row));
+}
+
+function setLang(lang){
+  if(lang !== 'en' && lang !== 'ko'){
+    document.querySelectorAll('[data-t]').forEach(el=>{
+      const key=el.getAttribute('data-t');
+      if(T.en&&T.en[key]!==undefined) el.textContent=T.en[key];
+    });
+    window.currentLang = 'en';
+    document.title = 'Renaissance Phuket Resort & Spa — Sales Playbook 2026';
+    applyStaticTranslations('en');
+    syncCoffeeTheme(false);
+    document.querySelectorAll('[data-lang]').forEach(btn=>{
+      btn.classList.toggle('active',btn.getAttribute('data-lang')==='en');
+    });
+    window.alert('Translation pending. English and Korean are live.');
+    return;
+  }
+  document.querySelectorAll('[data-t]').forEach(el=>{
+    const key=el.getAttribute('data-t');
+    if(T[lang]&&T[lang][key]!==undefined) el.textContent=T[lang][key];
+  });
+  window.currentLang = lang;
+  document.title = lang === 'ko' ? '르네상스 푸켓 리조트 & 스파 — 세일즈 플레이북 2026' : 'Renaissance Phuket Resort & Spa — Sales Playbook 2026';
+  applyStaticTranslations(lang);
+  syncCoffeeTheme(false);
+  document.querySelectorAll('[data-lang]').forEach(btn=>{
+    btn.classList.toggle('active',btn.getAttribute('data-lang')===lang);
+  });
+  document.documentElement.lang=lang;
+}
+
+/* ── GALLERY FILTER ──────────────────────────────────────── */
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.gf-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gitem').forEach(item => {
+    const show = cat === 'all' || item.dataset.cat === cat;
+    item.style.display = show ? '' : 'none';
+  });
+}
+
+function openLightbox(el) {
+  const img = el.querySelector('img');
+  document.getElementById('lbImg').src = img.src;
+  document.getElementById('lbImg').alt = img.alt;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+/* ── RFP FORM ────────────────────────────────────────────── */
+function submitRFP(e) {
+  e.preventDefault();
+  document.getElementById('rfpForm').style.display = 'none';
+  document.getElementById('rfpSuccess').style.display = 'block';
+}
+
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
