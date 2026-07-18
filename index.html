@@ -84,6 +84,8 @@ body{font-family:Georgia,"Miller Text RH",serif;background:var(--pavement);color
 .shuttle-item{flex:1;min-width:180px}
 .shuttle-label{font-family:Arial,sans-serif;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--wave);margin-bottom:6px}
 .shuttle-item p{font-size:.88rem;color:rgba(245,243,240,.75);line-height:1.7}
+.outlet-menu-btn{display:inline-block;font-family:Arial,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--midnight);border:1.5px solid var(--midnight);border-radius:30px;padding:6px 14px;text-decoration:none;transition:background .2s,color .2s;white-space:nowrap}
+.outlet-menu-btn:hover{background:var(--midnight);color:var(--pavement)}
 
 /* Resort Zone Map */
 .resort-wrap{position:relative}
@@ -561,6 +563,7 @@ footer{background:var(--midnight);text-align:center;padding:24px;font-family:Ari
           <button class="phuket-pin" style="--x:63%;--y:52%" data-destination="town" onclick="selectDestination('town')" onmouseenter="selectDestination('town')" type="button"><span class="pin-number">4</span><span class="pin-name">Phuket Town</span></button>
           <button class="phuket-pin" style="--x:40%;--y:54%" data-destination="patong" onclick="selectDestination('patong')" onmouseenter="selectDestination('patong')" type="button"><span class="pin-number">5</span><span class="pin-name">Patong</span></button>
           <button class="phuket-pin" style="--x:53%;--y:18%" data-destination="airport" onclick="selectDestination('airport')" onmouseenter="selectDestination('airport')" type="button"><span class="pin-number">6</span><span class="pin-name">Phuket Airport</span></button>
+          <button class="phuket-pin" style="--x:44%;--y:88%" data-destination="promthep" onclick="selectDestination('promthep')" onmouseenter="selectDestination('promthep')" type="button"><span class="pin-number">7</span><span class="pin-name">Promthep Cape</span></button>
           <div class="phuket-map-card" id="destinationMapCard">
             <div class="map-card-kicker" id="destinationKicker">Hotel Anchor</div>
             <h4 id="destinationTitle">Renaissance Phuket Resort & Spa</h4>
@@ -583,6 +586,7 @@ footer{background:var(--midnight);text-align:center;padding:24px;font-family:Ari
             <button class="rec-card" data-destination-card="town" onclick="selectDestination('town')" type="button"><strong>4 · Culture</strong><h3>Phuket Town</h3><p>Connected by the hotel shuttle route with Central Floresta, three times daily.</p><div class="rec-meta"><span>Approx. 38 km</span><span>50 min by car</span></div></button>
             <button class="rec-card" data-destination-card="patong" onclick="selectDestination('patong')" type="button"><strong>5 · Attractions</strong><h3>Patong</h3><p>A sandy, crescent beach lined with cafes, restaurants, bars and night life.</p><div class="rec-meta"><span>Approx. 35 km</span><span>50 min by car</span></div></button>
             <button class="rec-card" data-destination-card="airport" onclick="selectDestination('airport')" type="button"><strong>6 · Arrival</strong><h3>Phuket International Airport</h3><p>The key arrival point — just 20 minutes from the resort.</p><div class="rec-meta"><span>Approx. 20 min</span><span>By car</span></div></button>
+            <button class="rec-card" data-destination-card="promthep" onclick="selectDestination('promthep')" type="button"><strong>7 · Viewpoint</strong><h3>Promthep Cape</h3><p>Phuket's southernmost tip — the island's most celebrated sunset viewpoint.</p><div class="rec-meta"><span>Approx. 50 km</span><span>60 min by car</span></div></button>
           </div>
         </div>
       </div>
@@ -593,8 +597,17 @@ footer{background:var(--midnight);text-align:center;padding:24px;font-family:Ari
       <div class="map-shuttle">
         <div class="shuttle-item">
           <div class="shuttle-label" data-t="dest_shuttle">Shuttle Service</div>
-          <p data-t="dest_shuttle1">3× daily: Hotel ↔ Phuket Town & Central Floresta</p>
-          <p data-t="dest_shuttle2">3× daily: Hotel ↔ Patong</p>
+          <p style="line-height:1.4;margin:0">
+            <strong>Complimentary</strong><br>
+            Hourly: Hotel ↔ Mai Khao Plaza
+          </p>
+          <a class="outlet-menu-btn" href="https://marrstar.box.com/s/s2nchynmgg70it4s9gwfaxlwirhkugga" target="_blank" rel="noopener" style="color:var(--pavement);border-color:rgba(245,243,240,.5);margin-top:18px">View Schedule →</a>
+          <p style="line-height:1.4;margin:18px 0 0">
+            <strong>Fee applies</strong><br>
+            3× daily: Hotel ↔ Phuket Town &amp; Central Floresta<br>
+            3× daily: Hotel ↔ Patong
+          </p>
+          <a class="outlet-menu-btn" href="https://marrstar.box.com/s/phcoyydcy4dq0f85ricfg7p2nve5v06r" target="_blank" rel="noopener" style="color:var(--pavement);border-color:rgba(245,243,240,.5);margin-top:18px">View Schedule →</a>
         </div>
         <div class="shuttle-item">
           <div class="shuttle-label">Key Distances</div>
@@ -1599,8 +1612,8 @@ footer{background:var(--midnight);text-align:center;padding:24px;font-family:Ari
         </div>
       </div>
       <div class="soc-card reveal">
-        <div class="sc-tag">Spa</div>
-        <div class="sc-name">Quan Spa</div>
+        <div class="sc-tag">Quan Spa</div>
+        <div class="sc-name">Quan Spa Phuket</div>
         <div class="sc-links">
           <a href="https://www.marriott.com/en-us/hotels/hktbr-renaissance-phuket-resort-and-spa/spa/" target="_blank" rel="noopener">Website</a>
           <a href="https://www.facebook.com/QuanSpaPhuket" target="_blank" rel="noopener">Facebook</a>
@@ -1630,8 +1643,8 @@ footer{background:var(--midnight);text-align:center;padding:24px;font-family:Ari
         </div>
       </div>
       <div class="soc-card reveal">
-        <div class="sc-tag">International Cuisine</div>
-        <div class="sc-name">Sand Box Beachfront Bar & Eatery</div>
+        <div class="sc-tag">Beachfront Bar & Eatery</div>
+        <div class="sc-name">Sand Box</div>
         <div class="sc-links">
           <a href="https://www.facebook.com/SandBoxBeachfrontBar" target="_blank" rel="noopener">Facebook</a>
           <a href="https://www.instagram.com/sand_box_beachfrontbar_eatery/" target="_blank" rel="noopener">Instagram</a>
@@ -1655,7 +1668,7 @@ footer{background:var(--midnight);text-align:center;padding:24px;font-family:Ari
             <div class="cc-name">Renaissance Phuket Sales Team</div>
             <div class="cc-links">
               <a href="mailto:sales.renphuket@marriott.com">sales.renphuket@marriott.com</a>
-              <a href="tel:+6676363999">+66 76 363 999</a>
+              <a href="tel:+66763...">+66 76 3… (Content to be supplied)</a>
             </div>
           </div>
           <div class="contact-card">
@@ -2483,6 +2496,14 @@ const destinationMapData = {
     distance:'Approx. 20 min',
     time:'By car',
     description:'The key arrival point for guests — just 20 minutes from the resort.'
+  },
+  promthep:{
+    kicker:'7 · Viewpoint',
+    title:'Promthep Cape',
+    category:'Sunset viewpoint',
+    distance:'Approx. 50 km',
+    time:'60 min by car',
+    description:"Phuket's southernmost tip — the island's most celebrated sunset viewpoint."
   }
 };
 
