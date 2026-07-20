@@ -1484,37 +1484,87 @@ footer{background:var(--midnight);text-align:center;padding:24px;font-family:Ari
     <div class="section-head light reveal">
       <div class="eyebrow" data-t="gal_eyebrow">Gallery</div>
       <h2 class="display" data-t="gal_title">See the Resort</h2>
-      <p class="sub" data-t="gal_sub">Filter by category to explore what Renaissance Phuket looks and feels like.</p>
+      <p class="sub" data-t="gal_sub">Filter the official Marriott gallery by group name for client-ready visual references.</p>
     </div>
     <div class="gallery-filters">
       <button class="gf-btn active" onclick="filterGallery('all',this)" data-t="gf_all">All</button>
-      <button class="gf-btn" onclick="filterGallery('resort',this)" data-t="gf_resort">Resort</button>
-      <button class="gf-btn" onclick="filterGallery('rooms',this)" data-t="gf_rooms">Accommodations</button>
+      <button class="gf-btn" onclick="filterGallery('hotel-view',this)">Hotel View</button>
+      <button class="gf-btn" onclick="filterGallery('guest-rooms',this)">Guest Rooms</button>
+      <button class="gf-btn" onclick="filterGallery('villas',this)">Villas</button>
+      <button class="gf-btn" onclick="filterGallery('suites',this)">Suites</button>
+      <button class="gf-btn" onclick="filterGallery('features',this)">Features</button>
       <button class="gf-btn" onclick="filterGallery('dining',this)" data-t="gf_dining">Dining</button>
-      <button class="gf-btn" onclick="filterGallery('mice',this)" data-t="gf_mice">MICE</button>
-      <button class="gf-btn" onclick="filterGallery('outdoor',this)" data-t="gf_outdoor">Outdoor Venues</button>
+      <button class="gf-btn" onclick="filterGallery('recreation',this)">Recreation & Fitness</button>
       <button class="gf-btn" onclick="filterGallery('activities',this)">Activities</button>
-      <button class="gf-btn" onclick="filterGallery('wellness',this)" data-t="gf_wellness">Wellness</button>
-      <button class="gf-btn" onclick="filterGallery('beach',this)" data-t="gf_beach">Beachfront</button>
-      <button class="gf-btn" onclick="filterGallery('coffee',this)">Coffee Break Themes</button>
+      <button class="gf-btn" onclick="filterGallery('spa',this)">Spa</button>
+      <button class="gf-btn" onclick="filterGallery('nearby',this)">Nearby Attractions</button>
+      <button class="gf-btn" onclick="filterGallery('events',this)">Events & Meetings</button>
+      <button class="gf-btn" onclick="filterGallery('weddings',this)">Weddings</button>
     </div>
     <div class="gallery-grid" id="galleryGrid">
-      <div class="gitem wide" data-cat="resort" onclick="openLightbox(this)"><img src="images/slide03_004.png" alt="Mai Khao Beach"><div class="goverlay"><span class="glabel">Mai Khao Beach</span></div></div>
-      <div class="gitem" data-cat="rooms" onclick="openLightbox(this)"><img src="images/Site - room type - 1.jpg" alt="Deluxe Room"><div class="goverlay"><span class="glabel">Deluxe Room</span></div></div>
-      <div class="gitem" data-cat="rooms" onclick="openLightbox(this)"><img src="images/Site - room type - 4.jpg" alt="Pool Villa"><div class="goverlay"><span class="glabel">Pool Villa</span></div></div>
-      <div class="gitem" data-cat="dining" onclick="openLightbox(this)"><img src="images/2.jpg" alt="Takieng"><div class="goverlay"><span class="glabel">Takieng Restaurant</span></div></div>
-      <div class="gitem" data-cat="dining" onclick="openLightbox(this)"><img src="images/3.jpg" alt="Sand Box"><div class="goverlay"><span class="glabel">Sand Box Bar</span></div></div>
-      <div class="gitem" data-cat="mice" onclick="openLightbox(this)"><img src="images/slide09_026.jpg" alt="R Ballroom"><div class="goverlay"><span class="glabel">R Ballroom</span></div></div>
-      <div class="gitem wide" data-cat="outdoor" onclick="openLightbox(this)"><img src="images/slide11_041.jpg" alt="Beach Lawn"><div class="goverlay"><span class="glabel">Beach Lawn</span></div></div>
-      <div class="gitem" data-cat="beach" onclick="openLightbox(this)"><img src="images/slide11_043.png" alt="Barefoot Beach"><div class="goverlay"><span class="glabel">Barefoot Beachfront</span></div></div>
-      <div class="gitem" data-cat="wellness" onclick="openLightbox(this)"><img src="images/slide13_052.jpg" alt="Quan Spa"><div class="goverlay"><span class="glabel">Quan Spa</span></div></div>
-      <div class="gitem" data-cat="coffee" onclick="openLightbox(this)"><img src="images/slide10_036.jpg" alt="Coffee Break"><div class="goverlay"><span class="glabel">Coffee Break Theme</span></div></div>
-      <div class="gitem" data-cat="resort" onclick="openLightbox(this)"><img src="images/slide13_050.png" alt="Resort Pool"><div class="goverlay"><span class="glabel">Resort Pool</span></div></div>
-      <div class="gitem" data-cat="rooms" onclick="openLightbox(this)"><img src="images/Site - room type - 5.jpg" alt="Oceanfront Villa"><div class="goverlay"><span class="glabel">Oceanfront Villa</span></div></div>
-      <div class="gitem" data-cat="activities" onclick="openLightbox(this)"><img src="images/slide12_045.jpg" alt="Bike Tour"><div class="goverlay"><span class="glabel">Bike Tour</span></div></div>
-      <div class="gitem" data-cat="activities" onclick="openLightbox(this)"><img src="images/slide12_048.jpg" alt="Punch Bowl Ritual"><div class="goverlay"><span class="glabel">Punch Bowl Ritual</span></div></div>
+      <div class="gitem wide" data-cat="hotel-view" onclick="openLightbox(this)"><img src="images/HKTBR_Aerial_Top_View.jpg" alt="Aerial view" loading="lazy"><div class="goverlay"><span class="glabel">Hotel View · Aerial View</span></div></div>
+      <div class="gitem wide" data-cat="hotel-view" onclick="openLightbox(this)"><img src="images/HKTBR_Aerial_Top_View_Map.jpg" alt="Resort aerial map" loading="lazy"><div class="goverlay"><span class="glabel">Hotel View · Resort Map</span></div></div>
+      <div class="gitem" data-cat="hotel-view" onclick="openLightbox(this)"><img src="images/slide03_004.png" alt="Mai Khao Beach" loading="lazy"><div class="goverlay"><span class="glabel">Hotel View · Mai Khao Beach</span></div></div>
+      <div class="gitem" data-cat="hotel-view" onclick="openLightbox(this)"><img src="images/slide13_050.png" alt="Resort pool and beachfront" loading="lazy"><div class="goverlay"><span class="glabel">Hotel View · Pool & Beachfront</span></div></div>
+      <div class="gitem" data-cat="hotel-view" onclick="openLightbox(this)"><img src="images/slide14_055.jpg" alt="Resort exterior" loading="lazy"><div class="goverlay"><span class="glabel">Hotel View · Resort Exterior</span></div></div>
+
+      <div class="gitem" data-cat="guest-rooms" onclick="openLightbox(this)"><img src="images/Site - room type - 1.jpg" alt="Deluxe Room" loading="lazy"><div class="goverlay"><span class="glabel">Guest Rooms · Deluxe Room</span></div></div>
+      <div class="gitem" data-cat="guest-rooms" onclick="openLightbox(this)"><img src="images/Site - room type - 2.jpg" alt="Deluxe Lagoon View" loading="lazy"><div class="goverlay"><span class="glabel">Guest Rooms · Lagoon View</span></div></div>
+      <div class="gitem" data-cat="guest-rooms" onclick="openLightbox(this)"><img src="images/Site - room type - 3.jpg" alt="One Bedroom Suite" loading="lazy"><div class="goverlay"><span class="glabel">Guest Rooms · Suite Living Area</span></div></div>
+      <div class="gitem" data-cat="guest-rooms" onclick="openLightbox(this)"><img src="images/slide04_005.jpg" alt="Guest room detail" loading="lazy"><div class="goverlay"><span class="glabel">Guest Rooms · Room Detail</span></div></div>
+
+      <div class="gitem wide" data-cat="villas" onclick="openLightbox(this)"><img src="images/Site - room type - 4.jpg" alt="Pool Villa" loading="lazy"><div class="goverlay"><span class="glabel">Villas · Pool Villa</span></div></div>
+      <div class="gitem" data-cat="villas" onclick="openLightbox(this)"><img src="images/Site - room type - 5.jpg" alt="Oceanfront Pool Villa" loading="lazy"><div class="goverlay"><span class="glabel">Villas · Oceanfront Pool Villa</span></div></div>
+      <div class="gitem wide" data-cat="villas" onclick="openLightbox(this)"><img src="images/Site - room type - 6.jpg" alt="Duplex Oceanfront Villa" loading="lazy"><div class="goverlay"><span class="glabel">Villas · Duplex Oceanfront</span></div></div>
+      <div class="gitem" data-cat="villas" onclick="openLightbox(this)"><img src="images/Site - room type - 6.png" alt="Duplex Oceanfront Villa alternate view" loading="lazy"><div class="goverlay"><span class="glabel">Villas · Duplex Detail</span></div></div>
+
+      <div class="gitem" data-cat="suites" onclick="openLightbox(this)"><img src="images/Site - room type - 3.jpg" alt="One Bedroom Suite" loading="lazy"><div class="goverlay"><span class="glabel">Suites · One Bedroom Suite</span></div></div>
+      <div class="gitem" data-cat="suites" onclick="openLightbox(this)"><img src="images/slide04_009.jpg" alt="Suite detail" loading="lazy"><div class="goverlay"><span class="glabel">Suites · Suite Detail</span></div></div>
+
+      <div class="gitem" data-cat="features" onclick="openLightbox(this)"><img src="images/slide04_006.jpg" alt="Guest room feature" loading="lazy"><div class="goverlay"><span class="glabel">Features · Room Feature</span></div></div>
+      <div class="gitem" data-cat="features" onclick="openLightbox(this)"><img src="images/slide04_007.jpg" alt="Villa feature" loading="lazy"><div class="goverlay"><span class="glabel">Features · Villa Feature</span></div></div>
+      <div class="gitem" data-cat="features" onclick="openLightbox(this)"><img src="images/slide04_008.jpg" alt="Bathroom feature" loading="lazy"><div class="goverlay"><span class="glabel">Features · Guest Bathroom</span></div></div>
+
+      <div class="gitem wide" data-cat="dining" onclick="openLightbox(this)"><img src="images/1.jpg" alt="Yunami" loading="lazy"><div class="goverlay"><span class="glabel">Dining · Yunami</span></div></div>
+      <div class="gitem" data-cat="dining" onclick="openLightbox(this)"><img src="images/2.jpg" alt="Takieng" loading="lazy"><div class="goverlay"><span class="glabel">Dining · Takieng</span></div></div>
+      <div class="gitem" data-cat="dining" onclick="openLightbox(this)"><img src="images/3.jpg" alt="Sand Box" loading="lazy"><div class="goverlay"><span class="glabel">Dining · Sand Box</span></div></div>
+      <div class="gitem" data-cat="dining" onclick="openLightbox(this)"><img src="images/4.jpg" alt="Loca Vore" loading="lazy"><div class="goverlay"><span class="glabel">Dining · Loca Vore</span></div></div>
+      <div class="gitem" data-cat="dining" onclick="openLightbox(this)"><img src="images/5.jpg" alt="The Lounge" loading="lazy"><div class="goverlay"><span class="glabel">Dining · The Lounge</span></div></div>
+      <div class="gitem" data-cat="dining" onclick="openLightbox(this)"><img src="images/6.jpg" alt="Doppio" loading="lazy"><div class="goverlay"><span class="glabel">Dining · Doppio</span></div></div>
+
+      <div class="gitem" data-cat="recreation" onclick="openLightbox(this)"><img src="images/slide13_050.png" alt="Main pool" loading="lazy"><div class="goverlay"><span class="glabel">Recreation & Fitness · Main Pool</span></div></div>
+      <div class="gitem" data-cat="recreation" onclick="openLightbox(this)"><img src="images/slide12_044.jpg" alt="Fitness and recreation" loading="lazy"><div class="goverlay"><span class="glabel">Recreation & Fitness · Fitness</span></div></div>
+      <div class="gitem" data-cat="recreation" onclick="openLightbox(this)"><img src="images/slide12_049.jpg" alt="Kids and recreation" loading="lazy"><div class="goverlay"><span class="glabel">Recreation & Fitness · Family Recreation</span></div></div>
+      <div class="gitem" data-cat="recreation" onclick="openLightbox(this)"><img src="images/slide12_047.jpg" alt="Resort recreation" loading="lazy"><div class="goverlay"><span class="glabel">Recreation & Fitness · Resort Recreation</span></div></div>
+
+      <div class="gitem" data-cat="activities" onclick="openLightbox(this)"><img src="images/enhancer-1.jpg" alt="Bike Tour" loading="lazy"><div class="goverlay"><span class="glabel">Activities · Bike Tour</span></div></div>
+      <div class="gitem" data-cat="activities" onclick="openLightbox(this)"><img src="images/enhancer-2.jpg" alt="Beach Yoga" loading="lazy"><div class="goverlay"><span class="glabel">Activities · Beach Yoga</span></div></div>
+      <div class="gitem" data-cat="activities" onclick="openLightbox(this)"><img src="images/enhancer-3.jpg" alt="Photo Spots" loading="lazy"><div class="goverlay"><span class="glabel">Activities · Photo Spots</span></div></div>
+      <div class="gitem" data-cat="activities" onclick="openLightbox(this)"><img src="images/enhancer-4.jpg" alt="Punch Bowl Ritual" loading="lazy"><div class="goverlay"><span class="glabel">Activities · Punch Bowl Ritual</span></div></div>
+      <div class="gitem" data-cat="activities" onclick="openLightbox(this)"><img src="images/enhancer-5.jpg" alt="Entertainment" loading="lazy"><div class="goverlay"><span class="glabel">Activities · Entertainment</span></div></div>
+
+      <div class="gitem" data-cat="spa" onclick="openLightbox(this)"><img src="images/slide13_052.jpg" alt="Quan Spa" loading="lazy"><div class="goverlay"><span class="glabel">Spa · Quan Spa</span></div></div>
+      <div class="gitem" data-cat="spa" onclick="openLightbox(this)"><img src="images/enhancer-6.jpg" alt="Singing Bowl Experience" loading="lazy"><div class="goverlay"><span class="glabel">Spa · Singing Bowl</span></div></div>
+      <div class="gitem" data-cat="spa" onclick="openLightbox(this)"><img src="images/slide13_051.jpg" alt="Wellness setting" loading="lazy"><div class="goverlay"><span class="glabel">Spa · Wellness Setting</span></div></div>
+
+      <div class="gitem" data-cat="nearby" onclick="openLightbox(this)"><img src="images/slide08_020.png" alt="Phuket destination map" loading="lazy"><div class="goverlay"><span class="glabel">Nearby Attractions · Phuket Map</span></div></div>
+      <div class="gitem" data-cat="nearby" onclick="openLightbox(this)"><img src="images/slide04_005.jpg" alt="Nearby attraction" loading="lazy"><div class="goverlay"><span class="glabel">Nearby Attractions · Local Place</span></div></div>
+      <div class="gitem" data-cat="nearby" onclick="openLightbox(this)"><img src="images/slide04_006.jpg" alt="Nearby destination detail" loading="lazy"><div class="goverlay"><span class="glabel">Nearby Attractions · Destination Detail</span></div></div>
+
+      <div class="gitem wide" data-cat="events" onclick="openLightbox(this)"><img src="images/M-1.jpg" alt="R Ballroom" loading="lazy"><div class="goverlay"><span class="glabel">Events & Meetings · R Ballroom</span></div></div>
+      <div class="gitem wide" data-cat="events" onclick="openLightbox(this)"><img src="images/M-2.png" alt="Beach Lawn event" loading="lazy"><div class="goverlay"><span class="glabel">Events & Meetings · Beach Lawn</span></div></div>
+      <div class="gitem" data-cat="events" onclick="openLightbox(this)"><img src="images/M-3.jpg" alt="Beach meeting" loading="lazy"><div class="goverlay"><span class="glabel">Events & Meetings · Barefoot Meeting</span></div></div>
+      <div class="gitem wide" data-cat="events" onclick="openLightbox(this)"><img src="images/M-4.jpg" alt="Garden dinner" loading="lazy"><div class="goverlay"><span class="glabel">Events & Meetings · Garden Dinner</span></div></div>
+      <div class="gitem" data-cat="events" onclick="openLightbox(this)"><img src="images/M-5.jpg" alt="Takieng private setting" loading="lazy"><div class="goverlay"><span class="glabel">Events & Meetings · Takieng Setting</span></div></div>
+      <div class="gitem" data-cat="events" onclick="openLightbox(this)"><img src="images/Meeting/B-1.jpg" alt="Art Room coffee break" loading="lazy"><div class="goverlay"><span class="glabel">Events & Meetings · Coffee Break</span></div></div>
+      <div class="gitem" data-cat="events" onclick="openLightbox(this)"><img src="images/Meeting/B-5.jpg" alt="Carnival coffee break" loading="lazy"><div class="goverlay"><span class="glabel">Events & Meetings · Theme Break</span></div></div>
+
+      <div class="gitem wide" data-cat="weddings" onclick="openLightbox(this)"><img src="images/M-2.png" alt="Beachfront wedding setting" loading="lazy"><div class="goverlay"><span class="glabel">Weddings · Beachfront Setting</span></div></div>
+      <div class="gitem" data-cat="weddings" onclick="openLightbox(this)"><img src="images/M-4.jpg" alt="Garden wedding dinner" loading="lazy"><div class="goverlay"><span class="glabel">Weddings · Garden Dinner</span></div></div>
+      <div class="gitem" data-cat="weddings" onclick="openLightbox(this)"><img src="images/slide11_041.jpg" alt="Outdoor wedding venue" loading="lazy"><div class="goverlay"><span class="glabel">Weddings · Outdoor Venue</span></div></div>
+      <div class="gitem" data-cat="weddings" onclick="openLightbox(this)"><img src="images/slide11_043.png" alt="Beach wedding setting" loading="lazy"><div class="goverlay"><span class="glabel">Weddings · Beach Setting</span></div></div>
     </div>
-    <p style="text-align:center;margin-top:20px;font-family:Arial,sans-serif;font-size:.75rem;color:rgba(245,243,240,.35);font-style:italic">Photography to be inserted — placeholders shown</p>
+    <p style="text-align:center;margin-top:20px;font-family:Arial,sans-serif;font-size:.75rem;color:rgba(245,243,240,.35);font-style:italic">Gallery organized by Marriott.com photo group names, using local project images for reliable loading.</p>
   </div>
 </section>
 
@@ -1790,7 +1840,7 @@ const T = {
     enh4_name:"Punch Bowl Ritual",enh4_desc:"A theatrical welcome ritual for group arrivals — house-made punch bowl presented with ceremony to set the tone for a remarkable event.",
     enh5_name:"Entertainment",enh5_desc:"From traditional Thai performers to ambient live music, our entertainment options elevate gala dinners and cocktail receptions.",
     enh6_name:"Singing Bowl Experiences",enh6_desc:"A mindful sound healing session led by our wellness team — a calm opening or closing ritual for retreats and leadership summits.",
-    gal_eyebrow:"Gallery",gal_title:"See the Resort",gal_sub:"Filter by category to explore what Renaissance Phuket looks and feels like.",
+    gal_eyebrow:"Gallery",gal_title:"See the Resort",gal_sub:"Filter the official Marriott gallery by group name for client-ready visual references.",
     gf_all:"All",gf_resort:"Resort",gf_rooms:"Accommodations",gf_dining:"Dining",gf_mice:"MICE",gf_outdoor:"Outdoor Venues",gf_wellness:"Wellness",gf_beach:"Beachfront",
     dl_eyebrow:"Downloads",dl_title:"Resource Centre",dl_sub:"Quick links to key resort information for client conversations.",
     dl1_name:"Accommodation Overview",dl1_desc:"Room categories, sizes, and group room block information.",
@@ -1927,7 +1977,7 @@ const T = {
     enh4_name:"펀치 볼 리추얼",enh4_desc:"그룹 도착을 환영하는 르네상스의 시그니처 이브닝 리추얼입니다.",
     enh5_name:"엔터테인먼트",enh5_desc:"태국 전통 공연부터 라이브 음악까지 갈라 디너와 칵테일 리셉션을 위한 엔터테인먼트를 제안합니다.",
     enh6_name:"싱잉볼 체험",enh6_desc:"웰니스 팀이 진행하는 차분한 사운드 힐링 세션으로 리트리트와 리더십 프로그램에 어울립니다.",
-    gal_eyebrow:"갤러리",gal_title:"리조트 둘러보기",gal_sub:"카테고리별로 르네상스 푸켓의 공간과 분위기를 살펴보세요.",
+    gal_eyebrow:"갤러리",gal_title:"리조트 둘러보기",gal_sub:"고객 미팅에 활용하기 쉽도록 공식 Marriott 갤러리를 그룹별로 확인하세요.",
     gf_all:"전체",gf_resort:"리조트",gf_rooms:"객실 및 빌라",gf_dining:"다이닝",gf_mice:"MICE",gf_outdoor:"야외 공간",gf_wellness:"웰니스",gf_beach:"비치프런트",
     dl_eyebrow:"다운로드",dl_title:"리소스 센터",dl_sub:"고객 상담에 필요한 주요 리조트 정보를 빠르게 확인할 수 있습니다.",
     dl1_name:"객실 개요",dl1_desc:"객실 카테고리, 크기, 그룹 객실 블록 정보를 확인하세요.",
